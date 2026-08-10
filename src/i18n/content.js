@@ -60,11 +60,11 @@ export const content = {
       title: 'Un imobil cu adevărat remarcabil',
       paragraphs: [
         'Într-una dintre cele mai prestigioase și căutate zone ale Oradei, vă prezentăm un imobil cu adevărat remarcabil, conceput pentru a satisface cele mai exigente standarde investiționale și operaționale.',
-        'Această proprietate reprezintă o combinație rară între poziționare strategică, execuție impecabilă și tehnologie de ultimă generație, fiind pregătită pentru exploatare imediată în segmente premium: hospitality boutique, serviced apartments sau spații profesionale de elită.',
+        'Această proprietate reprezintă o combinație rară între poziționare strategică, execuție impecabilă și tehnologie de ultimă generație, fiind pregătită pentru exploatare imediată în segmente premium: hotel boutique, apartamente în regim hotelier sau spații profesionale de elită.',
       ],
       uses: [
-        { label: 'Hospitality boutique', icon: 'hotel' },
-        { label: 'Serviced apartments', icon: 'apartment' },
+        { label: 'Hotel boutique', icon: 'hotel' },
+        { label: 'Apartamente în regim hotelier', icon: 'apartment' },
         { label: 'Spații profesionale de elită', icon: 'office' },
       ],
     },
