@@ -1,0 +1,25 @@
+# dependencies
+node_modules/
+
+# build output
+dist/
+build/
+.vite/
+
+# environment
+.env
+.env.*
+!.env.example
+
+# editor and OS noise
+.DS_Store
+Thumbs.db
+*.local
+*.log
+npm-debug.log*
+
+# Source photography, ~1.9 GB, stays local. Only the optimized WebP derivatives
+# under public/media are committed, since the site loads those at runtime.
+# Regenerate them from these folders with: npm run images
+imagini/
+poze2/

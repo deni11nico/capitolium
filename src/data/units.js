@@ -1,0 +1,70 @@
+import media from './media.json'
+import { unitSpecs } from './unitSpecs.js'
+import { unitDescriptions } from '../i18n/unitDescriptions.js'
+
+/**
+ * The six apartments plus the cellar, in presentation order. `slug` is both the
+ * route segment and the key into the generated media manifest.
+ *
+ * ap-4 is the building's cellar rather than an apartment, which is why the
+ * property counts 6 apartments across 7 photographed spaces.
+ */
+const UNITS = [
+  { slug: 'ap-1', number: 1, kind: 'apartment', name: { ro: 'Apartamentul 1', en: 'Apartment 1' } },
+  { slug: 'ap-2', number: 2, kind: 'apartment', name: { ro: 'Apartamentul 2', en: 'Apartment 2' } },
+  { slug: 'ap-3', number: 3, kind: 'apartment', name: { ro: 'Apartamentul 3', en: 'Apartment 3' } },
+  { slug: 'ap-5', number: 5, kind: 'apartment', name: { ro: 'Apartamentul 5', en: 'Apartment 5' } },
+  { slug: 'ap-6', number: 6, kind: 'apartment', name: { ro: 'Apartamentul 6', en: 'Apartment 6' } },
+  { slug: 'ap-7', number: 7, kind: 'apartment', name: { ro: 'Apartamentul 7', en: 'Apartment 7' } },
+  { slug: 'ap-4', number: 4, kind: 'cellar', name: { ro: 'Pivnița', en: 'The Cellar' } },
+]
+
+/**
+ * The "poza1" sheet is the curated lead image for a unit, so it becomes the
+ * homepage card cover and the hero on the unit page. Note ap-2's file is named
+ * "ap2-paza1", a typo in the source folder, hence the loose match.
+ */
+const isLeadSheet = (photo) => /-p[oa]za1-/.test(photo.id)
+
+export const units = UNITS.map((unit) => {
+  const photos = media.groups[unit.slug] ?? []
+
+  const sheets = photos.filter((photo) => photo.source === 'imagini')
+  const photographs = photos.filter((photo) => photo.source !== 'imagini')
+
+  // Fall back through the remaining sheets, then the photographs, so a unit
+  // without a poza1 file (the cellar) still gets a cover.
+  const cover = sheets.find(isLeadSheet) ?? sheets[0] ?? photographs[0] ?? null
+
+  return {
+    ...unit,
+    href: `/${unit.slug}`,
+    photos,
+    cover,
+    // Shown large under the hero, above the floor plan.
+    sheets: sheets.filter((photo) => photo !== cover),
+    // Every photographed frame, none held back, since the hero is a sheet now.
+    galleryPhotos: photographs,
+    plan: media.plans[unit.slug] ?? null,
+    specs: unitSpecs[unit.slug] ?? null,
+    description: unitDescriptions[unit.slug] ?? null,
+  }
+})
+
+export const unitBySlug = new Map(units.map((unit) => [unit.slug, unit]))
+
+export const apartmentCount = units.filter((unit) => unit.kind === 'apartment').length
+
+/** Photography used outside the unit pages. */
+export const facade = media.groups.fatada ?? []
+export const courtyard = media.groups.curte ?? []
+export const sitePlan = media.plans.site ?? null
+
+const byId = (list, id) => list.find((photo) => photo.id === id) ?? list[0] ?? null
+
+/** Hand-picked frames so the key sections never depend on folder ordering. */
+export const heroPhoto = byId(facade, 'las-7844-b43f0d')
+export const architecturePhoto = byId(courtyard, 'las-7417-8e26ab')
+export const entrancePhoto = byId(facade, 'las-7857-d449fd')
+export const courtyardFeature = byId(courtyard, 'las-7408-e1c25e')
+export const investmentPhoto = byId(facade, 'las-7843-b9a09d')

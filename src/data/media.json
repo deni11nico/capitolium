@@ -1,0 +1,1996 @@
+{
+  "groups": {
+    "fatada": [
+      {
+        "id": "las-7398-0f88e6",
+        "thumb": "/media/fatada/las-7398-0f88e6-t.webp",
+        "full": "/media/fatada/las-7398-0f88e6-f.webp",
+        "width": 1920,
+        "height": 2880,
+        "color": "#f8f8f8",
+        "source": "poze2"
+      },
+      {
+        "id": "las-7406-cf436f",
+        "thumb": "/media/fatada/las-7406-cf436f-t.webp",
+        "full": "/media/fatada/las-7406-cf436f-f.webp",
+        "width": 1920,
+        "height": 1280,
+        "color": "#f8f8f8",
+        "source": "poze2"
+      },
+      {
+        "id": "las-7610-a5de84",
+        "thumb": "/media/fatada/las-7610-a5de84-t.webp",
+        "full": "/media/fatada/las-7610-a5de84-f.webp",
+        "width": 1920,
+        "height": 1280,
+        "color": "#a88858",
+        "source": "poze2"
+      },
+      {
+        "id": "las-7669-4f6051",
+        "thumb": "/media/fatada/las-7669-4f6051-t.webp",
+        "full": "/media/fatada/las-7669-4f6051-f.webp",
+        "width": 1920,
+        "height": 2880,
+        "color": "#a8a898",
+        "source": "poze2"
+      },
+      {
+        "id": "las-7719-7f31c1",
+        "thumb": "/media/fatada/las-7719-7f31c1-t.webp",
+        "full": "/media/fatada/las-7719-7f31c1-f.webp",
+        "width": 1920,
+        "height": 2880,
+        "color": "#483828",
+        "source": "poze2"
+      },
+      {
+        "id": "las-7832-6c1487",
+        "thumb": "/media/fatada/las-7832-6c1487-t.webp",
+        "full": "/media/fatada/las-7832-6c1487-f.webp",
+        "width": 1920,
+        "height": 1280,
+        "color": "#c8a898",
+        "source": "poze2"
+      },
+      {
+        "id": "las-7833-2602a8",
+        "thumb": "/media/fatada/las-7833-2602a8-t.webp",
+        "full": "/media/fatada/las-7833-2602a8-f.webp",
+        "width": 1920,
+        "height": 1280,
+        "color": "#887868",
+        "source": "poze2"
+      },
+      {
+        "id": "las-7838-155962",
+        "thumb": "/media/fatada/las-7838-155962-t.webp",
+        "full": "/media/fatada/las-7838-155962-f.webp",
+        "width": 1920,
+        "height": 1280,
+        "color": "#e8e8e8",
+        "source": "poze2"
+      },
+      {
+        "id": "las-7841-83c01e",
+        "thumb": "/media/fatada/las-7841-83c01e-t.webp",
+        "full": "/media/fatada/las-7841-83c01e-f.webp",
+        "width": 1920,
+        "height": 1280,
+        "color": "#886848",
+        "source": "poze2"
+      },
+      {
+        "id": "las-7843-b9a09d",
+        "thumb": "/media/fatada/las-7843-b9a09d-t.webp",
+        "full": "/media/fatada/las-7843-b9a09d-f.webp",
+        "width": 1920,
+        "height": 1280,
+        "color": "#98b8d8",
+        "source": "poze2"
+      },
+      {
+        "id": "las-7844-b43f0d",
+        "thumb": "/media/fatada/las-7844-b43f0d-t.webp",
+        "full": "/media/fatada/las-7844-b43f0d-f.webp",
+        "width": 1920,
+        "height": 1280,
+        "color": "#b8d8f8",
+        "source": "poze2"
+      },
+      {
+        "id": "las-7847-071b6b",
+        "thumb": "/media/fatada/las-7847-071b6b-t.webp",
+        "full": "/media/fatada/las-7847-071b6b-f.webp",
+        "width": 1920,
+        "height": 1280,
+        "color": "#98b8d8",
+        "source": "poze2"
+      },
+      {
+        "id": "las-7857-d449fd",
+        "thumb": "/media/fatada/las-7857-d449fd-t.webp",
+        "full": "/media/fatada/las-7857-d449fd-f.webp",
+        "width": 1920,
+        "height": 1280,
+        "color": "#787878",
+        "source": "poze2"
+      },
+      {
+        "id": "las-7870-9b6b55",
+        "thumb": "/media/fatada/las-7870-9b6b55-t.webp",
+        "full": "/media/fatada/las-7870-9b6b55-f.webp",
+        "width": 1920,
+        "height": 1280,
+        "color": "#f8f8e8",
+        "source": "poze2"
+      },
+      {
+        "id": "imobil-b2db4a",
+        "thumb": "/media/fatada/imobil-b2db4a-t.webp",
+        "full": "/media/fatada/imobil-b2db4a-f.webp",
+        "width": 1600,
+        "height": 1066,
+        "color": "#b8d8f8",
+        "source": "imagini"
+      }
+    ],
+    "curte": [
+      {
+        "id": "las-7389-faf1dc",
+        "thumb": "/media/curte/las-7389-faf1dc-t.webp",
+        "full": "/media/curte/las-7389-faf1dc-f.webp",
+        "width": 1920,
+        "height": 1280,
+        "color": "#181808",
+        "source": "poze2"
+      },
+      {
+        "id": "las-7391-a1c578",
+        "thumb": "/media/curte/las-7391-a1c578-t.webp",
+        "full": "/media/curte/las-7391-a1c578-f.webp",
+        "width": 1920,
+        "height": 1280,
+        "color": "#f8f8f8",
+        "source": "poze2"
+      },
+      {
+        "id": "las-7393-a98d18",
+        "thumb": "/media/curte/las-7393-a98d18-t.webp",
+        "full": "/media/curte/las-7393-a98d18-f.webp",
+        "width": 1920,
+        "height": 1280,
+        "color": "#f8f8f8",
+        "source": "poze2"
+      },
+      {
+        "id": "las-7396-948001",
+        "thumb": "/media/curte/las-7396-948001-t.webp",
+        "full": "/media/curte/las-7396-948001-f.webp",
+        "width": 1920,
+        "height": 1280,
+        "color": "#f8e8d8",
+        "source": "poze2"
+      },
+      {
+        "id": "las-7408-e1c25e",
+        "thumb": "/media/curte/las-7408-e1c25e-t.webp",
+        "full": "/media/curte/las-7408-e1c25e-f.webp",
+        "width": 1920,
+        "height": 1280,
+        "color": "#f8f8f8",
+        "source": "poze2"
+      },
+      {
+        "id": "las-7417-8e26ab",
+        "thumb": "/media/curte/las-7417-8e26ab-t.webp",
+        "full": "/media/curte/las-7417-8e26ab-f.webp",
+        "width": 1920,
+        "height": 1280,
+        "color": "#f8f8f8",
+        "source": "poze2"
+      },
+      {
+        "id": "las-7826-44ce1e",
+        "thumb": "/media/curte/las-7826-44ce1e-t.webp",
+        "full": "/media/curte/las-7826-44ce1e-f.webp",
+        "width": 1920,
+        "height": 1280,
+        "color": "#e8d8d8",
+        "source": "poze2"
+      },
+      {
+        "id": "las-7830-798617",
+        "thumb": "/media/curte/las-7830-798617-t.webp",
+        "full": "/media/curte/las-7830-798617-f.webp",
+        "width": 1920,
+        "height": 1280,
+        "color": "#e8e8e8",
+        "source": "poze2"
+      },
+      {
+        "id": "curte1-848521",
+        "thumb": "/media/curte/curte1-848521-t.webp",
+        "full": "/media/curte/curte1-848521-f.webp",
+        "width": 1600,
+        "height": 1066,
+        "color": "#887868",
+        "source": "imagini"
+      },
+      {
+        "id": "curte2-c093a1",
+        "thumb": "/media/curte/curte2-c093a1-t.webp",
+        "full": "/media/curte/curte2-c093a1-f.webp",
+        "width": 1600,
+        "height": 1066,
+        "color": "#f8f8f8",
+        "source": "imagini"
+      }
+    ],
+    "ap-1": [
+      {
+        "id": "las-7425-535f5b",
+        "thumb": "/media/ap-1/las-7425-535f5b-t.webp",
+        "full": "/media/ap-1/las-7425-535f5b-f.webp",
+        "width": 1920,
+        "height": 1280,
+        "color": "#d8d8c8",
+        "source": "poze2"
+      },
+      {
+        "id": "las-7429-d2c248",
+        "thumb": "/media/ap-1/las-7429-d2c248-t.webp",
+        "full": "/media/ap-1/las-7429-d2c248-f.webp",
+        "width": 1920,
+        "height": 1280,
+        "color": "#e8e8d8",
+        "source": "poze2"
+      },
+      {
+        "id": "las-7433-1eda37",
+        "thumb": "/media/ap-1/las-7433-1eda37-t.webp",
+        "full": "/media/ap-1/las-7433-1eda37-f.webp",
+        "width": 1920,
+        "height": 1280,
+        "color": "#d8d8d8",
+        "source": "poze2"
+      },
+      {
+        "id": "las-7435-661f9e",
+        "thumb": "/media/ap-1/las-7435-661f9e-t.webp",
+        "full": "/media/ap-1/las-7435-661f9e-f.webp",
+        "width": 1920,
+        "height": 1280,
+        "color": "#d8d8d8",
+        "source": "poze2"
+      },
+      {
+        "id": "las-7438-be2f5f",
+        "thumb": "/media/ap-1/las-7438-be2f5f-t.webp",
+        "full": "/media/ap-1/las-7438-be2f5f-f.webp",
+        "width": 1920,
+        "height": 1280,
+        "color": "#d8d8d8",
+        "source": "poze2"
+      },
+      {
+        "id": "las-7439-418936",
+        "thumb": "/media/ap-1/las-7439-418936-t.webp",
+        "full": "/media/ap-1/las-7439-418936-f.webp",
+        "width": 1920,
+        "height": 1280,
+        "color": "#c8c8c8",
+        "source": "poze2"
+      },
+      {
+        "id": "las-7443-2c4553",
+        "thumb": "/media/ap-1/las-7443-2c4553-t.webp",
+        "full": "/media/ap-1/las-7443-2c4553-f.webp",
+        "width": 1920,
+        "height": 1280,
+        "color": "#d8c8d8",
+        "source": "poze2"
+      },
+      {
+        "id": "las-7445-75ec3d",
+        "thumb": "/media/ap-1/las-7445-75ec3d-t.webp",
+        "full": "/media/ap-1/las-7445-75ec3d-f.webp",
+        "width": 1920,
+        "height": 1280,
+        "color": "#d8d8d8",
+        "source": "poze2"
+      },
+      {
+        "id": "las-7447-027679",
+        "thumb": "/media/ap-1/las-7447-027679-t.webp",
+        "full": "/media/ap-1/las-7447-027679-f.webp",
+        "width": 1920,
+        "height": 1280,
+        "color": "#c8b898",
+        "source": "poze2"
+      },
+      {
+        "id": "las-7451-1bbc4e",
+        "thumb": "/media/ap-1/las-7451-1bbc4e-t.webp",
+        "full": "/media/ap-1/las-7451-1bbc4e-f.webp",
+        "width": 1920,
+        "height": 1280,
+        "color": "#f8f8f8",
+        "source": "poze2"
+      },
+      {
+        "id": "las-7454-1934f0",
+        "thumb": "/media/ap-1/las-7454-1934f0-t.webp",
+        "full": "/media/ap-1/las-7454-1934f0-f.webp",
+        "width": 1920,
+        "height": 1280,
+        "color": "#f8f8f8",
+        "source": "poze2"
+      },
+      {
+        "id": "las-7458-4735f4",
+        "thumb": "/media/ap-1/las-7458-4735f4-t.webp",
+        "full": "/media/ap-1/las-7458-4735f4-f.webp",
+        "width": 1920,
+        "height": 1280,
+        "color": "#f8f8e8",
+        "source": "poze2"
+      },
+      {
+        "id": "las-7544-3c0a98",
+        "thumb": "/media/ap-1/las-7544-3c0a98-t.webp",
+        "full": "/media/ap-1/las-7544-3c0a98-f.webp",
+        "width": 1920,
+        "height": 2880,
+        "color": "#e8e8f8",
+        "source": "poze2"
+      },
+      {
+        "id": "las-7545-a345a8",
+        "thumb": "/media/ap-1/las-7545-a345a8-t.webp",
+        "full": "/media/ap-1/las-7545-a345a8-f.webp",
+        "width": 1920,
+        "height": 2880,
+        "color": "#d8d8d8",
+        "source": "poze2"
+      },
+      {
+        "id": "las-7546-65d7d9",
+        "thumb": "/media/ap-1/las-7546-65d7d9-t.webp",
+        "full": "/media/ap-1/las-7546-65d7d9-f.webp",
+        "width": 1920,
+        "height": 2880,
+        "color": "#b8b8c8",
+        "source": "poze2"
+      },
+      {
+        "id": "las-7550-24f665",
+        "thumb": "/media/ap-1/las-7550-24f665-t.webp",
+        "full": "/media/ap-1/las-7550-24f665-f.webp",
+        "width": 1920,
+        "height": 1280,
+        "color": "#b8b898",
+        "source": "poze2"
+      },
+      {
+        "id": "las-7553-7ef6f4",
+        "thumb": "/media/ap-1/las-7553-7ef6f4-t.webp",
+        "full": "/media/ap-1/las-7553-7ef6f4-f.webp",
+        "width": 1920,
+        "height": 2880,
+        "color": "#a88868",
+        "source": "poze2"
+      },
+      {
+        "id": "las-7555-e1dca0",
+        "thumb": "/media/ap-1/las-7555-e1dca0-t.webp",
+        "full": "/media/ap-1/las-7555-e1dca0-f.webp",
+        "width": 1920,
+        "height": 2880,
+        "color": "#887858",
+        "source": "poze2"
+      },
+      {
+        "id": "las-7558-19a368",
+        "thumb": "/media/ap-1/las-7558-19a368-t.webp",
+        "full": "/media/ap-1/las-7558-19a368-f.webp",
+        "width": 1920,
+        "height": 2880,
+        "color": "#f8e8d8",
+        "source": "poze2"
+      },
+      {
+        "id": "las-7560-12b4ef",
+        "thumb": "/media/ap-1/las-7560-12b4ef-t.webp",
+        "full": "/media/ap-1/las-7560-12b4ef-f.webp",
+        "width": 1920,
+        "height": 2880,
+        "color": "#e8d8c8",
+        "source": "poze2"
+      },
+      {
+        "id": "las-7561-273be2",
+        "thumb": "/media/ap-1/las-7561-273be2-t.webp",
+        "full": "/media/ap-1/las-7561-273be2-f.webp",
+        "width": 1920,
+        "height": 2880,
+        "color": "#886838",
+        "source": "poze2"
+      },
+      {
+        "id": "las-7562-2317c0",
+        "thumb": "/media/ap-1/las-7562-2317c0-t.webp",
+        "full": "/media/ap-1/las-7562-2317c0-f.webp",
+        "width": 1920,
+        "height": 2880,
+        "color": "#e8c8b8",
+        "source": "poze2"
+      },
+      {
+        "id": "las-7563-2eb622",
+        "thumb": "/media/ap-1/las-7563-2eb622-t.webp",
+        "full": "/media/ap-1/las-7563-2eb622-f.webp",
+        "width": 1920,
+        "height": 1280,
+        "color": "#a88858",
+        "source": "poze2"
+      },
+      {
+        "id": "las-7566-af4be0",
+        "thumb": "/media/ap-1/las-7566-af4be0-t.webp",
+        "full": "/media/ap-1/las-7566-af4be0-f.webp",
+        "width": 1920,
+        "height": 2880,
+        "color": "#a88858",
+        "source": "poze2"
+      },
+      {
+        "id": "las-7569-d33d04",
+        "thumb": "/media/ap-1/las-7569-d33d04-t.webp",
+        "full": "/media/ap-1/las-7569-d33d04-f.webp",
+        "width": 1920,
+        "height": 2880,
+        "color": "#d8b8a8",
+        "source": "poze2"
+      },
+      {
+        "id": "las-7571-0dccab",
+        "thumb": "/media/ap-1/las-7571-0dccab-t.webp",
+        "full": "/media/ap-1/las-7571-0dccab-f.webp",
+        "width": 1920,
+        "height": 2880,
+        "color": "#d8c8b8",
+        "source": "poze2"
+      },
+      {
+        "id": "las-7573-f01db5",
+        "thumb": "/media/ap-1/las-7573-f01db5-t.webp",
+        "full": "/media/ap-1/las-7573-f01db5-f.webp",
+        "width": 1920,
+        "height": 1280,
+        "color": "#d8c8b8",
+        "source": "poze2"
+      },
+      {
+        "id": "las-7574-5d464e",
+        "thumb": "/media/ap-1/las-7574-5d464e-t.webp",
+        "full": "/media/ap-1/las-7574-5d464e-f.webp",
+        "width": 1920,
+        "height": 2880,
+        "color": "#e8d8d8",
+        "source": "poze2"
+      },
+      {
+        "id": "las-7576-f8fd38",
+        "thumb": "/media/ap-1/las-7576-f8fd38-t.webp",
+        "full": "/media/ap-1/las-7576-f8fd38-f.webp",
+        "width": 1920,
+        "height": 1280,
+        "color": "#e8d8d8",
+        "source": "poze2"
+      },
+      {
+        "id": "las-7578-3c5ad2",
+        "thumb": "/media/ap-1/las-7578-3c5ad2-t.webp",
+        "full": "/media/ap-1/las-7578-3c5ad2-f.webp",
+        "width": 1920,
+        "height": 1280,
+        "color": "#e8d8d8",
+        "source": "poze2"
+      },
+      {
+        "id": "las-7579-c9399e",
+        "thumb": "/media/ap-1/las-7579-c9399e-t.webp",
+        "full": "/media/ap-1/las-7579-c9399e-f.webp",
+        "width": 1920,
+        "height": 1280,
+        "color": "#d8c8c8",
+        "source": "poze2"
+      },
+      {
+        "id": "las-7580-3507db",
+        "thumb": "/media/ap-1/las-7580-3507db-t.webp",
+        "full": "/media/ap-1/las-7580-3507db-f.webp",
+        "width": 1920,
+        "height": 1280,
+        "color": "#d8c8c8",
+        "source": "poze2"
+      },
+      {
+        "id": "las-7584-f41bfe",
+        "thumb": "/media/ap-1/las-7584-f41bfe-t.webp",
+        "full": "/media/ap-1/las-7584-f41bfe-f.webp",
+        "width": 1920,
+        "height": 1280,
+        "color": "#c8a888",
+        "source": "poze2"
+      },
+      {
+        "id": "las-7585-efcff7",
+        "thumb": "/media/ap-1/las-7585-efcff7-t.webp",
+        "full": "/media/ap-1/las-7585-efcff7-f.webp",
+        "width": 1920,
+        "height": 2880,
+        "color": "#e8d8d8",
+        "source": "poze2"
+      },
+      {
+        "id": "las-7588-014004",
+        "thumb": "/media/ap-1/las-7588-014004-t.webp",
+        "full": "/media/ap-1/las-7588-014004-f.webp",
+        "width": 1920,
+        "height": 2880,
+        "color": "#988848",
+        "source": "poze2"
+      },
+      {
+        "id": "las-7590-20a57a",
+        "thumb": "/media/ap-1/las-7590-20a57a-t.webp",
+        "full": "/media/ap-1/las-7590-20a57a-f.webp",
+        "width": 1920,
+        "height": 1280,
+        "color": "#b89878",
+        "source": "poze2"
+      },
+      {
+        "id": "las-7591-ece5ec",
+        "thumb": "/media/ap-1/las-7591-ece5ec-t.webp",
+        "full": "/media/ap-1/las-7591-ece5ec-f.webp",
+        "width": 1920,
+        "height": 1280,
+        "color": "#c8b8a8",
+        "source": "poze2"
+      },
+      {
+        "id": "las-7597-227dfc",
+        "thumb": "/media/ap-1/las-7597-227dfc-t.webp",
+        "full": "/media/ap-1/las-7597-227dfc-f.webp",
+        "width": 1920,
+        "height": 1280,
+        "color": "#e8e8e8",
+        "source": "poze2"
+      },
+      {
+        "id": "las-7604-1fe4db",
+        "thumb": "/media/ap-1/las-7604-1fe4db-t.webp",
+        "full": "/media/ap-1/las-7604-1fe4db-f.webp",
+        "width": 1920,
+        "height": 1280,
+        "color": "#d8c888",
+        "source": "poze2"
+      },
+      {
+        "id": "las-7607-01fef5",
+        "thumb": "/media/ap-1/las-7607-01fef5-t.webp",
+        "full": "/media/ap-1/las-7607-01fef5-f.webp",
+        "width": 1920,
+        "height": 1280,
+        "color": "#e8d8c8",
+        "source": "poze2"
+      },
+      {
+        "id": "ap1-poza1-42b7ec",
+        "thumb": "/media/ap-1/ap1-poza1-42b7ec-t.webp",
+        "full": "/media/ap-1/ap1-poza1-42b7ec-f.webp",
+        "width": 1600,
+        "height": 1066,
+        "color": "#e8e8e8",
+        "source": "imagini"
+      },
+      {
+        "id": "ap1-1-c9123f",
+        "thumb": "/media/ap-1/ap1-1-c9123f-t.webp",
+        "full": "/media/ap-1/ap1-1-c9123f-f.webp",
+        "width": 1600,
+        "height": 1066,
+        "color": "#d8d8d8",
+        "source": "imagini"
+      },
+      {
+        "id": "ap1-2-e72dcb",
+        "thumb": "/media/ap-1/ap1-2-e72dcb-t.webp",
+        "full": "/media/ap-1/ap1-2-e72dcb-f.webp",
+        "width": 1600,
+        "height": 1066,
+        "color": "#f8f8f8",
+        "source": "imagini"
+      },
+      {
+        "id": "ap1-4e3d4b",
+        "thumb": "/media/ap-1/ap1-4e3d4b-t.webp",
+        "full": "/media/ap-1/ap1-4e3d4b-f.webp",
+        "width": 1600,
+        "height": 1066,
+        "color": "#f8f8f8",
+        "source": "imagini"
+      }
+    ],
+    "ap-2": [
+      {
+        "id": "las-7462-81988f",
+        "thumb": "/media/ap-2/las-7462-81988f-t.webp",
+        "full": "/media/ap-2/las-7462-81988f-f.webp",
+        "width": 1920,
+        "height": 1280,
+        "color": "#d8c8b8",
+        "source": "poze2"
+      },
+      {
+        "id": "las-7466-6e1f4c",
+        "thumb": "/media/ap-2/las-7466-6e1f4c-t.webp",
+        "full": "/media/ap-2/las-7466-6e1f4c-f.webp",
+        "width": 1920,
+        "height": 1280,
+        "color": "#e89868",
+        "source": "poze2"
+      },
+      {
+        "id": "las-7469-927e9b",
+        "thumb": "/media/ap-2/las-7469-927e9b-t.webp",
+        "full": "/media/ap-2/las-7469-927e9b-f.webp",
+        "width": 1920,
+        "height": 1280,
+        "color": "#e8d8c8",
+        "source": "poze2"
+      },
+      {
+        "id": "las-7471-1e54e7",
+        "thumb": "/media/ap-2/las-7471-1e54e7-t.webp",
+        "full": "/media/ap-2/las-7471-1e54e7-f.webp",
+        "width": 1920,
+        "height": 1280,
+        "color": "#d8c8b8",
+        "source": "poze2"
+      },
+      {
+        "id": "las-7475-923bc3",
+        "thumb": "/media/ap-2/las-7475-923bc3-t.webp",
+        "full": "/media/ap-2/las-7475-923bc3-f.webp",
+        "width": 1920,
+        "height": 1280,
+        "color": "#f8c898",
+        "source": "poze2"
+      },
+      {
+        "id": "las-7477-b2acb6",
+        "thumb": "/media/ap-2/las-7477-b2acb6-t.webp",
+        "full": "/media/ap-2/las-7477-b2acb6-f.webp",
+        "width": 1920,
+        "height": 1280,
+        "color": "#e8c8b8",
+        "source": "poze2"
+      },
+      {
+        "id": "las-7478-3f6931",
+        "thumb": "/media/ap-2/las-7478-3f6931-t.webp",
+        "full": "/media/ap-2/las-7478-3f6931-f.webp",
+        "width": 1920,
+        "height": 2880,
+        "color": "#f8f8e8",
+        "source": "poze2"
+      },
+      {
+        "id": "las-7613ok-868a54",
+        "thumb": "/media/ap-2/las-7613ok-868a54-t.webp",
+        "full": "/media/ap-2/las-7613ok-868a54-f.webp",
+        "width": 1920,
+        "height": 1280,
+        "color": "#a86848",
+        "source": "poze2"
+      },
+      {
+        "id": "las-7616-24d120",
+        "thumb": "/media/ap-2/las-7616-24d120-t.webp",
+        "full": "/media/ap-2/las-7616-24d120-f.webp",
+        "width": 1920,
+        "height": 2880,
+        "color": "#c89888",
+        "source": "poze2"
+      },
+      {
+        "id": "las-7620-189bbf",
+        "thumb": "/media/ap-2/las-7620-189bbf-t.webp",
+        "full": "/media/ap-2/las-7620-189bbf-f.webp",
+        "width": 1920,
+        "height": 2880,
+        "color": "#b88878",
+        "source": "poze2"
+      },
+      {
+        "id": "las-7621-0d8c0b",
+        "thumb": "/media/ap-2/las-7621-0d8c0b-t.webp",
+        "full": "/media/ap-2/las-7621-0d8c0b-f.webp",
+        "width": 1920,
+        "height": 1280,
+        "color": "#886848",
+        "source": "poze2"
+      },
+      {
+        "id": "las-7626-c75b9c",
+        "thumb": "/media/ap-2/las-7626-c75b9c-t.webp",
+        "full": "/media/ap-2/las-7626-c75b9c-f.webp",
+        "width": 1920,
+        "height": 1280,
+        "color": "#b8d8f8",
+        "source": "poze2"
+      },
+      {
+        "id": "las-7629-86aaf7",
+        "thumb": "/media/ap-2/las-7629-86aaf7-t.webp",
+        "full": "/media/ap-2/las-7629-86aaf7-f.webp",
+        "width": 1920,
+        "height": 2880,
+        "color": "#e8a888",
+        "source": "poze2"
+      },
+      {
+        "id": "las-7630-189386",
+        "thumb": "/media/ap-2/las-7630-189386-t.webp",
+        "full": "/media/ap-2/las-7630-189386-f.webp",
+        "width": 1920,
+        "height": 2880,
+        "color": "#c8b8a8",
+        "source": "poze2"
+      },
+      {
+        "id": "las-7632-433a4f",
+        "thumb": "/media/ap-2/las-7632-433a4f-t.webp",
+        "full": "/media/ap-2/las-7632-433a4f-f.webp",
+        "width": 1920,
+        "height": 1280,
+        "color": "#c8c8b8",
+        "source": "poze2"
+      },
+      {
+        "id": "las-7638-e89766",
+        "thumb": "/media/ap-2/las-7638-e89766-t.webp",
+        "full": "/media/ap-2/las-7638-e89766-f.webp",
+        "width": 1920,
+        "height": 1280,
+        "color": "#d8c8c8",
+        "source": "poze2"
+      },
+      {
+        "id": "las-7639-684648",
+        "thumb": "/media/ap-2/las-7639-684648-t.webp",
+        "full": "/media/ap-2/las-7639-684648-f.webp",
+        "width": 1920,
+        "height": 2880,
+        "color": "#f8e8d8",
+        "source": "poze2"
+      },
+      {
+        "id": "las-7643-c94968",
+        "thumb": "/media/ap-2/las-7643-c94968-t.webp",
+        "full": "/media/ap-2/las-7643-c94968-f.webp",
+        "width": 1920,
+        "height": 2880,
+        "color": "#f8e8e8",
+        "source": "poze2"
+      },
+      {
+        "id": "las-7646-430fac",
+        "thumb": "/media/ap-2/las-7646-430fac-t.webp",
+        "full": "/media/ap-2/las-7646-430fac-f.webp",
+        "width": 1920,
+        "height": 2880,
+        "color": "#c87848",
+        "source": "poze2"
+      },
+      {
+        "id": "las-7649-ad8511",
+        "thumb": "/media/ap-2/las-7649-ad8511-t.webp",
+        "full": "/media/ap-2/las-7649-ad8511-f.webp",
+        "width": 1920,
+        "height": 2880,
+        "color": "#d88858",
+        "source": "poze2"
+      },
+      {
+        "id": "las-7651-7181d8",
+        "thumb": "/media/ap-2/las-7651-7181d8-t.webp",
+        "full": "/media/ap-2/las-7651-7181d8-f.webp",
+        "width": 1920,
+        "height": 2880,
+        "color": "#d88868",
+        "source": "poze2"
+      },
+      {
+        "id": "las-7655-ca48c1",
+        "thumb": "/media/ap-2/las-7655-ca48c1-t.webp",
+        "full": "/media/ap-2/las-7655-ca48c1-f.webp",
+        "width": 1920,
+        "height": 2880,
+        "color": "#d8b8a8",
+        "source": "poze2"
+      },
+      {
+        "id": "las-7662-967794",
+        "thumb": "/media/ap-2/las-7662-967794-t.webp",
+        "full": "/media/ap-2/las-7662-967794-f.webp",
+        "width": 1920,
+        "height": 1280,
+        "color": "#685848",
+        "source": "poze2"
+      },
+      {
+        "id": "las-7663-6564e5",
+        "thumb": "/media/ap-2/las-7663-6564e5-t.webp",
+        "full": "/media/ap-2/las-7663-6564e5-f.webp",
+        "width": 1920,
+        "height": 2880,
+        "color": "#e8b898",
+        "source": "poze2"
+      },
+      {
+        "id": "las-7666-7e27ba",
+        "thumb": "/media/ap-2/las-7666-7e27ba-t.webp",
+        "full": "/media/ap-2/las-7666-7e27ba-f.webp",
+        "width": 1920,
+        "height": 2880,
+        "color": "#f8a868",
+        "source": "poze2"
+      },
+      {
+        "id": "ap2-paza1-63b344",
+        "thumb": "/media/ap-2/ap2-paza1-63b344-t.webp",
+        "full": "/media/ap-2/ap2-paza1-63b344-f.webp",
+        "width": 1600,
+        "height": 1066,
+        "color": "#d8c8b8",
+        "source": "imagini"
+      },
+      {
+        "id": "ap2-1-9be187",
+        "thumb": "/media/ap-2/ap2-1-9be187-t.webp",
+        "full": "/media/ap-2/ap2-1-9be187-f.webp",
+        "width": 1600,
+        "height": 1066,
+        "color": "#f8f8f8",
+        "source": "imagini"
+      },
+      {
+        "id": "ap2-587cd7",
+        "thumb": "/media/ap-2/ap2-587cd7-t.webp",
+        "full": "/media/ap-2/ap2-587cd7-f.webp",
+        "width": 1600,
+        "height": 1066,
+        "color": "#d8c8b8",
+        "source": "imagini"
+      }
+    ],
+    "ap-3": [
+      {
+        "id": "las-7482-75c6ee",
+        "thumb": "/media/ap-3/las-7482-75c6ee-t.webp",
+        "full": "/media/ap-3/las-7482-75c6ee-f.webp",
+        "width": 1920,
+        "height": 1280,
+        "color": "#c8c8b8",
+        "source": "poze2"
+      },
+      {
+        "id": "las-7483-a74835",
+        "thumb": "/media/ap-3/las-7483-a74835-t.webp",
+        "full": "/media/ap-3/las-7483-a74835-f.webp",
+        "width": 1920,
+        "height": 1280,
+        "color": "#e8d8d8",
+        "source": "poze2"
+      },
+      {
+        "id": "las-7485-b29818",
+        "thumb": "/media/ap-3/las-7485-b29818-t.webp",
+        "full": "/media/ap-3/las-7485-b29818-f.webp",
+        "width": 1920,
+        "height": 1280,
+        "color": "#c8b8b8",
+        "source": "poze2"
+      },
+      {
+        "id": "las-7486-44511f",
+        "thumb": "/media/ap-3/las-7486-44511f-t.webp",
+        "full": "/media/ap-3/las-7486-44511f-f.webp",
+        "width": 1920,
+        "height": 1280,
+        "color": "#c8b8b8",
+        "source": "poze2"
+      },
+      {
+        "id": "las-7489-d8b983",
+        "thumb": "/media/ap-3/las-7489-d8b983-t.webp",
+        "full": "/media/ap-3/las-7489-d8b983-f.webp",
+        "width": 1920,
+        "height": 1280,
+        "color": "#d8c8c8",
+        "source": "poze2"
+      },
+      {
+        "id": "las-7491-13acce",
+        "thumb": "/media/ap-3/las-7491-13acce-t.webp",
+        "full": "/media/ap-3/las-7491-13acce-f.webp",
+        "width": 1920,
+        "height": 1280,
+        "color": "#c8c8c8",
+        "source": "poze2"
+      },
+      {
+        "id": "las-7494-3056ef",
+        "thumb": "/media/ap-3/las-7494-3056ef-t.webp",
+        "full": "/media/ap-3/las-7494-3056ef-f.webp",
+        "width": 1920,
+        "height": 2880,
+        "color": "#e8e8e8",
+        "source": "poze2"
+      },
+      {
+        "id": "las-7497-d8bfb2",
+        "thumb": "/media/ap-3/las-7497-d8bfb2-t.webp",
+        "full": "/media/ap-3/las-7497-d8bfb2-f.webp",
+        "width": 1920,
+        "height": 1280,
+        "color": "#d8d8d8",
+        "source": "poze2"
+      },
+      {
+        "id": "las-7500-dd6cef",
+        "thumb": "/media/ap-3/las-7500-dd6cef-t.webp",
+        "full": "/media/ap-3/las-7500-dd6cef-f.webp",
+        "width": 1920,
+        "height": 1280,
+        "color": "#c8c8b8",
+        "source": "poze2"
+      },
+      {
+        "id": "las-7501-073144",
+        "thumb": "/media/ap-3/las-7501-073144-t.webp",
+        "full": "/media/ap-3/las-7501-073144-f.webp",
+        "width": 1920,
+        "height": 1280,
+        "color": "#584838",
+        "source": "poze2"
+      },
+      {
+        "id": "las-7672-5cb869",
+        "thumb": "/media/ap-3/las-7672-5cb869-t.webp",
+        "full": "/media/ap-3/las-7672-5cb869-f.webp",
+        "width": 1920,
+        "height": 2880,
+        "color": "#887868",
+        "source": "poze2"
+      },
+      {
+        "id": "las-7674-f52171",
+        "thumb": "/media/ap-3/las-7674-f52171-t.webp",
+        "full": "/media/ap-3/las-7674-f52171-f.webp",
+        "width": 1920,
+        "height": 1280,
+        "color": "#f8f8f8",
+        "source": "poze2"
+      },
+      {
+        "id": "las-7676-6e1eef",
+        "thumb": "/media/ap-3/las-7676-6e1eef-t.webp",
+        "full": "/media/ap-3/las-7676-6e1eef-f.webp",
+        "width": 1920,
+        "height": 2880,
+        "color": "#c89868",
+        "source": "poze2"
+      },
+      {
+        "id": "las-7678-f32c8f",
+        "thumb": "/media/ap-3/las-7678-f32c8f-t.webp",
+        "full": "/media/ap-3/las-7678-f32c8f-f.webp",
+        "width": 1920,
+        "height": 1280,
+        "color": "#e8e8d8",
+        "source": "poze2"
+      },
+      {
+        "id": "las-7680-431585",
+        "thumb": "/media/ap-3/las-7680-431585-t.webp",
+        "full": "/media/ap-3/las-7680-431585-f.webp",
+        "width": 1920,
+        "height": 2880,
+        "color": "#f8f8e8",
+        "source": "poze2"
+      },
+      {
+        "id": "las-7683-d0dff3",
+        "thumb": "/media/ap-3/las-7683-d0dff3-t.webp",
+        "full": "/media/ap-3/las-7683-d0dff3-f.webp",
+        "width": 1920,
+        "height": 2880,
+        "color": "#a8a898",
+        "source": "poze2"
+      },
+      {
+        "id": "las-7684-81f068",
+        "thumb": "/media/ap-3/las-7684-81f068-t.webp",
+        "full": "/media/ap-3/las-7684-81f068-f.webp",
+        "width": 1920,
+        "height": 2880,
+        "color": "#e8e8d8",
+        "source": "poze2"
+      },
+      {
+        "id": "las-7687-4c0572",
+        "thumb": "/media/ap-3/las-7687-4c0572-t.webp",
+        "full": "/media/ap-3/las-7687-4c0572-f.webp",
+        "width": 1920,
+        "height": 2880,
+        "color": "#d8d8c8",
+        "source": "poze2"
+      },
+      {
+        "id": "las-7690-54a37f",
+        "thumb": "/media/ap-3/las-7690-54a37f-t.webp",
+        "full": "/media/ap-3/las-7690-54a37f-f.webp",
+        "width": 1920,
+        "height": 2880,
+        "color": "#c8c8b8",
+        "source": "poze2"
+      },
+      {
+        "id": "las-7692-c437ec",
+        "thumb": "/media/ap-3/las-7692-c437ec-t.webp",
+        "full": "/media/ap-3/las-7692-c437ec-f.webp",
+        "width": 1920,
+        "height": 2880,
+        "color": "#d8d8c8",
+        "source": "poze2"
+      },
+      {
+        "id": "las-7693-163afb",
+        "thumb": "/media/ap-3/las-7693-163afb-t.webp",
+        "full": "/media/ap-3/las-7693-163afb-f.webp",
+        "width": 1920,
+        "height": 1280,
+        "color": "#e8e8d8",
+        "source": "poze2"
+      },
+      {
+        "id": "las-7695-74a73d",
+        "thumb": "/media/ap-3/las-7695-74a73d-t.webp",
+        "full": "/media/ap-3/las-7695-74a73d-f.webp",
+        "width": 1920,
+        "height": 2880,
+        "color": "#989888",
+        "source": "poze2"
+      },
+      {
+        "id": "las-7696-91d720",
+        "thumb": "/media/ap-3/las-7696-91d720-t.webp",
+        "full": "/media/ap-3/las-7696-91d720-f.webp",
+        "width": 1920,
+        "height": 2880,
+        "color": "#a8a898",
+        "source": "poze2"
+      },
+      {
+        "id": "las-7697-b01364",
+        "thumb": "/media/ap-3/las-7697-b01364-t.webp",
+        "full": "/media/ap-3/las-7697-b01364-f.webp",
+        "width": 1920,
+        "height": 2880,
+        "color": "#787868",
+        "source": "poze2"
+      },
+      {
+        "id": "las-7700-442ae7",
+        "thumb": "/media/ap-3/las-7700-442ae7-t.webp",
+        "full": "/media/ap-3/las-7700-442ae7-f.webp",
+        "width": 1920,
+        "height": 2880,
+        "color": "#787868",
+        "source": "poze2"
+      },
+      {
+        "id": "las-7704-ee71bf",
+        "thumb": "/media/ap-3/las-7704-ee71bf-t.webp",
+        "full": "/media/ap-3/las-7704-ee71bf-f.webp",
+        "width": 1920,
+        "height": 1280,
+        "color": "#a8a8a8",
+        "source": "poze2"
+      },
+      {
+        "id": "las-7706-5b41b2",
+        "thumb": "/media/ap-3/las-7706-5b41b2-t.webp",
+        "full": "/media/ap-3/las-7706-5b41b2-f.webp",
+        "width": 1920,
+        "height": 2880,
+        "color": "#989898",
+        "source": "poze2"
+      },
+      {
+        "id": "las-7708-5fdabc",
+        "thumb": "/media/ap-3/las-7708-5fdabc-t.webp",
+        "full": "/media/ap-3/las-7708-5fdabc-f.webp",
+        "width": 1920,
+        "height": 1280,
+        "color": "#c8c8c8",
+        "source": "poze2"
+      },
+      {
+        "id": "las-7709-71cb8f",
+        "thumb": "/media/ap-3/las-7709-71cb8f-t.webp",
+        "full": "/media/ap-3/las-7709-71cb8f-f.webp",
+        "width": 1920,
+        "height": 1280,
+        "color": "#c8c8c8",
+        "source": "poze2"
+      },
+      {
+        "id": "las-7710-dac3fa",
+        "thumb": "/media/ap-3/las-7710-dac3fa-t.webp",
+        "full": "/media/ap-3/las-7710-dac3fa-f.webp",
+        "width": 1920,
+        "height": 1280,
+        "color": "#d8d8c8",
+        "source": "poze2"
+      },
+      {
+        "id": "las-7711-9a02ed",
+        "thumb": "/media/ap-3/las-7711-9a02ed-t.webp",
+        "full": "/media/ap-3/las-7711-9a02ed-f.webp",
+        "width": 1920,
+        "height": 2880,
+        "color": "#b8b8a8",
+        "source": "poze2"
+      },
+      {
+        "id": "las-7712-a12b63",
+        "thumb": "/media/ap-3/las-7712-a12b63-t.webp",
+        "full": "/media/ap-3/las-7712-a12b63-f.webp",
+        "width": 1920,
+        "height": 2880,
+        "color": "#d8c8c8",
+        "source": "poze2"
+      },
+      {
+        "id": "las-7713-42d750",
+        "thumb": "/media/ap-3/las-7713-42d750-t.webp",
+        "full": "/media/ap-3/las-7713-42d750-f.webp",
+        "width": 1920,
+        "height": 2880,
+        "color": "#c8b8a8",
+        "source": "poze2"
+      },
+      {
+        "id": "las-7714-50f62a",
+        "thumb": "/media/ap-3/las-7714-50f62a-t.webp",
+        "full": "/media/ap-3/las-7714-50f62a-f.webp",
+        "width": 1920,
+        "height": 2880,
+        "color": "#e8e8e8",
+        "source": "poze2"
+      },
+      {
+        "id": "las-7716-d84188",
+        "thumb": "/media/ap-3/las-7716-d84188-t.webp",
+        "full": "/media/ap-3/las-7716-d84188-f.webp",
+        "width": 1920,
+        "height": 2880,
+        "color": "#c8a888",
+        "source": "poze2"
+      },
+      {
+        "id": "las-7717-42aef5",
+        "thumb": "/media/ap-3/las-7717-42aef5-t.webp",
+        "full": "/media/ap-3/las-7717-42aef5-f.webp",
+        "width": 1920,
+        "height": 1280,
+        "color": "#987858",
+        "source": "poze2"
+      },
+      {
+        "id": "ap3-poza1-c74944",
+        "thumb": "/media/ap-3/ap3-poza1-c74944-t.webp",
+        "full": "/media/ap-3/ap3-poza1-c74944-f.webp",
+        "width": 1600,
+        "height": 1066,
+        "color": "#987858",
+        "source": "imagini"
+      },
+      {
+        "id": "ap3-1-2ffd82",
+        "thumb": "/media/ap-3/ap3-1-2ffd82-t.webp",
+        "full": "/media/ap-3/ap3-1-2ffd82-f.webp",
+        "width": 1600,
+        "height": 1066,
+        "color": "#e8d8d8",
+        "source": "imagini"
+      },
+      {
+        "id": "ap3-2-d7b24a",
+        "thumb": "/media/ap-3/ap3-2-d7b24a-t.webp",
+        "full": "/media/ap-3/ap3-2-d7b24a-f.webp",
+        "width": 1600,
+        "height": 1066,
+        "color": "#f8f8f8",
+        "source": "imagini"
+      },
+      {
+        "id": "ap3-084f1f",
+        "thumb": "/media/ap-3/ap3-084f1f-t.webp",
+        "full": "/media/ap-3/ap3-084f1f-f.webp",
+        "width": 1600,
+        "height": 1066,
+        "color": "#c8c8b8",
+        "source": "imagini"
+      }
+    ],
+    "ap-4": [
+      {
+        "id": "las-7720-7b077a",
+        "thumb": "/media/ap-4/las-7720-7b077a-t.webp",
+        "full": "/media/ap-4/las-7720-7b077a-f.webp",
+        "width": 1920,
+        "height": 2880,
+        "color": "#785838",
+        "source": "poze2"
+      },
+      {
+        "id": "las-7722-bf2e36",
+        "thumb": "/media/ap-4/las-7722-bf2e36-t.webp",
+        "full": "/media/ap-4/las-7722-bf2e36-f.webp",
+        "width": 1920,
+        "height": 2880,
+        "color": "#886848",
+        "source": "poze2"
+      },
+      {
+        "id": "las-7726-6c79d9",
+        "thumb": "/media/ap-4/las-7726-6c79d9-t.webp",
+        "full": "/media/ap-4/las-7726-6c79d9-f.webp",
+        "width": 1920,
+        "height": 2880,
+        "color": "#f8c898",
+        "source": "poze2"
+      },
+      {
+        "id": "las-7731-1b1212",
+        "thumb": "/media/ap-4/las-7731-1b1212-t.webp",
+        "full": "/media/ap-4/las-7731-1b1212-f.webp",
+        "width": 1920,
+        "height": 1280,
+        "color": "#b87838",
+        "source": "poze2"
+      },
+      {
+        "id": "las-7734-ee1615",
+        "thumb": "/media/ap-4/las-7734-ee1615-t.webp",
+        "full": "/media/ap-4/las-7734-ee1615-f.webp",
+        "width": 1920,
+        "height": 2880,
+        "color": "#281818",
+        "source": "poze2"
+      },
+      {
+        "id": "pivnita-01932b",
+        "thumb": "/media/ap-4/pivnita-01932b-t.webp",
+        "full": "/media/ap-4/pivnita-01932b-f.webp",
+        "width": 1600,
+        "height": 1066,
+        "color": "#b87838",
+        "source": "imagini"
+      }
+    ],
+    "ap-5": [
+      {
+        "id": "las-7504-07a2e3",
+        "thumb": "/media/ap-5/las-7504-07a2e3-t.webp",
+        "full": "/media/ap-5/las-7504-07a2e3-f.webp",
+        "width": 1920,
+        "height": 1280,
+        "color": "#b8b8a8",
+        "source": "poze2"
+      },
+      {
+        "id": "las-7507-9ecfbe",
+        "thumb": "/media/ap-5/las-7507-9ecfbe-t.webp",
+        "full": "/media/ap-5/las-7507-9ecfbe-f.webp",
+        "width": 1920,
+        "height": 1280,
+        "color": "#e8e8d8",
+        "source": "poze2"
+      },
+      {
+        "id": "las-7508-c00bc8",
+        "thumb": "/media/ap-5/las-7508-c00bc8-t.webp",
+        "full": "/media/ap-5/las-7508-c00bc8-f.webp",
+        "width": 1920,
+        "height": 1280,
+        "color": "#e8d8c8",
+        "source": "poze2"
+      },
+      {
+        "id": "las-7511-c7c2e6",
+        "thumb": "/media/ap-5/las-7511-c7c2e6-t.webp",
+        "full": "/media/ap-5/las-7511-c7c2e6-f.webp",
+        "width": 1920,
+        "height": 2880,
+        "color": "#f8e8e8",
+        "source": "poze2"
+      },
+      {
+        "id": "las-7512-7aff84",
+        "thumb": "/media/ap-5/las-7512-7aff84-t.webp",
+        "full": "/media/ap-5/las-7512-7aff84-f.webp",
+        "width": 1920,
+        "height": 1280,
+        "color": "#e8d8d8",
+        "source": "poze2"
+      },
+      {
+        "id": "las-7514-8c91ae",
+        "thumb": "/media/ap-5/las-7514-8c91ae-t.webp",
+        "full": "/media/ap-5/las-7514-8c91ae-f.webp",
+        "width": 1920,
+        "height": 1280,
+        "color": "#e8e8e8",
+        "source": "poze2"
+      },
+      {
+        "id": "las-7795-7c1fb3",
+        "thumb": "/media/ap-5/las-7795-7c1fb3-t.webp",
+        "full": "/media/ap-5/las-7795-7c1fb3-f.webp",
+        "width": 1920,
+        "height": 1280,
+        "color": "#a8b8c8",
+        "source": "poze2"
+      },
+      {
+        "id": "las-7797-bebb86",
+        "thumb": "/media/ap-5/las-7797-bebb86-t.webp",
+        "full": "/media/ap-5/las-7797-bebb86-f.webp",
+        "width": 1920,
+        "height": 2880,
+        "color": "#786858",
+        "source": "poze2"
+      },
+      {
+        "id": "las-7801-f00002",
+        "thumb": "/media/ap-5/las-7801-f00002-t.webp",
+        "full": "/media/ap-5/las-7801-f00002-f.webp",
+        "width": 1920,
+        "height": 2880,
+        "color": "#d8d8d8",
+        "source": "poze2"
+      },
+      {
+        "id": "las-7804-957bbb",
+        "thumb": "/media/ap-5/las-7804-957bbb-t.webp",
+        "full": "/media/ap-5/las-7804-957bbb-f.webp",
+        "width": 1920,
+        "height": 2880,
+        "color": "#d8b898",
+        "source": "poze2"
+      },
+      {
+        "id": "las-7806-306a6a",
+        "thumb": "/media/ap-5/las-7806-306a6a-t.webp",
+        "full": "/media/ap-5/las-7806-306a6a-f.webp",
+        "width": 1920,
+        "height": 2880,
+        "color": "#c8b8a8",
+        "source": "poze2"
+      },
+      {
+        "id": "las-7808-e32cb3",
+        "thumb": "/media/ap-5/las-7808-e32cb3-t.webp",
+        "full": "/media/ap-5/las-7808-e32cb3-f.webp",
+        "width": 1920,
+        "height": 2880,
+        "color": "#e8d8a8",
+        "source": "poze2"
+      },
+      {
+        "id": "las-7809-36e912",
+        "thumb": "/media/ap-5/las-7809-36e912-t.webp",
+        "full": "/media/ap-5/las-7809-36e912-f.webp",
+        "width": 1920,
+        "height": 2880,
+        "color": "#282818",
+        "source": "poze2"
+      },
+      {
+        "id": "las-7810-338b53",
+        "thumb": "/media/ap-5/las-7810-338b53-t.webp",
+        "full": "/media/ap-5/las-7810-338b53-f.webp",
+        "width": 1920,
+        "height": 2880,
+        "color": "#685858",
+        "source": "poze2"
+      },
+      {
+        "id": "las-7812-05b176",
+        "thumb": "/media/ap-5/las-7812-05b176-t.webp",
+        "full": "/media/ap-5/las-7812-05b176-f.webp",
+        "width": 1920,
+        "height": 1280,
+        "color": "#d8c8c8",
+        "source": "poze2"
+      },
+      {
+        "id": "las-7814-a85868",
+        "thumb": "/media/ap-5/las-7814-a85868-t.webp",
+        "full": "/media/ap-5/las-7814-a85868-f.webp",
+        "width": 1920,
+        "height": 2880,
+        "color": "#e8e8e8",
+        "source": "poze2"
+      },
+      {
+        "id": "las-7816-e22bc5",
+        "thumb": "/media/ap-5/las-7816-e22bc5-t.webp",
+        "full": "/media/ap-5/las-7816-e22bc5-f.webp",
+        "width": 1920,
+        "height": 2880,
+        "color": "#f8f8f8",
+        "source": "poze2"
+      },
+      {
+        "id": "las-7822-d13045",
+        "thumb": "/media/ap-5/las-7822-d13045-t.webp",
+        "full": "/media/ap-5/las-7822-d13045-f.webp",
+        "width": 1920,
+        "height": 1280,
+        "color": "#787868",
+        "source": "poze2"
+      },
+      {
+        "id": "las-7825-c6a250",
+        "thumb": "/media/ap-5/las-7825-c6a250-t.webp",
+        "full": "/media/ap-5/las-7825-c6a250-f.webp",
+        "width": 1920,
+        "height": 2880,
+        "color": "#f8f8f8",
+        "source": "poze2"
+      },
+      {
+        "id": "ap5-poza1-8765d1",
+        "thumb": "/media/ap-5/ap5-poza1-8765d1-t.webp",
+        "full": "/media/ap-5/ap5-poza1-8765d1-f.webp",
+        "width": 1600,
+        "height": 1066,
+        "color": "#e8f8f8",
+        "source": "imagini"
+      },
+      {
+        "id": "ap5-1-efd6ac",
+        "thumb": "/media/ap-5/ap5-1-efd6ac-t.webp",
+        "full": "/media/ap-5/ap5-1-efd6ac-f.webp",
+        "width": 1600,
+        "height": 1066,
+        "color": "#f8f8f8",
+        "source": "imagini"
+      },
+      {
+        "id": "ap5-19c1c3",
+        "thumb": "/media/ap-5/ap5-19c1c3-t.webp",
+        "full": "/media/ap-5/ap5-19c1c3-f.webp",
+        "width": 1600,
+        "height": 1066,
+        "color": "#f8f8f8",
+        "source": "imagini"
+      }
+    ],
+    "ap-6": [
+      {
+        "id": "las-7516-53cf6b",
+        "thumb": "/media/ap-6/las-7516-53cf6b-t.webp",
+        "full": "/media/ap-6/las-7516-53cf6b-f.webp",
+        "width": 1920,
+        "height": 1280,
+        "color": "#d8c8b8",
+        "source": "poze2"
+      },
+      {
+        "id": "las-7518-9ec6dd",
+        "thumb": "/media/ap-6/las-7518-9ec6dd-t.webp",
+        "full": "/media/ap-6/las-7518-9ec6dd-f.webp",
+        "width": 1920,
+        "height": 1280,
+        "color": "#d8c8b8",
+        "source": "poze2"
+      },
+      {
+        "id": "las-7520-25d545",
+        "thumb": "/media/ap-6/las-7520-25d545-t.webp",
+        "full": "/media/ap-6/las-7520-25d545-f.webp",
+        "width": 1920,
+        "height": 1280,
+        "color": "#d8c8b8",
+        "source": "poze2"
+      },
+      {
+        "id": "las-7521-c3f95f",
+        "thumb": "/media/ap-6/las-7521-c3f95f-t.webp",
+        "full": "/media/ap-6/las-7521-c3f95f-f.webp",
+        "width": 1920,
+        "height": 1280,
+        "color": "#a8b898",
+        "source": "poze2"
+      },
+      {
+        "id": "las-7525-770c60",
+        "thumb": "/media/ap-6/las-7525-770c60-t.webp",
+        "full": "/media/ap-6/las-7525-770c60-f.webp",
+        "width": 1920,
+        "height": 1280,
+        "color": "#d8d8c8",
+        "source": "poze2"
+      },
+      {
+        "id": "las-7527-6ab941",
+        "thumb": "/media/ap-6/las-7527-6ab941-t.webp",
+        "full": "/media/ap-6/las-7527-6ab941-f.webp",
+        "width": 1920,
+        "height": 1280,
+        "color": "#d8c8b8",
+        "source": "poze2"
+      },
+      {
+        "id": "las-7768-6cc80e",
+        "thumb": "/media/ap-6/las-7768-6cc80e-t.webp",
+        "full": "/media/ap-6/las-7768-6cc80e-f.webp",
+        "width": 1920,
+        "height": 1280,
+        "color": "#d8c8b8",
+        "source": "poze2"
+      },
+      {
+        "id": "las-7770-9da462",
+        "thumb": "/media/ap-6/las-7770-9da462-t.webp",
+        "full": "/media/ap-6/las-7770-9da462-f.webp",
+        "width": 1920,
+        "height": 1280,
+        "color": "#d8c8c8",
+        "source": "poze2"
+      },
+      {
+        "id": "las-7774-001e7c",
+        "thumb": "/media/ap-6/las-7774-001e7c-t.webp",
+        "full": "/media/ap-6/las-7774-001e7c-f.webp",
+        "width": 1920,
+        "height": 2880,
+        "color": "#c8b8a8",
+        "source": "poze2"
+      },
+      {
+        "id": "las-7778-2cdb70",
+        "thumb": "/media/ap-6/las-7778-2cdb70-t.webp",
+        "full": "/media/ap-6/las-7778-2cdb70-f.webp",
+        "width": 1920,
+        "height": 2880,
+        "color": "#685848",
+        "source": "poze2"
+      },
+      {
+        "id": "las-7779-1a6403",
+        "thumb": "/media/ap-6/las-7779-1a6403-t.webp",
+        "full": "/media/ap-6/las-7779-1a6403-f.webp",
+        "width": 1920,
+        "height": 2880,
+        "color": "#f8e8d8",
+        "source": "poze2"
+      },
+      {
+        "id": "las-7782-4213c7",
+        "thumb": "/media/ap-6/las-7782-4213c7-t.webp",
+        "full": "/media/ap-6/las-7782-4213c7-f.webp",
+        "width": 1920,
+        "height": 2880,
+        "color": "#a88878",
+        "source": "poze2"
+      },
+      {
+        "id": "las-7783-68ea42",
+        "thumb": "/media/ap-6/las-7783-68ea42-t.webp",
+        "full": "/media/ap-6/las-7783-68ea42-f.webp",
+        "width": 1920,
+        "height": 2880,
+        "color": "#d8c8a8",
+        "source": "poze2"
+      },
+      {
+        "id": "las-7786-a08c9b",
+        "thumb": "/media/ap-6/las-7786-a08c9b-t.webp",
+        "full": "/media/ap-6/las-7786-a08c9b-f.webp",
+        "width": 1920,
+        "height": 2880,
+        "color": "#a8a888",
+        "source": "poze2"
+      },
+      {
+        "id": "las-7787-52489b",
+        "thumb": "/media/ap-6/las-7787-52489b-t.webp",
+        "full": "/media/ap-6/las-7787-52489b-f.webp",
+        "width": 1920,
+        "height": 1280,
+        "color": "#a8a888",
+        "source": "poze2"
+      },
+      {
+        "id": "las-7788-f2e76d",
+        "thumb": "/media/ap-6/las-7788-f2e76d-t.webp",
+        "full": "/media/ap-6/las-7788-f2e76d-f.webp",
+        "width": 1920,
+        "height": 2880,
+        "color": "#d8c8b8",
+        "source": "poze2"
+      },
+      {
+        "id": "las-7789-d303cf",
+        "thumb": "/media/ap-6/las-7789-d303cf-t.webp",
+        "full": "/media/ap-6/las-7789-d303cf-f.webp",
+        "width": 1920,
+        "height": 1280,
+        "color": "#786858",
+        "source": "poze2"
+      },
+      {
+        "id": "las-7792-29d304",
+        "thumb": "/media/ap-6/las-7792-29d304-t.webp",
+        "full": "/media/ap-6/las-7792-29d304-f.webp",
+        "width": 1920,
+        "height": 2880,
+        "color": "#b8a888",
+        "source": "poze2"
+      },
+      {
+        "id": "las-7794-865335",
+        "thumb": "/media/ap-6/las-7794-865335-t.webp",
+        "full": "/media/ap-6/las-7794-865335-f.webp",
+        "width": 1920,
+        "height": 2880,
+        "color": "#a89888",
+        "source": "poze2"
+      },
+      {
+        "id": "ap6-poza1-a0b656",
+        "thumb": "/media/ap-6/ap6-poza1-a0b656-t.webp",
+        "full": "/media/ap-6/ap6-poza1-a0b656-f.webp",
+        "width": 1600,
+        "height": 1066,
+        "color": "#d8c8b8",
+        "source": "imagini"
+      },
+      {
+        "id": "ap6-1-8c2ba9",
+        "thumb": "/media/ap-6/ap6-1-8c2ba9-t.webp",
+        "full": "/media/ap-6/ap6-1-8c2ba9-f.webp",
+        "width": 1600,
+        "height": 1066,
+        "color": "#f8f8f8",
+        "source": "imagini"
+      },
+      {
+        "id": "ap6-402c16",
+        "thumb": "/media/ap-6/ap6-402c16-t.webp",
+        "full": "/media/ap-6/ap6-402c16-f.webp",
+        "width": 1600,
+        "height": 1066,
+        "color": "#d8c8b8",
+        "source": "imagini"
+      }
+    ],
+    "ap-7": [
+      {
+        "id": "las-7530-4b661f",
+        "thumb": "/media/ap-7/las-7530-4b661f-t.webp",
+        "full": "/media/ap-7/las-7530-4b661f-f.webp",
+        "width": 1920,
+        "height": 1280,
+        "color": "#e8e8e8",
+        "source": "poze2"
+      },
+      {
+        "id": "las-7531-74d0db",
+        "thumb": "/media/ap-7/las-7531-74d0db-t.webp",
+        "full": "/media/ap-7/las-7531-74d0db-f.webp",
+        "width": 1920,
+        "height": 1280,
+        "color": "#f8f8f8",
+        "source": "poze2"
+      },
+      {
+        "id": "las-7532-fa156c",
+        "thumb": "/media/ap-7/las-7532-fa156c-t.webp",
+        "full": "/media/ap-7/las-7532-fa156c-f.webp",
+        "width": 1920,
+        "height": 1280,
+        "color": "#d8d8d8",
+        "source": "poze2"
+      },
+      {
+        "id": "las-7534-45fab9",
+        "thumb": "/media/ap-7/las-7534-45fab9-t.webp",
+        "full": "/media/ap-7/las-7534-45fab9-f.webp",
+        "width": 1920,
+        "height": 1280,
+        "color": "#d8d8d8",
+        "source": "poze2"
+      },
+      {
+        "id": "las-7536-660bca",
+        "thumb": "/media/ap-7/las-7536-660bca-t.webp",
+        "full": "/media/ap-7/las-7536-660bca-f.webp",
+        "width": 1920,
+        "height": 1280,
+        "color": "#e8e8f8",
+        "source": "poze2"
+      },
+      {
+        "id": "las-7539-f6dbdd",
+        "thumb": "/media/ap-7/las-7539-f6dbdd-t.webp",
+        "full": "/media/ap-7/las-7539-f6dbdd-f.webp",
+        "width": 1920,
+        "height": 1280,
+        "color": "#98b8c8",
+        "source": "poze2"
+      },
+      {
+        "id": "las-7540-88aa17",
+        "thumb": "/media/ap-7/las-7540-88aa17-t.webp",
+        "full": "/media/ap-7/las-7540-88aa17-f.webp",
+        "width": 1920,
+        "height": 1280,
+        "color": "#282828",
+        "source": "poze2"
+      },
+      {
+        "id": "las-7542-a8763c",
+        "thumb": "/media/ap-7/las-7542-a8763c-t.webp",
+        "full": "/media/ap-7/las-7542-a8763c-f.webp",
+        "width": 1920,
+        "height": 1280,
+        "color": "#383838",
+        "source": "poze2"
+      },
+      {
+        "id": "las-7736-9b6308",
+        "thumb": "/media/ap-7/las-7736-9b6308-t.webp",
+        "full": "/media/ap-7/las-7736-9b6308-f.webp",
+        "width": 1920,
+        "height": 1280,
+        "color": "#d8d8d8",
+        "source": "poze2"
+      },
+      {
+        "id": "las-7741-806e0b",
+        "thumb": "/media/ap-7/las-7741-806e0b-t.webp",
+        "full": "/media/ap-7/las-7741-806e0b-f.webp",
+        "width": 1920,
+        "height": 1280,
+        "color": "#d8c8c8",
+        "source": "poze2"
+      },
+      {
+        "id": "las-7743-8492eb",
+        "thumb": "/media/ap-7/las-7743-8492eb-t.webp",
+        "full": "/media/ap-7/las-7743-8492eb-f.webp",
+        "width": 1920,
+        "height": 2880,
+        "color": "#c8b8b8",
+        "source": "poze2"
+      },
+      {
+        "id": "las-7745-3ac63a",
+        "thumb": "/media/ap-7/las-7745-3ac63a-t.webp",
+        "full": "/media/ap-7/las-7745-3ac63a-f.webp",
+        "width": 1920,
+        "height": 2880,
+        "color": "#383838",
+        "source": "poze2"
+      },
+      {
+        "id": "las-7747-32ae09",
+        "thumb": "/media/ap-7/las-7747-32ae09-t.webp",
+        "full": "/media/ap-7/las-7747-32ae09-f.webp",
+        "width": 1920,
+        "height": 2880,
+        "color": "#d8d8d8",
+        "source": "poze2"
+      },
+      {
+        "id": "las-7749-d29834",
+        "thumb": "/media/ap-7/las-7749-d29834-t.webp",
+        "full": "/media/ap-7/las-7749-d29834-f.webp",
+        "width": 1920,
+        "height": 2880,
+        "color": "#d8d8c8",
+        "source": "poze2"
+      },
+      {
+        "id": "las-7751-d5c89f",
+        "thumb": "/media/ap-7/las-7751-d5c89f-t.webp",
+        "full": "/media/ap-7/las-7751-d5c89f-f.webp",
+        "width": 1920,
+        "height": 2880,
+        "color": "#a8c8c8",
+        "source": "poze2"
+      },
+      {
+        "id": "las-7753-0b110a",
+        "thumb": "/media/ap-7/las-7753-0b110a-t.webp",
+        "full": "/media/ap-7/las-7753-0b110a-f.webp",
+        "width": 1920,
+        "height": 2880,
+        "color": "#484848",
+        "source": "poze2"
+      },
+      {
+        "id": "las-7755-888568",
+        "thumb": "/media/ap-7/las-7755-888568-t.webp",
+        "full": "/media/ap-7/las-7755-888568-f.webp",
+        "width": 1920,
+        "height": 2880,
+        "color": "#c8c8c8",
+        "source": "poze2"
+      },
+      {
+        "id": "las-7757-d95d57",
+        "thumb": "/media/ap-7/las-7757-d95d57-t.webp",
+        "full": "/media/ap-7/las-7757-d95d57-f.webp",
+        "width": 1920,
+        "height": 1280,
+        "color": "#b8b8b8",
+        "source": "poze2"
+      },
+      {
+        "id": "las-7760-fbe5f6",
+        "thumb": "/media/ap-7/las-7760-fbe5f6-t.webp",
+        "full": "/media/ap-7/las-7760-fbe5f6-f.webp",
+        "width": 1920,
+        "height": 2880,
+        "color": "#a8b8b8",
+        "source": "poze2"
+      },
+      {
+        "id": "las-7762-21b9e5",
+        "thumb": "/media/ap-7/las-7762-21b9e5-t.webp",
+        "full": "/media/ap-7/las-7762-21b9e5-f.webp",
+        "width": 1920,
+        "height": 2880,
+        "color": "#a89898",
+        "source": "poze2"
+      },
+      {
+        "id": "las-7766-4f877a",
+        "thumb": "/media/ap-7/las-7766-4f877a-t.webp",
+        "full": "/media/ap-7/las-7766-4f877a-f.webp",
+        "width": 1920,
+        "height": 2880,
+        "color": "#b8a898",
+        "source": "poze2"
+      },
+      {
+        "id": "ap7-poza1-c8e168",
+        "thumb": "/media/ap-7/ap7-poza1-c8e168-t.webp",
+        "full": "/media/ap-7/ap7-poza1-c8e168-f.webp",
+        "width": 1600,
+        "height": 1066,
+        "color": "#d8c8b8",
+        "source": "imagini"
+      },
+      {
+        "id": "ap7-1-337bb7",
+        "thumb": "/media/ap-7/ap7-1-337bb7-t.webp",
+        "full": "/media/ap-7/ap7-1-337bb7-f.webp",
+        "width": 1600,
+        "height": 1066,
+        "color": "#e8d8d8",
+        "source": "imagini"
+      },
+      {
+        "id": "ap7-2-27ea68",
+        "thumb": "/media/ap-7/ap7-2-27ea68-t.webp",
+        "full": "/media/ap-7/ap7-2-27ea68-f.webp",
+        "width": 1600,
+        "height": 1066,
+        "color": "#f8f8f8",
+        "source": "imagini"
+      },
+      {
+        "id": "ap7-d20d4d",
+        "thumb": "/media/ap-7/ap7-d20d4d-t.webp",
+        "full": "/media/ap-7/ap7-d20d4d-f.webp",
+        "width": 1600,
+        "height": 1066,
+        "color": "#d8d8d8",
+        "source": "imagini"
+      }
+    ]
+  },
+  "plans": {
+    "ap-1": {
+      "id": "plan-ap-1",
+      "thumb": "/media/plans/ap-1-d.webp",
+      "full": "/media/plans/ap-1-f.webp",
+      "width": 1488,
+      "height": 2104,
+      "color": "#ffffff"
+    },
+    "ap-2": {
+      "id": "plan-ap-2",
+      "thumb": "/media/plans/ap-2-d.webp",
+      "full": "/media/plans/ap-2-f.webp",
+      "width": 1488,
+      "height": 2104,
+      "color": "#ffffff"
+    },
+    "ap-3": {
+      "id": "plan-ap-3",
+      "thumb": "/media/plans/ap-3-d.webp",
+      "full": "/media/plans/ap-3-f.webp",
+      "width": 1488,
+      "height": 2104,
+      "color": "#ffffff"
+    },
+    "ap-5": {
+      "id": "plan-ap-5",
+      "thumb": "/media/plans/ap-5-d.webp",
+      "full": "/media/plans/ap-5-f.webp",
+      "width": 1488,
+      "height": 2104,
+      "color": "#ffffff"
+    },
+    "ap-6": {
+      "id": "plan-ap-6",
+      "thumb": "/media/plans/ap-6-d.webp",
+      "full": "/media/plans/ap-6-f.webp",
+      "width": 1488,
+      "height": 2104,
+      "color": "#ffffff"
+    },
+    "ap-7": {
+      "id": "plan-ap-7",
+      "thumb": "/media/plans/ap-7-d.webp",
+      "full": "/media/plans/ap-7-f.webp",
+      "width": 1488,
+      "height": 2104,
+      "color": "#ffffff"
+    },
+    "site": {
+      "id": "plan-site",
+      "thumb": "/media/plans/site-d.webp",
+      "full": "/media/plans/site-f.webp",
+      "width": 2600,
+      "height": 3653,
+      "color": "#ffffff"
+    },
+    "attic": {
+      "id": "plan-attic",
+      "thumb": "/media/plans/attic-d.webp",
+      "full": "/media/plans/attic-f.webp",
+      "width": 1488,
+      "height": 2104,
+      "color": "#ffffff"
+    }
+  }
+}

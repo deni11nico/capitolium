@@ -1,0 +1,26 @@
+{
+  "name": "capitolium",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "images": "node scripts/optimize-images.mjs",
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@phosphor-icons/react": "^2.1.7",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-router-dom": "^6.26.2"
+  },
+  "devDependencies": {
+    "@tailwindcss/vite": "^4.0.0",
+    "@vitejs/plugin-react": "^4.3.1",
+    "pdf-to-img": "^6.2.0",
+    "sharp": "^0.33.5",
+    "tailwindcss": "^4.0.0",
+    "vite": "^5.4.8"
+  }
+}
