@@ -62,8 +62,16 @@
     }
   }
 
+  /*
+     `backwards` rather than `both` on purpose. With `both` the element keeps
+     an identity transform after the animation ends, and any non-none transform
+     turns the element into the containing block for position:fixed children,
+     which sizes overlays to the document instead of the viewport. `backwards`
+     still applies the start frame before it runs, then hands the element back
+     to its normal styles with transform: none.
+  */
   .animate-page-in {
-    animation: page-in 0.45s cubic-bezier(0.22, 1, 0.36, 1) both;
+    animation: page-in 0.45s cubic-bezier(0.22, 1, 0.36, 1) backwards;
   }
 
   /* scroll reveal, disabled entirely for reduced-motion users */

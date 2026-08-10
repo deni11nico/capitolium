@@ -1,4 +1,5 @@
 import { useCallback, useEffect, useRef } from 'react'
+import { createPortal } from 'react-dom'
 import { CaretLeft, CaretRight, X } from '@phosphor-icons/react'
 import { useLanguage } from '../i18n/LanguageContext.jsx'
 
@@ -33,13 +34,37 @@ export default function Lightbox({ photos, index, onClose, onIndexChange, label 
     }
 
     document.addEventListener('keydown', onKeyDown)
-    const previousOverflow = document.body.style.overflow
-    document.body.style.overflow = 'hidden'
+
+    /**
+     * Freeze the page without losing the reader's place.
+     *
+     * `overflow: hidden` alone clamps the scroll to the top, so opening the
+     * viewer threw you back to the start of the page and closing it left you
+     * there. Pinning the body at a negative offset keeps the same pixels on
+     * screen behind the overlay, and the offset is scrolled back on close.
+     */
+    const { body } = document
+    const scrollY = window.scrollY
+    const previous = {
+      position: body.style.position,
+      top: body.style.top,
+      left: body.style.left,
+      right: body.style.right,
+      overflow: body.style.overflow,
+    }
+
+    body.style.position = 'fixed'
+    body.style.top = `-${scrollY}px`
+    body.style.left = '0'
+    body.style.right = '0'
+    body.style.overflow = 'hidden'
+
     closeRef.current?.focus()
 
     return () => {
       document.removeEventListener('keydown', onKeyDown)
-      document.body.style.overflow = previousOverflow
+      Object.assign(body.style, previous)
+      window.scrollTo({ top: scrollY, behavior: 'instant' })
     }
   }, [onClose, open, step])
 
@@ -67,7 +92,16 @@ export default function Lightbox({ photos, index, onClose, onIndexChange, label 
     touchStart.current = null
   }
 
-  return (
+  /**
+   * Rendered through a portal into <body> rather than in place.
+   *
+   * `position: fixed` resolves against the nearest ancestor carrying a
+   * transform, filter or perspective rather than against the viewport. The
+   * route transition wrapper keeps an identity transform after it finishes,
+   * which made the overlay size itself to the whole document instead of the
+   * screen. Escaping to <body> makes that structurally impossible.
+   */
+  return createPortal(
     <div
       role="dialog"
       aria-modal="true"
@@ -135,6 +169,7 @@ export default function Lightbox({ photos, index, onClose, onIndexChange, label 
           </>
         )}
       </div>
-    </div>
+    </div>,
+    document.body,
   )
 }

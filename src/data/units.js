@@ -1,6 +1,27 @@
-import media from './media.json'
+import rawMedia from './media.json'
 import { unitSpecs } from './unitSpecs.js'
 import { unitDescriptions } from '../i18n/unitDescriptions.js'
+
+/**
+ * The manifest stores root-absolute URLs like "/media/ap-1/x.webp", which only
+ * resolve when the site is served from the root. On GitHub Pages it lives under
+ * /capitolium/, so every photo URL is rebased against Vite's BASE_URL here,
+ * once, before anything downstream reads it.
+ */
+const withBase = (url) =>
+  url.startsWith('/') ? import.meta.env.BASE_URL + url.slice(1) : url
+
+const rebase = (photo) =>
+  photo ? { ...photo, thumb: withBase(photo.thumb), full: withBase(photo.full) } : photo
+
+const media = {
+  groups: Object.fromEntries(
+    Object.entries(rawMedia.groups).map(([slug, list]) => [slug, list.map(rebase)]),
+  ),
+  plans: Object.fromEntries(
+    Object.entries(rawMedia.plans).map(([key, plan]) => [key, rebase(plan)]),
+  ),
+}
 
 /**
  * The six apartments plus the cellar, in presentation order. `slug` is both the
