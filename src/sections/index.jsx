@@ -301,15 +301,18 @@ export function TechnicalDetails({ onOpenPhoto }) {
         </Reveal>
 
         <Reveal delay={120} className="lg:col-span-7">
-          {/* p5 is portrait. Left in flow it would impose its own 3:4 ratio on
-              the whole row and tower over the section, and h-full cannot rein
-              that in while the row height is itself auto. Out of flow, the
-              min-height sets the row and the crop follows it. */}
+          {/*
+            Fixed 1180:1770 portrait, so the frame keeps that proportion at
+            every width rather than being cropped to a landscape box. The ratio
+            is declared rather than left to the image: p5 is portrait, and an
+            in-flow image would otherwise impose its own intrinsic height on the
+            row, which h-full cannot rein in while the row height is auto.
+          */}
           <button
             type="button"
             onClick={() => onOpenPhoto({ photos: [gatePhoto], index: 0 })}
             aria-label={`${t.a11y.openGallery} ${t.technical.gate.title}`}
-            className="group relative block aspect-[4/3] w-full overflow-hidden rounded-3xl lg:aspect-auto lg:h-full lg:min-h-[355px]"
+            className="group relative block aspect-[1180/1770] w-full overflow-hidden rounded-3xl"
           >
             <Photo
               photo={gatePhoto}
