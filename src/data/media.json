@@ -1925,6 +1925,53 @@
         "color": "#d8d8d8",
         "source": "imagini"
       }
+    ],
+    "tehnic": [
+      {
+        "id": "p1-103056",
+        "thumb": "/media/tehnic/p1-103056-t.webp",
+        "full": "/media/tehnic/p1-103056-f.webp",
+        "width": 1600,
+        "height": 1200,
+        "color": "#f8e8c8",
+        "source": "poze2"
+      },
+      {
+        "id": "p2-8118a7",
+        "thumb": "/media/tehnic/p2-8118a7-t.webp",
+        "full": "/media/tehnic/p2-8118a7-f.webp",
+        "width": 1200,
+        "height": 1600,
+        "color": "#e8c8d8",
+        "source": "poze2"
+      },
+      {
+        "id": "p3-8383fb",
+        "thumb": "/media/tehnic/p3-8383fb-t.webp",
+        "full": "/media/tehnic/p3-8383fb-f.webp",
+        "width": 1600,
+        "height": 1200,
+        "color": "#888888",
+        "source": "poze2"
+      },
+      {
+        "id": "p4-9a3ea4",
+        "thumb": "/media/tehnic/p4-9a3ea4-t.webp",
+        "full": "/media/tehnic/p4-9a3ea4-f.webp",
+        "width": 1200,
+        "height": 1600,
+        "color": "#484848",
+        "source": "poze2"
+      },
+      {
+        "id": "p5-9d19a0",
+        "thumb": "/media/tehnic/p5-9d19a0-t.webp",
+        "full": "/media/tehnic/p5-9d19a0-f.webp",
+        "width": 1200,
+        "height": 1600,
+        "color": "#281808",
+        "source": "poze2"
+      }
     ]
   },
   "plans": {

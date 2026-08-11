@@ -13,6 +13,7 @@ import {
   entrancePhoto,
   heroPhoto,
   investmentPhoto,
+  technical,
   units,
 } from '../data/units.js'
 
@@ -230,6 +231,66 @@ export function Execution() {
           </span>
         ))}
       </Reveal>
+    </Section>
+  )
+}
+
+/**
+ * The build specifications, sitting under the execution section. Cards match
+ * the technology and comfort sections; the strip below them is documentation
+ * photography from the works, opened in the same viewer as everywhere else.
+ */
+export function TechnicalDetails({ onOpenPhoto }) {
+  const { t } = useLanguage()
+
+  return (
+    <Section id="technical">
+      <SectionHeading
+        eyebrow={t.technical.eyebrow}
+        title={t.technical.title}
+        body={t.technical.body}
+      />
+
+      <div className="mt-16 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+        {t.technical.items.map((item, index) => (
+          <FeatureCard
+            key={item.title}
+            icon={icons[item.icon]}
+            title={item.title}
+            text={item.text}
+            delay={(index % 3) * 90}
+          />
+        ))}
+      </div>
+
+      {technical.length > 0 && (
+        <>
+          <Reveal className="mt-20">
+            <Eyebrow>{t.technical.galleryTitle}</Eyebrow>
+          </Reveal>
+
+          <div className="mt-8 grid auto-rows-fr grid-cols-2 items-stretch gap-3 sm:gap-4 lg:grid-cols-5">
+            {technical.map((photo, index) => (
+              <Reveal key={photo.id} delay={(index % 5) * 70}>
+                <button
+                  type="button"
+                  onClick={() => onOpenPhoto(index)}
+                  aria-label={`${t.a11y.openGallery} ${index + 1}`}
+                  className="group block aspect-[4/3] w-full overflow-hidden rounded-3xl"
+                >
+                  <Photo
+                    photo={photo}
+                    alt={t.technical.title}
+                    className="h-full w-full"
+                    imgClassName="transition-transform duration-[900ms] ease-out group-hover:scale-[1.05]"
+                    sizes="(max-width: 1024px) 50vw, 20vw"
+                  />
+                </button>
+              </Reveal>
+            ))}
+          </div>
+        </>
+      )}
     </Section>
   )
 }

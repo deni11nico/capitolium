@@ -9,6 +9,9 @@ import {
   Door,
   Fan,
   Fingerprint,
+  Flame,
+  Garage,
+  GridFour,
   Handshake,
   HouseLine,
   Leaf,
@@ -19,6 +22,7 @@ import {
   SunHorizon,
   Thermometer,
   Tree,
+  TreeEvergreen,
   Wall,
   WifiHigh,
 } from '@phosphor-icons/react'
@@ -48,6 +52,12 @@ export const icons = {
   expand: ArrowsOut,
 
   energy: Leaf,
+
+  // Technical details
+  gate: Garage,
+  boiler: Flame,
+  paving: GridFour,
+  woodwool: TreeEvergreen,
 }
 
 /** Investment cards are ordered, so they take icons by position. */

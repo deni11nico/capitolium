@@ -79,6 +79,8 @@ export const apartmentCount = units.filter((unit) => unit.kind === 'apartment').
 /** Photography used outside the unit pages. */
 export const facade = media.groups.fatada ?? []
 export const courtyard = media.groups.curte ?? []
+/** Construction and product documentation shots, used on the property page. */
+export const technical = media.groups.tehnic ?? []
 export const sitePlan = media.plans.site ?? null
 
 const byId = (list, id) => list.find((photo) => photo.id === id) ?? list[0] ?? null

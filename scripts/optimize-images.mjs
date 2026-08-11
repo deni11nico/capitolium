@@ -46,6 +46,8 @@ const GROUPS = [
   { slug: 'ap-5', sources: ['poze2/ap 5', { dir: 'imagini', match: /^ap5[.\-]/i }] },
   { slug: 'ap-6', sources: ['poze2/ap 6', { dir: 'imagini', match: /^ap6[.\-]/i }] },
   { slug: 'ap-7', sources: ['poze2/ap 7', { dir: 'imagini', match: /^ap7[.\-]/i }] },
+  // Construction and product documentation, shown on the technical details page.
+  { slug: 'tehnic', sources: ['pozenoi'] },
 ]
 
 /**
