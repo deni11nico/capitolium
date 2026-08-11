@@ -285,21 +285,22 @@ export function TechnicalDetails({ onOpenPhoto }) {
         body={t.technical.body}
       />
 
-      {/* Access: copy on one side, the gate on the other, splitting the width
-          evenly. The row height comes from the min-height below rather than
-          from the copy, which is short. */}
-      <div className="mt-16 grid items-stretch gap-4 lg:grid-cols-2">
-        <Reveal className="flex flex-col justify-center rounded-3xl bg-stone-warm p-8 sm:p-10">
+      {/* Access: the copy takes the smaller share and the gate the larger one.
+          The row height comes from the min-height below rather than from the
+          copy, which is short. */}
+      <div className="mt-16 grid items-stretch gap-4 lg:grid-cols-12">
+        <Reveal className="flex flex-col justify-center rounded-3xl bg-stone-warm p-7 sm:p-8 lg:col-span-5">
           <TechnicalBlockHeading
             icon={icons[t.technical.gate.icon]}
             title={t.technical.gate.title}
+            compact
           />
-          <p className="mt-3 max-w-xl text-[15px] leading-relaxed text-ink/60">
+          <p className="mt-2.5 text-[14px] leading-relaxed text-ink/60">
             {t.technical.gate.text}
           </p>
         </Reveal>
 
-        <Reveal delay={120}>
+        <Reveal delay={120} className="lg:col-span-7">
           {/* p5 is portrait. Left in flow it would impose its own 3:4 ratio on
               the whole row and tower over the section, and h-full cannot rein
               that in while the row height is itself auto. Out of flow, the
@@ -308,7 +309,7 @@ export function TechnicalDetails({ onOpenPhoto }) {
             type="button"
             onClick={() => onOpenPhoto({ photos: [gatePhoto], index: 0 })}
             aria-label={`${t.a11y.openGallery} ${t.technical.gate.title}`}
-            className="group relative block aspect-[4/3] w-full overflow-hidden rounded-3xl lg:aspect-auto lg:h-full lg:min-h-[380px]"
+            className="group relative block aspect-[4/3] w-full overflow-hidden rounded-3xl lg:aspect-auto lg:h-full lg:min-h-[355px]"
           >
             <Photo
               photo={gatePhoto}
@@ -316,7 +317,7 @@ export function TechnicalDetails({ onOpenPhoto }) {
               variant="full"
               className="absolute inset-0 h-full w-full"
               imgClassName="transition-transform duration-[900ms] ease-out group-hover:scale-[1.05]"
-              sizes="(max-width: 1024px) 100vw, 50vw"
+              sizes="(max-width: 1024px) 100vw, 60vw"
             />
           </button>
         </Reveal>
