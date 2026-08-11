@@ -109,33 +109,35 @@ export const content = {
       eyebrow: 'Detalii tehnice',
       title: 'Specificațiile din spatele finisajelor',
       body: 'Echipamentele, materialele și soluțiile constructive folosite la renovarea imobilului.',
-      items: [
-        {
-          icon: 'gate',
-          title: 'Acces & automatizări',
-          text: 'Poartă de acces auto și pietonal din lemn stratificat, acționată electric, cu echipament FAAC, lider internațional în automatizări de acces și mobilitate.',
-        },
-        {
-          icon: 'boiler',
-          title: 'Sistem termic',
-          text: 'Centrală termică cu condensare Daikin, 24 kW.',
-        },
-        {
-          icon: 'paving',
-          title: 'Curte',
-          text: 'Curte de 300 mp, pavată cu dale Starstone, lipite cu adeziv pe șapă de beton, cu impermeabilizare. Rezistență la trafic auto de până la 3,5 tone, ideală pentru zona de parcare și curtea interioară.',
-        },
-        {
-          icon: 'insulation',
-          title: 'Izolație pereți exteriori',
-          text: 'Vată minerală bazaltică Petralana Petrafas 34, izolație termică performantă, clasă de reacție la foc A1.',
-        },
-        {
-          icon: 'woodwool',
-          title: 'Izolație tavane',
-          text: 'Lână de lemn STEICO, produs 100% natural, certificat NaturePlus Eco-Label, soluție ecologică furnizată de Izolații Naturale.',
-        },
-      ],
+      gate: {
+        icon: 'gate',
+        title: 'Acces & automatizări',
+        text: 'Poartă de acces auto și pietonal din lemn stratificat, acționată electric, cu echipament FAAC, lider internațional în automatizări de acces și mobilitate.',
+      },
+      heating: {
+        icon: 'boiler',
+        title: 'Sistem termic',
+        text: 'Centrală termică cu condensare Daikin, 24 kW.',
+      },
+      courtyard: {
+        icon: 'paving',
+        title: 'Curte',
+        text: 'Curte de 300 mp, pavată cu dale Starstone, lipite cu adeziv pe șapă de beton, cu impermeabilizare. Rezistență la trafic auto de până la 3,5 tone, ideală pentru zona de parcare și curtea interioară.',
+      },
+      walls: {
+        icon: 'insulation',
+        title: 'Izolație pereți exteriori',
+        text: 'Vată minerală bazaltică Petralana Petrafas 34, izolație termică performantă, clasă de reacție la foc A1.',
+        extra:
+          'Plăci rigide din bazalt topit, cu o conductivitate termică declarată de 0,034 W/mK. Materialul este incombustibil, permeabil la vapori și stabil dimensional, conform standardului EN 13162.',
+        linkLabel: 'Vezi detalii produs',
+      },
+      ceilings: {
+        icon: 'woodwool',
+        title: 'Izolație tavane',
+        text: 'Lână de lemn STEICO, produs 100% natural, certificat NaturePlus Eco-Label, soluție ecologică furnizată de Izolații Naturale.',
+        sourceLabel: 'Sursă',
+      },
       galleryTitle: 'Din timpul lucrărilor',
     },
 
@@ -382,33 +384,35 @@ export const content = {
       eyebrow: 'Technical details',
       title: 'The specifications behind the finishes',
       body: 'The equipment, materials and construction solutions used in the renovation of the building.',
-      items: [
-        {
-          icon: 'gate',
-          title: 'Access & automation',
-          text: 'Automated wood-laminate vehicle and pedestrian access gate, powered by FAAC equipment, an international leader in access automation and mobility systems.',
-        },
-        {
-          icon: 'boiler',
-          title: 'Heating system',
-          text: 'Daikin 24 kW condensing boiler.',
-        },
-        {
-          icon: 'paving',
-          title: 'Courtyard',
-          text: '300 sqm courtyard, paved with Starstone tiles, adhesive-bonded on a concrete screed, with waterproofing. Supports vehicle traffic up to 3.5 tons, ideal for the parking and interior courtyard area.',
-        },
-        {
-          icon: 'insulation',
-          title: 'Exterior wall insulation',
-          text: 'Petralana Petrafas 34 basalt mineral wool, high-performance thermal insulation, A1 fire reaction class.',
-        },
-        {
-          icon: 'woodwool',
-          title: 'Ceiling insulation',
-          text: 'STEICO wood wool, a 100% natural product certified with the NaturePlus Eco-Label, an ecological solution supplied by Izolații Naturale.',
-        },
-      ],
+      gate: {
+        icon: 'gate',
+        title: 'Access & automation',
+        text: 'Automated wood-laminate vehicle and pedestrian access gate, powered by FAAC equipment, an international leader in access automation and mobility systems.',
+      },
+      heating: {
+        icon: 'boiler',
+        title: 'Heating system',
+        text: 'Daikin 24 kW condensing boiler.',
+      },
+      courtyard: {
+        icon: 'paving',
+        title: 'Courtyard',
+        text: '300 sqm courtyard, paved with Starstone tiles, adhesive-bonded on a concrete screed, with waterproofing. Supports vehicle traffic up to 3.5 tons, ideal for the parking and interior courtyard area.',
+      },
+      walls: {
+        icon: 'insulation',
+        title: 'Exterior wall insulation',
+        text: 'Petralana Petrafas 34 basalt mineral wool, high-performance thermal insulation, A1 fire reaction class.',
+        extra:
+          'Rigid boards made from molten basalt, with a declared thermal conductivity of 0.034 W/mK. The material is non-combustible, vapour-permeable and dimensionally stable, to the EN 13162 standard.',
+        linkLabel: 'Product details',
+      },
+      ceilings: {
+        icon: 'woodwool',
+        title: 'Ceiling insulation',
+        text: 'STEICO wood wool, a 100% natural product certified with the NaturePlus Eco-Label, an ecological solution supplied by Izolații Naturale.',
+        sourceLabel: 'Source',
+      },
       galleryTitle: 'During the works',
     },
 

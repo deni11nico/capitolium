@@ -85,6 +85,21 @@ export const sitePlan = media.plans.site ?? null
 
 const byId = (list, id) => list.find((photo) => photo.id === id) ?? list[0] ?? null
 
+/** Exact match, no fallback, for picks where the wrong frame would mislead. */
+const exactly = (list, id) => list.find((photo) => photo.id === id) ?? null
+
+/** The automated gate, shown beside the access block. */
+export const gatePhoto = exactly(technical, 'p5-9d19a0')
+
+/**
+ * Site photographs from the insulation works, shown with the ceiling block.
+ * The Petrafas product label (p2) is deliberately not among them: that block
+ * carries the specification as text and a link to the manufacturer instead.
+ */
+export const worksPhotos = ['p1-103056', 'p3-8383fb', 'p4-9a3ea4']
+  .map((id) => exactly(technical, id))
+  .filter(Boolean)
+
 /** Hand-picked frames so the key sections never depend on folder ordering. */
 export const heroPhoto = byId(facade, 'las-7844-b43f0d')
 export const architecturePhoto = byId(courtyard, 'las-7417-8e26ab')

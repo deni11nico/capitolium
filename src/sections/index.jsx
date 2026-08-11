@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import { ArrowDown, ArrowRight, CheckCircle, Leaf } from '@phosphor-icons/react'
+import { ArrowDown, ArrowRight, ArrowUpRight, CheckCircle, Leaf } from '@phosphor-icons/react'
 import Photo from '../components/Photo.jsx'
 import Reveal from '../components/Reveal.jsx'
 import UnitCard from '../components/UnitCard.jsx'
@@ -11,10 +11,11 @@ import {
   courtyard,
   courtyardFeature,
   entrancePhoto,
+  gatePhoto,
   heroPhoto,
   investmentPhoto,
-  technical,
   units,
+  worksPhotos,
 } from '../data/units.js'
 
 /**
@@ -235,10 +236,29 @@ export function Execution() {
   )
 }
 
+/** Manufacturer page for the wall insulation. TODO: replace with the real URL. */
+const PETRALANA_URL = '#TODO-petralana-link'
+
+/** Reference for the ceiling insulation claims. */
+const CEILING_SOURCE_URL = 'https://search.app/s6GMBiMySJEf29AA6'
+
+/** Heading shared by every block in the technical section. */
+function TechnicalBlockHeading({ icon: Icon, title }) {
+  return (
+    <>
+      {Icon && <Icon size={30} weight="light" className="text-forest-600" />}
+      <h3 className="mt-7 font-display text-2xl leading-snug sm:text-[26px]">{title}</h3>
+    </>
+  )
+}
+
 /**
- * The build specifications, sitting under the execution section. Cards match
- * the technology and comfort sections; the strip below them is documentation
- * photography from the works, opened in the same viewer as everywhere else.
+ * The build specifications, sitting under the execution section.
+ *
+ * Not a uniform card grid: the access and ceiling blocks pair their copy with
+ * photography, while the wall block carries a specification and a link to the
+ * manufacturer in place of an image. Every pairing is two columns from lg up
+ * and stacks below that, so nothing is squeezed on a phone.
  */
 export function TechnicalDetails({ onOpenPhoto }) {
   const { t } = useLanguage()
@@ -251,46 +271,115 @@ export function TechnicalDetails({ onOpenPhoto }) {
         body={t.technical.body}
       />
 
-      <div className="mt-16 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-        {t.technical.items.map((item, index) => (
-          <FeatureCard
-            key={item.title}
-            icon={icons[item.icon]}
-            title={item.title}
-            text={item.text}
-            delay={(index % 3) * 90}
-          />
-        ))}
+      {/* Access: copy on one side, the gate on the other. */}
+      <div className="mt-16 grid items-stretch gap-4 lg:grid-cols-2">
+        <Reveal className="flex flex-col justify-center rounded-3xl bg-stone-warm p-8 sm:p-10">
+          <TechnicalBlockHeading icon={icons[t.technical.gate.icon]} title={t.technical.gate.title} />
+          <p className="mt-3 text-[15px] leading-relaxed text-ink/60">{t.technical.gate.text}</p>
+        </Reveal>
+
+        <Reveal delay={120}>
+          <button
+            type="button"
+            onClick={() => onOpenPhoto({ photos: [gatePhoto], index: 0 })}
+            aria-label={`${t.a11y.openGallery} ${t.technical.gate.title}`}
+            className="group block aspect-[4/3] w-full overflow-hidden rounded-3xl lg:aspect-auto lg:h-full lg:min-h-[340px]"
+          >
+            <Photo
+              photo={gatePhoto}
+              alt={t.technical.gate.title}
+              variant="full"
+              className="h-full w-full"
+              imgClassName="transition-transform duration-[900ms] ease-out group-hover:scale-[1.05]"
+              sizes="(max-width: 1024px) 100vw, 50vw"
+            />
+          </button>
+        </Reveal>
       </div>
 
-      {technical.length > 0 && (
-        <>
-          <Reveal className="mt-20">
-            <Eyebrow>{t.technical.galleryTitle}</Eyebrow>
-          </Reveal>
+      {/* Heating and courtyard need no imagery of their own. */}
+      <div className="mt-4 grid gap-4 sm:grid-cols-2">
+        <FeatureCard
+          icon={icons[t.technical.heating.icon]}
+          title={t.technical.heating.title}
+          text={t.technical.heating.text}
+        />
+        <FeatureCard
+          icon={icons[t.technical.courtyard.icon]}
+          title={t.technical.courtyard.title}
+          text={t.technical.courtyard.text}
+          delay={90}
+        />
+      </div>
 
-          <div className="mt-8 grid auto-rows-fr grid-cols-2 items-stretch gap-3 sm:gap-4 lg:grid-cols-5">
-            {technical.map((photo, index) => (
-              <Reveal key={photo.id} delay={(index % 5) * 70}>
-                <button
-                  type="button"
-                  onClick={() => onOpenPhoto(index)}
-                  aria-label={`${t.a11y.openGallery} ${index + 1}`}
-                  className="group block aspect-[4/3] w-full overflow-hidden rounded-3xl"
-                >
-                  <Photo
-                    photo={photo}
-                    alt={t.technical.title}
-                    className="h-full w-full"
-                    imgClassName="transition-transform duration-[900ms] ease-out group-hover:scale-[1.05]"
-                    sizes="(max-width: 1024px) 50vw, 20vw"
-                  />
-                </button>
-              </Reveal>
-            ))}
-          </div>
-        </>
-      )}
+      {/* Walls: specification and a manufacturer link instead of a photo. */}
+      <Reveal className="mt-4 rounded-3xl bg-stone-warm p-8 sm:p-10">
+        <TechnicalBlockHeading icon={icons[t.technical.walls.icon]} title={t.technical.walls.title} />
+        <p className="mt-3 max-w-3xl text-[15px] leading-relaxed text-ink/60">
+          {t.technical.walls.text}
+        </p>
+        <p className="mt-4 max-w-3xl text-[15px] leading-relaxed text-ink/60">
+          {t.technical.walls.extra}
+        </p>
+        <a
+          href={PETRALANA_URL}
+          target="_blank"
+          rel="noreferrer"
+          className="group mt-7 inline-flex items-center gap-2.5 rounded-full bg-white px-6 py-3 text-[13px] font-medium text-forest-700 transition-colors duration-300 hover:bg-forest-700 hover:text-white"
+        >
+          {t.technical.walls.linkLabel}
+          <ArrowUpRight
+            size={15}
+            weight="light"
+            className="transition-transform duration-300 group-hover:translate-x-0.5"
+          />
+        </a>
+      </Reveal>
+
+      {/* Ceilings: copy with a footnote link, beside the site photographs. */}
+      <div className="mt-4 grid gap-4 lg:grid-cols-12">
+        <Reveal className="flex flex-col justify-center rounded-3xl bg-stone-warm p-8 sm:p-10 lg:col-span-5">
+          <TechnicalBlockHeading
+            icon={icons[t.technical.ceilings.icon]}
+            title={t.technical.ceilings.title}
+          />
+          <p className="mt-3 text-[15px] leading-relaxed text-ink/60">
+            {t.technical.ceilings.text}
+          </p>
+          <p className="mt-5 text-[13px] text-ink/45">
+            {t.technical.ceilings.sourceLabel}:{' '}
+            <a
+              href={CEILING_SOURCE_URL}
+              target="_blank"
+              rel="noreferrer"
+              className="text-forest-700 underline underline-offset-4 transition-colors duration-200 hover:text-forest-800"
+            >
+              izolatiinaturale.ro
+            </a>
+          </p>
+        </Reveal>
+
+        <div className="grid gap-4 sm:grid-cols-3 lg:col-span-7">
+          {worksPhotos.map((photo, index) => (
+            <Reveal key={photo.id} delay={index * 90}>
+              <button
+                type="button"
+                onClick={() => onOpenPhoto({ photos: worksPhotos, index })}
+                aria-label={`${t.a11y.openGallery} ${index + 1}`}
+                className="group block aspect-[4/3] w-full overflow-hidden rounded-3xl sm:aspect-[3/4] lg:aspect-auto lg:h-full lg:min-h-[300px]"
+              >
+                <Photo
+                  photo={photo}
+                  alt={t.technical.galleryTitle}
+                  className="h-full w-full"
+                  imgClassName="transition-transform duration-[900ms] ease-out group-hover:scale-[1.05]"
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 33vw, 20vw"
+                />
+              </button>
+            </Reveal>
+          ))}
+        </div>
+      </div>
     </Section>
   )
 }
