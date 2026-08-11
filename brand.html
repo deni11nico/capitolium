@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Brand Exploration — 5 names &amp; logos</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+<style>
+  :root {
+    --forest-50: #f3f6f3;
+    --forest-100: #e3ebe3;
+    --forest-300: #9db492;
+    --forest-500: #5c7452;
+    --forest-600: #445a3d;
+    --forest-700: #35462f;
+    --forest-800: #263322;
+    --forest-900: #1c2619;
+    --brass-300: #d9c48f;
+    --brass-400: #c4a962;
+    --brass-500: #a98d47;
+    --stone: #f6f4ef;
+    --ink: #1a1c19;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: 'Inter', system-ui, sans-serif;
+    background: var(--stone);
+    color: var(--ink);
+    -webkit-font-smoothing: antialiased;
+  }
+  .display { font-family: 'Cormorant Garamond', Georgia, serif; }
+
+  header.page {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 72px 32px 40px;
+  }
+  .eyebrow {
+    font-size: 12px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--brass-500);
+    font-weight: 600;
+    margin-bottom: 16px;
+  }
+  header.page h1 {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-weight: 500;
+    font-size: clamp(38px, 5vw, 56px);
+    line-height: 1.1;
+    color: var(--forest-800);
+  }
+  header.page p.lede {
+    margin-top: 18px;
+    max-width: 640px;
+    font-size: 16px;
+    line-height: 1.65;
+    color: #4a4f47;
+  }
+
+  main {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 32px 96px;
+    display: flex;
+    flex-direction: column;
+    gap: 56px;
+  }
+
+  .concept {
+    background: #ffffff;
+    border: 1px solid #e6e4dc;
+    border-radius: 4px;
+    overflow: hidden;
+  }
+  .concept-inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  @media (max-width: 800px) {
+    .concept-inner { grid-template-columns: 1fr; }
+  }
+
+  .logo-stage {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 56px 40px;
+    min-height: 340px;
+  }
+  .logo-stage.on-dark  { background: var(--forest-800); }
+  .logo-stage.on-light { background: #ffffff; border-left: 1px solid #e6e4dc; }
+  @media (max-width: 800px) {
+    .logo-stage.on-light { border-left: none; border-top: 1px solid #e6e4dc; }
+  }
+
+  .concept-meta {
+    padding: 28px 40px 36px;
+    border-top: 1px solid #e6e4dc;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 12px 48px;
+    align-items: baseline;
+  }
+  @media (max-width: 800px) {
+    .concept-meta { grid-template-columns: 1fr; }
+  }
+  .concept-number {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: 15px;
+    letter-spacing: 0.18em;
+    color: var(--brass-500);
+    white-space: nowrap;
+  }
+  .concept-meta h2 {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-weight: 500;
+    font-size: 30px;
+    color: var(--forest-800);
+    margin-bottom: 6px;
+  }
+  .concept-meta .tagline {
+    font-size: 13px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--brass-500);
+    font-weight: 600;
+    margin-bottom: 12px;
+  }
+  .concept-meta p.why {
+    font-size: 15px;
+    line-height: 1.7;
+    color: #4a4f47;
+    max-width: 560px;
+  }
+
+  footer.page {
+    text-align: center;
+    padding: 0 32px 72px;
+    font-size: 13px;
+    color: #8b8f87;
+  }
+</style>
+</head>
+<body>
+
+<header class="page">
+  <div class="eyebrow">Brand exploration</div>
+  <h1>Five names, five marks</h1>
+  <p class="lede">
+    Candidates to replace “Capitolium” — each rooted in real estate and architecture,
+    drawn in the site’s existing forest-green and matte-brass palette, and shown on both
+    dark and light grounds. Every logo is pure SVG, ready to drop into the header.
+  </p>
+</header>
+
+<main>
+
+  <!-- ============ 1. AEDIS ============ -->
+  <section class="concept">
+    <div class="concept-inner">
+      <div class="logo-stage on-dark">
+        <!-- Aedis: classical pediment over three columns, line-drawn -->
+        <svg width="300" height="210" viewBox="0 0 300 210" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Aedis logo">
+          <g stroke="#d9c48f" stroke-width="2.5" stroke-linecap="round">
+            <path d="M150 22 L226 70 H74 Z" fill="none" stroke-linejoin="round"/>
+            <line x1="66" y1="82" x2="234" y2="82"/>
+            <line x1="96"  y1="96" x2="96"  y2="140"/>
+            <line x1="150" y1="96" x2="150" y2="140"/>
+            <line x1="204" y1="96" x2="204" y2="140"/>
+            <line x1="74" y1="152" x2="226" y2="152"/>
+          </g>
+          <circle cx="150" cy="52" r="4" fill="#d9c48f"/>
+          <text x="150" y="192" text-anchor="middle" font-family="'Cormorant Garamond', Georgia, serif" font-size="34" letter-spacing="10" fill="#ffffff">AEDIS</text>
+        </svg>
+      </div>
+      <div class="logo-stage on-light">
+        <svg width="300" height="210" viewBox="0 0 300 210" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Aedis logo, light version">
+          <g stroke="#445a3d" stroke-width="2.5" stroke-linecap="round">
+            <path d="M150 22 L226 70 H74 Z" fill="none" stroke-linejoin="round"/>
+            <line x1="66" y1="82" x2="234" y2="82"/>
+            <line x1="96"  y1="96" x2="96"  y2="140"/>
+            <line x1="150" y1="96" x2="150" y2="140"/>
+            <line x1="204" y1="96" x2="204" y2="140"/>
+            <line x1="74" y1="152" x2="226" y2="152"/>
+          </g>
+          <circle cx="150" cy="52" r="4" fill="#a98d47"/>
+          <text x="150" y="192" text-anchor="middle" font-family="'Cormorant Garamond', Georgia, serif" font-size="34" letter-spacing="10" fill="#263322">AEDIS</text>
+        </svg>
+      </div>
+    </div>
+    <div class="concept-meta">
+      <div class="concept-number">No. 01</div>
+      <div>
+        <h2>Aedis</h2>
+        <div class="tagline">Latin for “edifice, dwelling”</div>
+        <p class="why">
+          Keeps the classical gravity of “Capitolium” but shorter, easier to say, and
+          directly about a building rather than a hill in Rome. The mark is a distilled
+          pediment-and-columns façade — a nod to the property’s heritage architecture.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 2. ATRIU ============ -->
+  <section class="concept">
+    <div class="concept-inner">
+      <div class="logo-stage on-dark">
+        <!-- Atriu: nested open squares, the courtyard seen from above -->
+        <svg width="300" height="210" viewBox="0 0 300 210" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Atriu logo">
+          <g stroke="#d9c48f" stroke-width="2.5" stroke-linejoin="round">
+            <path d="M90 30 H210 V150 H90 Z" fill="none"/>
+            <path d="M114 54 H186 V126 H114 Z" fill="none"/>
+          </g>
+          <rect x="138" y="78" width="24" height="24" fill="#d9c48f"/>
+          <text x="150" y="192" text-anchor="middle" font-family="'Cormorant Garamond', Georgia, serif" font-size="34" letter-spacing="10" fill="#ffffff">ATRIU</text>
+        </svg>
+      </div>
+      <div class="logo-stage on-light">
+        <svg width="300" height="210" viewBox="0 0 300 210" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Atriu logo, light version">
+          <g stroke="#445a3d" stroke-width="2.5" stroke-linejoin="round">
+            <path d="M90 30 H210 V150 H90 Z" fill="none"/>
+            <path d="M114 54 H186 V126 H114 Z" fill="none"/>
+          </g>
+          <rect x="138" y="78" width="24" height="24" fill="#a98d47"/>
+          <text x="150" y="192" text-anchor="middle" font-family="'Cormorant Garamond', Georgia, serif" font-size="34" letter-spacing="10" fill="#263322">ATRIU</text>
+        </svg>
+      </div>
+    </div>
+    <div class="concept-meta">
+      <div class="concept-number">No. 02</div>
+      <div>
+        <h2>Atriu</h2>
+        <div class="tagline">The courtyard at the heart of the house</div>
+        <p class="why">
+          Romanian spelling of <em>atrium</em> — the open inner court of a Roman house,
+          and literally what this property has. The mark is the plan view: nested
+          frames around a brass center, six walls sheltering one shared space.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 3. FRONTON ============ -->
+  <section class="concept">
+    <div class="concept-inner">
+      <div class="logo-stage on-dark">
+        <!-- Fronton: layered gable strokes rising like a facade crown -->
+        <svg width="300" height="210" viewBox="0 0 300 210" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Fronton logo">
+          <g stroke="#d9c48f" stroke-linecap="round" stroke-linejoin="round" fill="none">
+            <path d="M78 142 L150 96 L222 142" stroke-width="2.5"/>
+            <path d="M94 118 L150 82 L206 118" stroke-width="2.5"/>
+            <path d="M110 94 L150 68 L190 94" stroke-width="2.5"/>
+            <path d="M126 70 L150 54 L174 70" stroke-width="2.5"/>
+          </g>
+          <circle cx="150" cy="34" r="4" fill="#d9c48f"/>
+          <text x="150" y="192" text-anchor="middle" font-family="'Cormorant Garamond', Georgia, serif" font-size="34" letter-spacing="8" fill="#ffffff">FRONTON</text>
+        </svg>
+      </div>
+      <div class="logo-stage on-light">
+        <svg width="300" height="210" viewBox="0 0 300 210" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Fronton logo, light version">
+          <g stroke="#445a3d" stroke-linecap="round" stroke-linejoin="round" fill="none">
+            <path d="M78 142 L150 96 L222 142" stroke-width="2.5"/>
+            <path d="M94 118 L150 82 L206 118" stroke-width="2.5"/>
+            <path d="M110 94 L150 68 L190 94" stroke-width="2.5"/>
+            <path d="M126 70 L150 54 L174 70" stroke-width="2.5"/>
+          </g>
+          <circle cx="150" cy="34" r="4" fill="#a98d47"/>
+          <text x="150" y="192" text-anchor="middle" font-family="'Cormorant Garamond', Georgia, serif" font-size="34" letter-spacing="8" fill="#263322">FRONTON</text>
+        </svg>
+      </div>
+    </div>
+    <div class="concept-meta">
+      <div class="concept-number">No. 03</div>
+      <div>
+        <h2>Fronton</h2>
+        <div class="tagline">The crown of a façade</div>
+        <p class="why">
+          The architectural term (identical in Romanian and French) for the decorative
+          gable above a grand entrance. It sounds established and speaks the language
+          of restoration. The mark repeats the gable line, rising like rooflines in
+          Oradea’s old center.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 4. CURTEA ============ -->
+  <section class="concept">
+    <div class="concept-inner">
+      <div class="logo-stage on-dark">
+        <!-- Curtea: an arched carriage gateway with keystone -->
+        <svg width="300" height="210" viewBox="0 0 300 210" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Curtea logo">
+          <g stroke="#d9c48f" stroke-width="2.5" stroke-linecap="round" fill="none">
+            <path d="M100 152 V88 Q100 40 150 40 Q200 40 200 88 V152"/>
+            <path d="M118 152 V92 Q118 58 150 58 Q182 58 182 92 V152"/>
+            <line x1="86" y1="152" x2="214" y2="152"/>
+          </g>
+          <path d="M144 34 L156 34 L153 50 L147 50 Z" fill="#d9c48f"/>
+          <text x="150" y="192" text-anchor="middle" font-family="'Cormorant Garamond', Georgia, serif" font-size="34" letter-spacing="8" fill="#ffffff">CURTEA</text>
+        </svg>
+      </div>
+      <div class="logo-stage on-light">
+        <svg width="300" height="210" viewBox="0 0 300 210" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Curtea logo, light version">
+          <g stroke="#445a3d" stroke-width="2.5" stroke-linecap="round" fill="none">
+            <path d="M100 152 V88 Q100 40 150 40 Q200 40 200 88 V152"/>
+            <path d="M118 152 V92 Q118 58 150 58 Q182 58 182 92 V152"/>
+            <line x1="86" y1="152" x2="214" y2="152"/>
+          </g>
+          <path d="M144 34 L156 34 L153 50 L147 50 Z" fill="#a98d47"/>
+          <text x="150" y="192" text-anchor="middle" font-family="'Cormorant Garamond', Georgia, serif" font-size="34" letter-spacing="8" fill="#263322">CURTEA</text>
+        </svg>
+      </div>
+    </div>
+    <div class="concept-meta">
+      <div class="concept-number">No. 04</div>
+      <div>
+        <h2>Curtea</h2>
+        <div class="tagline">“The Court” — Romanian, warm, rooted</div>
+        <p class="why">
+          The only fully Romanian candidate. <em>Curtea</em> means both the courtyard
+          and, historically, a noble residence — Curtea Domnească. Instantly legible to
+          local buyers, quietly aristocratic. The mark is the arched carriage gateway
+          with its brass keystone: the moment you step off the street into the property.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 5. DOMENIA ============ -->
+  <section class="concept">
+    <div class="concept-inner">
+      <div class="logo-stage on-dark">
+        <!-- Domenia: a tall paneled door, ajar, with brass handle -->
+        <svg width="300" height="210" viewBox="0 0 300 210" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Domenia logo">
+          <g stroke="#d9c48f" stroke-width="2.5" stroke-linejoin="round" fill="none">
+            <rect x="106" y="30" width="88" height="122"/>
+            <path d="M122 46 H178 V88 H122 Z"/>
+            <path d="M122 102 H178 V136 H122 Z"/>
+          </g>
+          <circle cx="186" cy="94" r="4.5" fill="#d9c48f"/>
+          <line x1="92" y1="152" x2="208" y2="152" stroke="#d9c48f" stroke-width="2.5" stroke-linecap="round"/>
+          <text x="150" y="192" text-anchor="middle" font-family="'Cormorant Garamond', Georgia, serif" font-size="34" letter-spacing="8" fill="#ffffff">DOMENIA</text>
+        </svg>
+      </div>
+      <div class="logo-stage on-light">
+        <svg width="300" height="210" viewBox="0 0 300 210" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Domenia logo, light version">
+          <g stroke="#445a3d" stroke-width="2.5" stroke-linejoin="round" fill="none">
+            <rect x="106" y="30" width="88" height="122"/>
+            <path d="M122 46 H178 V88 H122 Z"/>
+            <path d="M122 102 H178 V136 H122 Z"/>
+          </g>
+          <circle cx="186" cy="94" r="4.5" fill="#a98d47"/>
+          <line x1="92" y1="152" x2="208" y2="152" stroke="#445a3d" stroke-width="2.5" stroke-linecap="round"/>
+          <text x="150" y="192" text-anchor="middle" font-family="'Cormorant Garamond', Georgia, serif" font-size="34" letter-spacing="8" fill="#263322">DOMENIA</text>
+        </svg>
+      </div>
+    </div>
+    <div class="concept-meta">
+      <div class="concept-number">No. 05</div>
+      <div>
+        <h2>Domenia</h2>
+        <div class="tagline">From domus &amp; domain</div>
+        <p class="why">
+          An invented name that reads naturally in Romanian and English — built from
+          <em>domus</em> (house) and <em>domeniu</em> (estate, domain). Feels like a
+          modern property brand that could outgrow a single building. The mark is a
+          tall paneled entrance door with a single brass handle: ownership, arrival, home.
+        </p>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="page">
+  Each mark is drawn as inline SVG — dark and light variants — in the site’s existing forest &amp; brass palette.
+</footer>
+
+</body>
+</html>

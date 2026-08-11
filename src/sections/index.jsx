@@ -277,38 +277,38 @@ export function TechnicalDetails({ onOpenPhoto }) {
   const { t } = useLanguage()
 
   return (
-    <Section id="technical">
+    // Opens tight because the execution section above it closes tight.
+    <Section id="technical" tightTop>
       <SectionHeading
         eyebrow={t.technical.eyebrow}
         title={t.technical.title}
         body={t.technical.body}
       />
 
-      {/* Access: copy on one side, the gate on the other. Deliberately the
-          lightest block in the section, so it carries a narrower photo column,
-          smaller type and tighter padding than the blocks below it. */}
-      <div className="mt-16 grid items-stretch gap-4 lg:grid-cols-12">
-        <Reveal className="flex flex-col justify-center rounded-3xl bg-stone-warm p-7 sm:p-8 lg:col-span-7">
+      {/* Access: copy on one side, the gate on the other, splitting the width
+          evenly. The row height comes from the min-height below rather than
+          from the copy, which is short. */}
+      <div className="mt-16 grid items-stretch gap-4 lg:grid-cols-2">
+        <Reveal className="flex flex-col justify-center rounded-3xl bg-stone-warm p-8 sm:p-10">
           <TechnicalBlockHeading
             icon={icons[t.technical.gate.icon]}
             title={t.technical.gate.title}
-            compact
           />
-          <p className="mt-2.5 max-w-xl text-[14px] leading-relaxed text-ink/60">
+          <p className="mt-3 max-w-xl text-[15px] leading-relaxed text-ink/60">
             {t.technical.gate.text}
           </p>
         </Reveal>
 
-        <Reveal delay={120} className="lg:col-span-5">
-          {/* p5 is portrait. Left in flow it would impose its own 3:4 height on
-              the whole row, which is what made this block tower over the rest
-              of the section. Taking the photo out of flow lets the copy set the
-              row height and the crop follow it. */}
+        <Reveal delay={120}>
+          {/* p5 is portrait. Left in flow it would impose its own 3:4 ratio on
+              the whole row and tower over the section, and h-full cannot rein
+              that in while the row height is itself auto. Out of flow, the
+              min-height sets the row and the crop follows it. */}
           <button
             type="button"
             onClick={() => onOpenPhoto({ photos: [gatePhoto], index: 0 })}
             aria-label={`${t.a11y.openGallery} ${t.technical.gate.title}`}
-            className="group relative block aspect-[4/3] w-full overflow-hidden rounded-3xl lg:aspect-auto lg:h-full lg:min-h-[210px]"
+            className="group relative block aspect-[4/3] w-full overflow-hidden rounded-3xl lg:aspect-auto lg:h-full lg:min-h-[380px]"
           >
             <Photo
               photo={gatePhoto}
@@ -316,7 +316,7 @@ export function TechnicalDetails({ onOpenPhoto }) {
               variant="full"
               className="absolute inset-0 h-full w-full"
               imgClassName="transition-transform duration-[900ms] ease-out group-hover:scale-[1.05]"
-              sizes="(max-width: 1024px) 100vw, 40vw"
+              sizes="(max-width: 1024px) 100vw, 50vw"
             />
           </button>
         </Reveal>

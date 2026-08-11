@@ -3,10 +3,18 @@ import Reveal from './Reveal.jsx'
 /**
  * Shared shell: consistent max width, gutters and vertical rhythm.
  *
- * `tightBottom` roughly halves the closing padding, for sections that end on a
- * full-width block where the standard gap reads as dead space.
+ * `tightTop` and `tightBottom` roughly halve the padding on that edge. Use them
+ * where two sections run on from each other and the standard gap opens up as
+ * dead space; both edges of a seam usually need it, not just one.
  */
-export function Section({ id, tone = 'light', className = '', tightBottom = false, children }) {
+export function Section({
+  id,
+  tone = 'light',
+  className = '',
+  tightTop = false,
+  tightBottom = false,
+  children,
+}) {
   const tones = {
     light: 'bg-white text-ink',
     warm: 'bg-stone-warm text-ink',
@@ -16,9 +24,9 @@ export function Section({ id, tone = 'light', className = '', tightBottom = fals
   return (
     <section id={id} className={`${tones[tone]} scroll-mt-20 ${className}`}>
       <div
-        className={`mx-auto max-w-[1400px] px-5 pt-24 sm:px-8 sm:pt-32 lg:pt-40 ${
-          tightBottom ? 'pb-12 sm:pb-16 lg:pb-20' : 'pb-24 sm:pb-32 lg:pb-40'
-        }`}
+        className={`mx-auto max-w-[1400px] px-5 sm:px-8 ${
+          tightTop ? 'pt-12 sm:pt-16 lg:pt-20' : 'pt-24 sm:pt-32 lg:pt-40'
+        } ${tightBottom ? 'pb-12 sm:pb-16 lg:pb-20' : 'pb-24 sm:pb-32 lg:pb-40'}`}
       >
         {children}
       </div>
