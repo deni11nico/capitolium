@@ -285,34 +285,18 @@ export function TechnicalDetails({ onOpenPhoto }) {
         body={t.technical.body}
       />
 
-      {/* Access: the copy takes the smaller share and the gate the larger one.
-          The row height comes from the min-height below rather than from the
-          copy, which is short. */}
+      {/* Access: the same pairing as the ceiling block below, mirrored so the
+          photograph leads on the left and the copy sits on the right. The
+          photo is out of flow because p5 is portrait, and an in-flow portrait
+          image imposes its own intrinsic height on the row, which h-full
+          cannot rein in while the row height is itself auto. */}
       <div className="mt-16 grid items-stretch gap-4 lg:grid-cols-12">
-        <Reveal className="flex flex-col justify-center rounded-3xl bg-stone-warm p-7 sm:p-8 lg:col-span-5">
-          <TechnicalBlockHeading
-            icon={icons[t.technical.gate.icon]}
-            title={t.technical.gate.title}
-            compact
-          />
-          <p className="mt-2.5 text-[14px] leading-relaxed text-ink/60">
-            {t.technical.gate.text}
-          </p>
-        </Reveal>
-
-        <Reveal delay={120} className="lg:col-span-7">
-          {/*
-            Fixed 1180:1770 portrait, so the frame keeps that proportion at
-            every width rather than being cropped to a landscape box. The ratio
-            is declared rather than left to the image: p5 is portrait, and an
-            in-flow image would otherwise impose its own intrinsic height on the
-            row, which h-full cannot rein in while the row height is auto.
-          */}
+        <Reveal className="lg:col-span-7">
           <button
             type="button"
             onClick={() => onOpenPhoto({ photos: [gatePhoto], index: 0 })}
             aria-label={`${t.a11y.openGallery} ${t.technical.gate.title}`}
-            className="group relative block aspect-[1180/1770] w-full overflow-hidden rounded-3xl"
+            className="group relative block aspect-[4/3] w-full overflow-hidden rounded-3xl lg:aspect-auto lg:h-full lg:min-h-[300px]"
           >
             <Photo
               photo={gatePhoto}
@@ -323,6 +307,19 @@ export function TechnicalDetails({ onOpenPhoto }) {
               sizes="(max-width: 1024px) 100vw, 60vw"
             />
           </button>
+        </Reveal>
+
+        <Reveal
+          delay={120}
+          className="flex flex-col justify-center rounded-3xl bg-stone-warm p-8 sm:p-10 lg:col-span-5"
+        >
+          <TechnicalBlockHeading
+            icon={icons[t.technical.gate.icon]}
+            title={t.technical.gate.title}
+          />
+          <p className="mt-3 text-[15px] leading-relaxed text-ink/60">
+            {t.technical.gate.text}
+          </p>
         </Reveal>
       </div>
 
