@@ -296,8 +296,11 @@ export function TechnicalDetails({ onOpenPhoto }) {
             type="button"
             onClick={() => onOpenPhoto({ photos: [gatePhoto], index: 0 })}
             aria-label={`${t.a11y.openGallery} ${t.technical.gate.title}`}
-            className="group relative block aspect-[4/3] w-full overflow-hidden rounded-3xl lg:aspect-auto lg:h-full lg:min-h-[300px]"
+            className="group relative block aspect-[4/3] w-full overflow-hidden rounded-3xl lg:aspect-auto lg:h-full lg:min-h-[520px]"
           >
+            {/* p5 is a 1200x1600 portrait. At 300px tall only a 29% band of it
+                survived the cover crop, which is why the gate was barely
+                readable. 520px shows roughly half the frame. */}
             <Photo
               photo={gatePhoto}
               alt={t.technical.gate.title}
