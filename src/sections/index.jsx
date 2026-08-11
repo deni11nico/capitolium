@@ -203,7 +203,7 @@ export function Execution() {
   const { t } = useLanguage()
 
   return (
-    <Section id="execution">
+    <Section id="execution" tightBottom>
       <SectionHeading
         eyebrow={t.execution.eyebrow}
         title={t.execution.title}
@@ -222,15 +222,20 @@ export function Execution() {
         ))}
       </div>
 
-      <Reveal
-        delay={220}
-        className="mt-8 flex flex-wrap items-center gap-x-10 gap-y-4 rounded-3xl bg-forest-900 px-9 py-7"
-      >
-        {t.execution.brands.map((brand) => (
-          <span key={brand} className="font-display text-2xl text-white/85 sm:text-[28px]">
-            {brand}
-          </span>
-        ))}
+      {/* A grid rather than a flex row: the brands then sit on an even rhythm
+          across the full width instead of bunching into the left third, and
+          the padding matches the cards above so the left edges line up. */}
+      <Reveal delay={220} className="mt-4 rounded-3xl bg-forest-900 p-8 sm:p-9">
+        <div className="grid grid-cols-2 gap-x-6 gap-y-5 sm:grid-cols-4">
+          {t.execution.brands.map((brand) => (
+            <span
+              key={brand}
+              className="font-display text-xl leading-none text-white/85 sm:text-2xl"
+            >
+              {brand}
+            </span>
+          ))}
+        </div>
       </Reveal>
     </Section>
   )
@@ -243,11 +248,19 @@ const PETRALANA_URL = '#TODO-petralana-link'
 const CEILING_SOURCE_URL = 'https://search.app/s6GMBiMySJEf29AA6'
 
 /** Heading shared by every block in the technical section. */
-function TechnicalBlockHeading({ icon: Icon, title }) {
+function TechnicalBlockHeading({ icon: Icon, title, compact = false }) {
   return (
     <>
-      {Icon && <Icon size={30} weight="light" className="text-forest-600" />}
-      <h3 className="mt-7 font-display text-2xl leading-snug sm:text-[26px]">{title}</h3>
+      {Icon && (
+        <Icon size={compact ? 26 : 30} weight="light" className="text-forest-600" />
+      )}
+      <h3
+        className={`font-display leading-snug ${
+          compact ? 'mt-5 text-xl sm:text-[22px]' : 'mt-7 text-2xl sm:text-[26px]'
+        }`}
+      >
+        {title}
+      </h3>
     </>
   )
 }
@@ -271,27 +284,39 @@ export function TechnicalDetails({ onOpenPhoto }) {
         body={t.technical.body}
       />
 
-      {/* Access: copy on one side, the gate on the other. */}
-      <div className="mt-16 grid items-stretch gap-4 lg:grid-cols-2">
-        <Reveal className="flex flex-col justify-center rounded-3xl bg-stone-warm p-8 sm:p-10">
-          <TechnicalBlockHeading icon={icons[t.technical.gate.icon]} title={t.technical.gate.title} />
-          <p className="mt-3 text-[15px] leading-relaxed text-ink/60">{t.technical.gate.text}</p>
+      {/* Access: copy on one side, the gate on the other. Deliberately the
+          lightest block in the section, so it carries a narrower photo column,
+          smaller type and tighter padding than the blocks below it. */}
+      <div className="mt-16 grid items-stretch gap-4 lg:grid-cols-12">
+        <Reveal className="flex flex-col justify-center rounded-3xl bg-stone-warm p-7 sm:p-8 lg:col-span-7">
+          <TechnicalBlockHeading
+            icon={icons[t.technical.gate.icon]}
+            title={t.technical.gate.title}
+            compact
+          />
+          <p className="mt-2.5 max-w-xl text-[14px] leading-relaxed text-ink/60">
+            {t.technical.gate.text}
+          </p>
         </Reveal>
 
-        <Reveal delay={120}>
+        <Reveal delay={120} className="lg:col-span-5">
+          {/* p5 is portrait. Left in flow it would impose its own 3:4 height on
+              the whole row, which is what made this block tower over the rest
+              of the section. Taking the photo out of flow lets the copy set the
+              row height and the crop follow it. */}
           <button
             type="button"
             onClick={() => onOpenPhoto({ photos: [gatePhoto], index: 0 })}
             aria-label={`${t.a11y.openGallery} ${t.technical.gate.title}`}
-            className="group block aspect-[4/3] w-full overflow-hidden rounded-3xl lg:aspect-auto lg:h-full lg:min-h-[340px]"
+            className="group relative block aspect-[4/3] w-full overflow-hidden rounded-3xl lg:aspect-auto lg:h-full lg:min-h-[210px]"
           >
             <Photo
               photo={gatePhoto}
               alt={t.technical.gate.title}
               variant="full"
-              className="h-full w-full"
+              className="absolute inset-0 h-full w-full"
               imgClassName="transition-transform duration-[900ms] ease-out group-hover:scale-[1.05]"
-              sizes="(max-width: 1024px) 100vw, 50vw"
+              sizes="(max-width: 1024px) 100vw, 40vw"
             />
           </button>
         </Reveal>

@@ -1,7 +1,12 @@
 import Reveal from './Reveal.jsx'
 
-/** Shared shell: consistent max width, gutters and vertical rhythm. */
-export function Section({ id, tone = 'light', className = '', children }) {
+/**
+ * Shared shell: consistent max width, gutters and vertical rhythm.
+ *
+ * `tightBottom` roughly halves the closing padding, for sections that end on a
+ * full-width block where the standard gap reads as dead space.
+ */
+export function Section({ id, tone = 'light', className = '', tightBottom = false, children }) {
   const tones = {
     light: 'bg-white text-ink',
     warm: 'bg-stone-warm text-ink',
@@ -10,7 +15,13 @@ export function Section({ id, tone = 'light', className = '', children }) {
 
   return (
     <section id={id} className={`${tones[tone]} scroll-mt-20 ${className}`}>
-      <div className="mx-auto max-w-[1400px] px-5 py-24 sm:px-8 sm:py-32 lg:py-40">{children}</div>
+      <div
+        className={`mx-auto max-w-[1400px] px-5 pt-24 sm:px-8 sm:pt-32 lg:pt-40 ${
+          tightBottom ? 'pb-12 sm:pb-16 lg:pb-20' : 'pb-24 sm:pb-32 lg:pb-40'
+        }`}
+      >
+        {children}
+      </div>
     </section>
   )
 }
