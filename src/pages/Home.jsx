@@ -1,4 +1,13 @@
-import { Architecture, Faq, Hero, HomeCta, Intro, Units } from '../sections/index.jsx'
+import {
+  Architecture,
+  Faq,
+  Hero,
+  HomeCta,
+  Intro,
+  Opportunities,
+  TrustBar,
+  Units,
+} from '../sections/index.jsx'
 
 /**
  * Introduces the property, then lists every unit in full. The detail pages
@@ -8,8 +17,9 @@ export default function Home() {
   return (
     <>
       <Hero />
-      {/* Directly under the hero: the three answers that decide whether a
-          visitor should go any further. */}
+      <TrustBar />
+      <Opportunities />
+      {/* The terms that disqualify most enquiries, beside the form itself. */}
       <Faq />
       <Intro />
       <Architecture />

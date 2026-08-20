@@ -53,6 +53,23 @@ export const content = {
       cta: 'Solicită informații despre achiziție',
       secondary: 'Vezi apartamentele',
       scroll: 'Derulează',
+      confidential:
+        'Informațiile sunt confidențiale și folosite exclusiv pentru procesul de vânzare.',
+    },
+
+    /** The reassurance strip that sits between the hero and the page. */
+    trust: [
+      { icon: 'units', value: '6', label: 'unități independente' },
+      { icon: 'whole', label: 'Vânzare integrală' },
+      { icon: 'place', label: 'Ultracentral Oradea' },
+      { icon: 'owner', label: 'Direct de la proprietar' },
+    ],
+
+    opportunities: {
+      titleLineOne: 'O proprietate.',
+      titleLineTwo: 'Multiple oportunități.',
+      body: 'Ideală pentru proiecte de anvergură care aduc valoare într-o locație premium, cu potențial ridicat de randament.',
+      items: ['Boutique hotel', 'Aparthotel', 'Clinică', 'Sediu premium'],
     },
 
     faq: {
@@ -381,6 +398,23 @@ export const content = {
       cta: 'Request acquisition information',
       secondary: 'View apartments',
       scroll: 'Scroll',
+      confidential:
+        'Your information is confidential and used solely for the sale process.',
+    },
+
+    /** The reassurance strip that sits between the hero and the page. */
+    trust: [
+      { icon: 'units', value: '6', label: 'independent units' },
+      { icon: 'whole', label: 'Sold as a whole' },
+      { icon: 'place', label: 'Ultra-central Oradea' },
+      { icon: 'owner', label: 'Direct from the owner' },
+    ],
+
+    opportunities: {
+      titleLineOne: 'One property.',
+      titleLineTwo: 'Multiple opportunities.',
+      body: 'Suited to substantial projects that create value in a premium location, with strong yield potential.',
+      items: ['Boutique hotel', 'Aparthotel', 'Clinic', 'Premium offices'],
     },
 
     faq: {

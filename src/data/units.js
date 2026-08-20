@@ -92,6 +92,17 @@ const exactly = (list, id) => list.find((photo) => photo.id === id) ?? null
 export const gatePhoto = exactly(technical, 'p5-9d19a0')
 
 /**
+ * Four interiors standing for the uses the building suits: boutique hotel,
+ * aparthotel, clinic, premium offices. These are the property's own rooms
+ * rather than stock imagery of those businesses, so the captions describe the
+ * intended use, not what is pictured.
+ */
+export const opportunityPhotos = ['ap-1', 'ap-3', 'ap-6', 'ap-7'].map((slug) => {
+  const list = (media.groups[slug] ?? []).filter((photo) => photo.source !== 'imagini')
+  return list[0] ?? null
+})
+
+/**
  * Site photographs from the insulation works, shown with the ceiling block.
  * The Petrafas product label (p2) is deliberately not among them: that block
  * carries the specification as text and a link to the manufacturer instead.

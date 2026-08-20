@@ -4,12 +4,18 @@ import {
   ArrowDown,
   ArrowRight,
   ArrowUpRight,
+  Buildings,
   CaretDown,
   CheckCircle,
   FileText,
   Leaf,
+  LockSimple,
+  MapPin,
+  Stack,
+  UserCircle,
 } from '@phosphor-icons/react'
 import Photo from '../components/Photo.jsx'
+import RequestForm from '../components/RequestForm.jsx'
 import { useRequestModal } from '../components/RequestModal.jsx'
 import Reveal from '../components/Reveal.jsx'
 import UnitCard from '../components/UnitCard.jsx'
@@ -24,6 +30,7 @@ import {
   gatePhoto,
   heroPhoto,
   investmentPhoto,
+  opportunityPhotos,
   units,
   worksPhotos,
 } from '../data/units.js'
@@ -72,34 +79,36 @@ export function Hero() {
         {/* The qualifying subtitle sits with the title, not tucked away lower
             down: it is what tells a visitor whether this is for them. */}
         <Reveal delay={240}>
-          <p className="mt-8 max-w-2xl text-base leading-relaxed text-white/80 sm:text-lg">
+          <p className="mt-8 max-w-xl text-[15px] leading-[1.75] text-white/80 sm:text-[17px]">
             {t.hero.lead}
           </p>
         </Reveal>
 
         <Reveal delay={360}>
-          <div className="mt-11 flex flex-wrap items-center gap-3">
+          <div className="mt-10 flex flex-wrap items-center gap-3">
             <button
               type="button"
               onClick={openRequest}
-              className="group flex items-center gap-3 rounded-full bg-brass-300 px-7 py-4 text-sm font-medium text-forest-900 transition-all duration-300 hover:bg-white"
+              className="flex items-center gap-3.5 rounded-sm bg-brass-400 px-8 py-5 text-[12px] font-medium tracking-[0.16em] uppercase text-forest-900 transition-colors duration-300 hover:bg-brass-300"
             >
-              <FileText size={17} weight="light" />
+              <FileText size={19} weight="light" />
               {t.hero.cta}
-              <ArrowRight
-                size={16}
-                weight="light"
-                className="transition-transform duration-300 group-hover:translate-x-1"
-              />
             </button>
 
             <Link
               to="/apartamente"
-              className="rounded-full bg-white/12 px-7 py-4 text-sm font-medium text-white backdrop-blur-md transition-colors duration-300 hover:bg-white/22"
+              className="rounded-sm bg-white/12 px-8 py-5 text-[12px] font-medium tracking-[0.16em] uppercase text-white backdrop-blur-md transition-colors duration-300 hover:bg-white/22"
             >
               {t.hero.secondary}
             </Link>
           </div>
+        </Reveal>
+
+        <Reveal delay={440}>
+          <p className="mt-6 flex items-center gap-2 text-[12px] text-white/55">
+            <LockSimple size={14} weight="light" />
+            {t.hero.confidential}
+          </p>
         </Reveal>
       </div>
 
@@ -115,64 +124,163 @@ export function Hero() {
   )
 }
 
+const TRUST_ICONS = { units: Buildings, whole: Stack, place: MapPin, owner: UserCircle }
+
+/** Four reassurances directly under the hero, divided by hairlines. */
+export function TrustBar() {
+  const { t } = useLanguage()
+
+  return (
+    <section className="bg-stone-warm">
+      <div className="mx-auto grid max-w-[1400px] grid-cols-2 gap-y-8 px-5 py-9 sm:px-8 lg:grid-cols-4 lg:gap-y-0">
+        {t.trust.map((item, index) => {
+          const Icon = TRUST_ICONS[item.icon]
+          return (
+            <Reveal
+              key={item.label}
+              delay={index * 80}
+              className={`flex items-center justify-center gap-4 px-4 ${
+                index > 0 ? 'lg:[box-shadow:inset_1px_0_0_0_rgba(26,28,25,0.1)]' : ''
+              }`}
+            >
+              <Icon size={30} weight="light" className="shrink-0 text-forest-600" />
+              <p className="text-[11px] font-medium leading-[1.5] tracking-[0.14em] uppercase text-ink/70">
+                {item.value && (
+                  <span className="mr-1.5 font-display text-[26px] tracking-normal text-ink">
+                    {item.value}
+                  </span>
+                )}
+                {item.label}
+              </p>
+            </Reveal>
+          )
+        })}
+      </div>
+    </section>
+  )
+}
+
+/** The four uses the building is positioned for, each with a photograph. */
+export function Opportunities() {
+  const { t } = useLanguage()
+
+  return (
+    <Section id="opportunities" tightBottom>
+      <div className="grid gap-12 lg:grid-cols-12 lg:gap-14">
+        <Reveal className="lg:col-span-4">
+          <h2 className="font-display text-[2.25rem] leading-[1.12] sm:text-[2.75rem]">
+            {t.opportunities.titleLineOne}
+            <br />
+            {t.opportunities.titleLineTwo}
+          </h2>
+          <div className="mt-7 h-px w-16 bg-brass-400" />
+          <p className="mt-7 max-w-sm text-[15px] leading-[1.75] text-ink/60">
+            {t.opportunities.body}
+          </p>
+        </Reveal>
+
+        <div className="grid grid-cols-2 gap-4 lg:col-span-8 lg:grid-cols-4">
+          {t.opportunities.items.map((label, index) => (
+            <Reveal key={label} delay={index * 80}>
+              <div className="overflow-hidden rounded-sm">
+                <Photo
+                  photo={opportunityPhotos[index]}
+                  alt={label}
+                  className="aspect-[4/3] w-full"
+                  sizes="(max-width: 1024px) 50vw, 20vw"
+                />
+              </div>
+              <p className="mt-4 text-center text-[11px] font-medium tracking-[0.16em] uppercase text-ink/60">
+                {label}
+              </p>
+            </Reveal>
+          ))}
+        </div>
+      </div>
+    </Section>
+  )
+}
+
 /**
- * Answers the three questions that disqualify most enquiries, right under the
- * hero, so nobody fills in the form only to find the terms do not suit them.
- * One panel open at a time.
+ * Answers the three questions that disqualify most enquiries, beside the
+ * qualifying form itself, so a visitor can read the terms and respond in the
+ * same view. One FAQ panel open at a time.
  */
 export function Faq() {
   const { t } = useLanguage()
-  const [openIndex, setOpenIndex] = useState(0)
+  // Open by default, as in the approved design, and each one still collapses.
+  const [closed, setClosed] = useState(() => new Set())
+  const toggle = (index) =>
+    setClosed((current) => {
+      const next = new Set(current)
+      if (next.has(index)) next.delete(index)
+      else next.add(index)
+      return next
+    })
 
   return (
-    <Section id="faq" tone="warm" tightBottom>
-      <div className="grid gap-10 lg:grid-cols-12 lg:gap-16">
-        <Reveal className="lg:col-span-4">
-          <Eyebrow>{t.faq.eyebrow}</Eyebrow>
-          <h2 className="mt-5 font-display text-[2.25rem] leading-[1.08] sm:text-5xl">
-            {t.faq.title}
-          </h2>
-        </Reveal>
+    <Section id="faq" tone="warm">
+      <div className="grid gap-6 lg:grid-cols-2 lg:gap-8">
+        <div>
+          <Reveal>
+            <p className="text-[11px] font-medium tracking-[0.18em] uppercase text-ink/45">
+              {t.faq.eyebrow}
+            </p>
+          </Reveal>
 
-        <div className="flex flex-col gap-3 lg:col-span-8">
-          {t.faq.items.map((item, index) => {
-            const isOpen = openIndex === index
-            return (
-              <Reveal key={item.q} delay={index * 80}>
-                <div className="overflow-hidden rounded-3xl bg-white">
-                  <h3>
-                    <button
-                      type="button"
-                      onClick={() => setOpenIndex(isOpen ? -1 : index)}
-                      aria-expanded={isOpen}
-                      aria-controls={`faq-panel-${index}`}
-                      className="flex w-full items-center justify-between gap-6 px-7 py-6 text-left sm:px-9"
-                    >
-                      <span className="font-display text-xl leading-snug sm:text-2xl">
-                        {item.q}
-                      </span>
-                      <CaretDown
-                        size={20}
-                        weight="light"
-                        className={`shrink-0 text-forest-600 transition-transform duration-300 ${
-                          isOpen ? 'rotate-180' : ''
-                        }`}
-                      />
-                    </button>
-                  </h3>
+          <div className="mt-6 flex flex-col gap-3">
+            {t.faq.items.map((item, index) => {
+              const isOpen = !closed.has(index)
+              return (
+                <Reveal key={item.q} delay={index * 80}>
+                  <div className="overflow-hidden rounded-sm bg-white">
+                    <h3>
+                      <button
+                        type="button"
+                        onClick={() => toggle(index)}
+                        aria-expanded={isOpen}
+                        aria-controls={`faq-panel-${index}`}
+                        className="flex w-full items-center justify-between gap-6 px-6 pt-5 text-left"
+                      >
+                        <span className="text-[15px] font-medium leading-snug text-ink/85">
+                          {item.q}
+                        </span>
+                        <CaretDown
+                          size={17}
+                          weight="light"
+                          className={`shrink-0 text-ink/40 transition-transform duration-300 ${
+                            isOpen ? 'rotate-180' : ''
+                          }`}
+                        />
+                      </button>
+                    </h3>
 
-                  {isOpen && (
-                    <div id={`faq-panel-${index}`} className="px-7 pb-7 sm:px-9 sm:pb-8">
-                      <p className="max-w-2xl text-[15px] leading-relaxed text-ink/60 sm:text-base">
-                        {item.a}
-                      </p>
-                    </div>
-                  )}
-                </div>
-              </Reveal>
-            )
-          })}
+                    {isOpen ? (
+                      <div id={`faq-panel-${index}`} className="px-6 pb-5 pt-1.5">
+                        <p className="max-w-md text-[14px] leading-relaxed text-ink/55">
+                          {item.a}
+                        </p>
+                      </div>
+                    ) : (
+                      <div className="pb-5" />
+                    )}
+                  </div>
+                </Reveal>
+              )
+            })}
+          </div>
         </div>
+
+        <Reveal delay={120}>
+          <div className="rounded-sm bg-white p-7 sm:p-9">
+            <p className="text-[11px] font-medium tracking-[0.18em] uppercase text-ink/45">
+              {t.form.title}
+            </p>
+            <div className="mt-7">
+              <RequestForm />
+            </div>
+          </div>
+        </Reveal>
       </div>
     </Section>
   )
