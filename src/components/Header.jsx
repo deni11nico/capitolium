@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react'
 import { Link, NavLink, useLocation } from 'react-router-dom'
 import { List, X } from '@phosphor-icons/react'
 import { useLanguage } from '../i18n/LanguageContext.jsx'
+import { BRAND_DESCRIPTOR, BRAND_NAME } from '../brand.js'
 import { ROUTES } from '../routes.js'
 
 function LanguageToggle() {
@@ -73,15 +74,19 @@ export default function Header() {
           aria-label={t.a11y.home}
           className="flex shrink-0 flex-col leading-none transition-opacity duration-200 hover:opacity-70"
         >
-          <span className="font-display text-2xl font-medium tracking-[0.02em] sm:text-[26px]">
-            Capitolium
+          {/* Set as a wordmark: the address line in letterspaced caps, the
+              descriptor beneath it between two rules. */}
+          <span className="font-display text-[22px] font-medium tracking-[0.16em] uppercase sm:text-[25px]">
+            {BRAND_NAME}
           </span>
           <span
-            className={`mt-1 text-[9px] font-medium tracking-[0.32em] uppercase transition-colors duration-500 ${
-              solid ? 'text-forest-600' : 'text-white/75'
+            className={`mt-1.5 flex items-center gap-2 text-[9px] font-medium tracking-[0.34em] uppercase transition-colors duration-500 ${
+              solid ? 'text-forest-600' : 'text-white/70'
             }`}
           >
-            Oradea
+            <span className="h-px w-4 bg-current opacity-60" />
+            {BRAND_DESCRIPTOR}
+            <span className="h-px w-4 bg-current opacity-60" />
           </span>
         </Link>
 

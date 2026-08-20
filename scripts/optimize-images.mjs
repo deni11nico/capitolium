@@ -1,5 +1,5 @@
 /**
- * Image pipeline for the Capitolium site.
+ * Image pipeline for the Maniu 65 Central site.
  *
  * Reads the untouched source photography from poze2/ and the floor plans from
  * imagini/, and writes web-sized WebP derivatives plus a manifest into

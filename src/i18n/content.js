@@ -9,9 +9,9 @@ export const DEFAULT_LANGUAGE = 'ro'
 export const content = {
   ro: {
     meta: {
-      title: 'Capitolium | Proprietate exclusivistă în ultracentrul Oradei',
+      title: 'Maniu 65 Central | Proprietate de investiție în centrul Oradiei',
       description:
-        'Capitolium, str. Iuliu Maniu, Oradea. Imobil ultracentral complet modernizat: 795 mp teren, 6 apartamente independente, tehnologie smart și clasă energetică B.',
+        'Maniu 65 Central, str. Iuliu Maniu, Oradea. Imobil ultracentral complet modernizat, 6 unități independente, vândut integral, într-o singură tranzacție.',
     },
 
     nav: {
@@ -347,16 +347,16 @@ export const content = {
 
     a11y: {
       switchTo: 'Comută pe engleză',
-      home: 'Capitolium, pagina principală',
+      home: 'Maniu 65 Central, pagina principală',
       openGallery: 'Deschide fotografia',
     },
   },
 
   en: {
     meta: {
-      title: 'Capitolium | Exclusive property in the heart of Oradea',
+      title: 'Maniu 65 Central | Investment property in the heart of Oradea',
       description:
-        'Capitolium, Iuliu Maniu Street, Oradea. A fully modernized ultra-central property: 795 sqm plot, 6 independent apartments, smart technology and Energy Class B.',
+        'Maniu 65 Central, Iuliu Maniu Street, Oradea. A fully modernized ultra-central property, 6 independent units, sold as a single transaction.',
     },
 
     nav: {
@@ -692,7 +692,7 @@ export const content = {
 
     a11y: {
       switchTo: 'Switch to Romanian',
-      home: 'Capitolium, home page',
+      home: 'Maniu 65 Central, home page',
       openGallery: 'Open photo',
     },
   },

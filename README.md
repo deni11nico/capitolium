@@ -1,6 +1,7 @@
-# Capitolium
+# Maniu 65 Central
 
-Presentation site for the Capitolium property, str. Iuliu Maniu, Oradea.
+Presentation site for the Maniu 65 Central property, str. Iuliu Maniu, Oradea.
+The name lives in `src/brand.js`; nothing user-facing should hardcode it.
 React + Vite + Tailwind v4 + Phosphor icons, bilingual RO/EN with Romanian as the default.
 
 ## Commands

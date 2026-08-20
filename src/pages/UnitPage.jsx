@@ -12,6 +12,7 @@ import Lightbox from '../components/Lightbox.jsx'
 import Photo from '../components/Photo.jsx'
 import Reveal from '../components/Reveal.jsx'
 import { useLanguage } from '../i18n/LanguageContext.jsx'
+import { BRAND_FULL } from '../brand.js'
 import { unitBySlug, units } from '../data/units.js'
 
 function NotFound() {
@@ -172,7 +173,7 @@ export default function UnitPage() {
 
           <Reveal delay={140} className="flex flex-col justify-center lg:py-4">
             <span className="text-[11px] font-medium tracking-[0.28em] uppercase text-forest-600">
-              Capitolium {unit.kind === 'cellar' ? '' : `· 0${unit.number}`}
+              {BRAND_FULL} {unit.kind === 'cellar' ? '' : `· 0${unit.number}`}
             </span>
 
             <h1 className="mt-4 font-display text-[2.75rem] leading-[1.02] sm:text-6xl lg:text-[4.25rem]">
