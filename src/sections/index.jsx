@@ -1,6 +1,16 @@
+import { useState } from 'react'
 import { Link } from 'react-router-dom'
-import { ArrowDown, ArrowRight, ArrowUpRight, CheckCircle, Leaf } from '@phosphor-icons/react'
+import {
+  ArrowDown,
+  ArrowRight,
+  ArrowUpRight,
+  CaretDown,
+  CheckCircle,
+  FileText,
+  Leaf,
+} from '@phosphor-icons/react'
 import Photo from '../components/Photo.jsx'
+import { useRequestModal } from '../components/RequestModal.jsx'
 import Reveal from '../components/Reveal.jsx'
 import UnitCard from '../components/UnitCard.jsx'
 import { Eyebrow, FeatureCard, Section, SectionHeading } from '../components/Section.jsx'
@@ -25,6 +35,7 @@ import {
 
 export function Hero() {
   const { t } = useLanguage()
+  const { openRequest } = useRequestModal()
 
   const toOverview = () =>
     document.getElementById('overview')?.scrollIntoView({ behavior: 'smooth' })
@@ -58,33 +69,36 @@ export function Hero() {
           </h1>
         </Reveal>
 
+        {/* The qualifying subtitle sits with the title, not tucked away lower
+            down: it is what tells a visitor whether this is for them. */}
         <Reveal delay={240}>
-          <p className="mt-8 max-w-xl text-base leading-relaxed text-white/75 sm:text-lg">
+          <p className="mt-8 max-w-2xl text-base leading-relaxed text-white/80 sm:text-lg">
             {t.hero.lead}
           </p>
         </Reveal>
 
         <Reveal delay={360}>
           <div className="mt-11 flex flex-wrap items-center gap-3">
-            <Link
-              to="/apartamente"
-              className="group flex items-center gap-3 rounded-full bg-white px-7 py-4 text-sm font-medium text-ink transition-all duration-300 hover:bg-brass-300"
+            <button
+              type="button"
+              onClick={openRequest}
+              className="group flex items-center gap-3 rounded-full bg-brass-300 px-7 py-4 text-sm font-medium text-forest-900 transition-all duration-300 hover:bg-white"
             >
+              <FileText size={17} weight="light" />
               {t.hero.cta}
               <ArrowRight
                 size={16}
                 weight="light"
                 className="transition-transform duration-300 group-hover:translate-x-1"
               />
-            </Link>
+            </button>
 
-            <button
-              type="button"
-              onClick={toOverview}
+            <Link
+              to="/apartamente"
               className="rounded-full bg-white/12 px-7 py-4 text-sm font-medium text-white backdrop-blur-md transition-colors duration-300 hover:bg-white/22"
             >
               {t.hero.secondary}
-            </button>
+            </Link>
           </div>
         </Reveal>
       </div>
@@ -98,6 +112,69 @@ export function Hero() {
         <ArrowDown size={18} weight="light" className="animate-bounce" />
       </button>
     </section>
+  )
+}
+
+/**
+ * Answers the three questions that disqualify most enquiries, right under the
+ * hero, so nobody fills in the form only to find the terms do not suit them.
+ * One panel open at a time.
+ */
+export function Faq() {
+  const { t } = useLanguage()
+  const [openIndex, setOpenIndex] = useState(0)
+
+  return (
+    <Section id="faq" tone="warm" tightBottom>
+      <div className="grid gap-10 lg:grid-cols-12 lg:gap-16">
+        <Reveal className="lg:col-span-4">
+          <Eyebrow>{t.faq.eyebrow}</Eyebrow>
+          <h2 className="mt-5 font-display text-[2.25rem] leading-[1.08] sm:text-5xl">
+            {t.faq.title}
+          </h2>
+        </Reveal>
+
+        <div className="flex flex-col gap-3 lg:col-span-8">
+          {t.faq.items.map((item, index) => {
+            const isOpen = openIndex === index
+            return (
+              <Reveal key={item.q} delay={index * 80}>
+                <div className="overflow-hidden rounded-3xl bg-white">
+                  <h3>
+                    <button
+                      type="button"
+                      onClick={() => setOpenIndex(isOpen ? -1 : index)}
+                      aria-expanded={isOpen}
+                      aria-controls={`faq-panel-${index}`}
+                      className="flex w-full items-center justify-between gap-6 px-7 py-6 text-left sm:px-9"
+                    >
+                      <span className="font-display text-xl leading-snug sm:text-2xl">
+                        {item.q}
+                      </span>
+                      <CaretDown
+                        size={20}
+                        weight="light"
+                        className={`shrink-0 text-forest-600 transition-transform duration-300 ${
+                          isOpen ? 'rotate-180' : ''
+                        }`}
+                      />
+                    </button>
+                  </h3>
+
+                  {isOpen && (
+                    <div id={`faq-panel-${index}`} className="px-7 pb-7 sm:px-9 sm:pb-8">
+                      <p className="max-w-2xl text-[15px] leading-relaxed text-ink/60 sm:text-base">
+                        {item.a}
+                      </p>
+                    </div>
+                  )}
+                </div>
+              </Reveal>
+            )
+          })}
+        </div>
+      </div>
+    </Section>
   )
 }
 
@@ -668,6 +745,7 @@ export function Investment() {
 
 export function Contact({ withHeading = true }) {
   const { t } = useLanguage()
+  const { openRequest } = useRequestModal()
 
   return (
     <Section id="contact" tone="warm">
@@ -687,20 +765,32 @@ export function Contact({ withHeading = true }) {
             <dl className="flex flex-col gap-8">
               {[
                 { label: t.contact.addressLabel, value: t.contact.address },
-                { label: t.contact.phoneLabel, value: t.contact.placeholder },
+                { label: t.contact.phoneLabel, value: t.contact.phone, tel: true },
                 { label: t.contact.emailLabel, value: t.contact.placeholder },
               ].map((row) => (
                 <div key={row.label}>
                   <dt className="text-[11px] font-medium tracking-[0.2em] uppercase text-ink/40">
                     {row.label}
                   </dt>
-                  <dd className="mt-2 text-[17px] leading-relaxed text-ink/85">{row.value}</dd>
+                  <dd className="mt-2 text-[17px] leading-relaxed text-ink/85">
+                    {row.tel ? (
+                      <a
+                        href={`tel:${row.value.replace(/\s/g, '')}`}
+                        className="transition-colors duration-200 hover:text-forest-700"
+                      >
+                        {row.value}
+                      </a>
+                    ) : (
+                      row.value
+                    )}
+                  </dd>
                 </div>
               ))}
             </dl>
 
             <button
               type="button"
+              onClick={openRequest}
               className="group mt-11 flex w-full items-center justify-center gap-3 rounded-full bg-forest-700 px-7 py-4 text-sm font-medium text-white transition-colors duration-300 hover:bg-forest-800"
             >
               {t.contact.cta}
@@ -720,6 +810,7 @@ export function Contact({ withHeading = true }) {
 /** Compact closing band on the home page, pointing at the contact page. */
 export function HomeCta() {
   const { t } = useLanguage()
+  const { openRequest } = useRequestModal()
 
   return (
     <Section id="cta" tone="warm">
@@ -736,9 +827,10 @@ export function HomeCta() {
           </p>
         </div>
 
-        <Link
-          to="/contact"
-          className="group flex shrink-0 items-center gap-3 rounded-full bg-white px-8 py-4 text-sm font-medium text-ink transition-colors duration-300 hover:bg-brass-300"
+        <button
+          type="button"
+          onClick={openRequest}
+          className="group flex shrink-0 items-center gap-3 rounded-full bg-brass-300 px-8 py-4 text-sm font-medium text-forest-900 transition-colors duration-300 hover:bg-white"
         >
           {t.contact.cta}
           <ArrowRight
@@ -746,7 +838,7 @@ export function HomeCta() {
             weight="light"
             className="transition-transform duration-300 group-hover:translate-x-1"
           />
-        </Link>
+        </button>
       </Reveal>
     </Section>
   )

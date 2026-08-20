@@ -49,10 +49,61 @@ export const content = {
       eyebrow: 'Str. Iuliu Maniu · Ultracentral, Oradea',
       title: 'Proprietate exclusivistă',
       titleAccent: 'în inima Oradei',
-      lead: 'O combinație rară între poziționare strategică, execuție impecabilă și tehnologie de ultimă generație.',
-      cta: 'Vezi apartamentele',
-      secondary: 'Descoperă imobilul',
+      lead: 'Oportunitate unică de investiție: imobil complet modernizat, 6 unități independente, vândut integral, într-o singură tranzacție. Ideal pentru dezvoltatori și investitori.',
+      cta: 'Solicită informații despre achiziție',
+      secondary: 'Vezi apartamentele',
       scroll: 'Derulează',
+    },
+
+    faq: {
+      eyebrow: 'Întrebări frecvente',
+      title: 'Ce trebuie să știți',
+      items: [
+        {
+          q: 'Se vinde și pe apartamente separate?',
+          a: 'Nu. Imobilul se vinde exclusiv integral, ca un singur activ.',
+        },
+        {
+          q: 'Colaborați cu agenții imobiliare?',
+          a: 'Nu, tranzacția se face direct cu proprietarul.',
+        },
+        {
+          q: 'Care este prețul?',
+          a: 'Preț disponibil la cerere, în urma completării formularului.',
+        },
+      ],
+    },
+
+    form: {
+      title: 'Solicită informații despre achiziție',
+      lead: 'Câteva întrebări scurte, ca să știm dacă oportunitatea vi se potrivește.',
+      close: 'Închide',
+      yes: 'Da',
+      no: 'Nu',
+      acquisition: 'Sunteți interesat de achiziția integrală a imobilului?',
+      agency: 'Reprezentați o agenție imobiliară?',
+      buyerType: 'Tip cumpărător',
+      // Stable ids so a language switch never drops the current selection.
+      buyerOptions: [
+        { id: 'individual', label: 'Persoană fizică' },
+        { id: 'developer', label: 'Dezvoltator' },
+        { id: 'fund', label: 'Fond de investiții' },
+      ],
+      budget: 'Interval buget estimat (opțional)',
+      budgetPlaceholder: 'Selectați intervalul',
+      budgetOptions: [
+        { id: 'under-500', label: 'sub 500.000 €' },
+        { id: '500-750', label: '500.000 – 750.000 €' },
+        { id: '750-1000', label: '750.000 – 1.000.000 €' },
+        { id: 'over-1000', label: 'peste 1.000.000 €' },
+      ],
+      submit: 'Trimite solicitarea',
+      reassurance: 'Vă vom contacta doar în legătură cu această oportunitate.',
+      requiredNotice: 'Vă rugăm să răspundeți la toate întrebările marcate.',
+      successTitle: 'Solicitare trimisă',
+      successBody:
+        'Vă mulțumim. Vă vom contacta în cel mai scurt timp în legătură cu această oportunitate.',
+      successClose: 'Închide',
     },
 
     intro: {
@@ -264,8 +315,10 @@ export const content = {
       addressLabel: 'Adresă',
       address: 'Str. Iuliu Maniu, Oradea, județul Bihor, România',
       phoneLabel: 'Telefon',
+      phone: '0765 776 955',
       emailLabel: 'Email',
       placeholder: 'urmează',
+      reach: 'Contactează-ne',
     },
 
     footer: {
@@ -324,10 +377,61 @@ export const content = {
       eyebrow: 'Iuliu Maniu Street · Ultra-central, Oradea',
       title: 'An exclusive property',
       titleAccent: 'in the heart of Oradea',
-      lead: 'A rare combination of strategic positioning, flawless execution, and cutting-edge technology.',
-      cta: 'View apartments',
-      secondary: 'Explore the property',
+      lead: 'Unique investment opportunity: fully modernized property, 6 independent units, sold as a single transaction. Ideal for developers and investors.',
+      cta: 'Request acquisition information',
+      secondary: 'View apartments',
       scroll: 'Scroll',
+    },
+
+    faq: {
+      eyebrow: 'Frequently asked questions',
+      title: 'What you should know',
+      items: [
+        {
+          q: 'Can the units be sold separately?',
+          a: 'No. The property is sold exclusively as a single asset.',
+        },
+        {
+          q: 'Do you work with real estate agencies?',
+          a: 'No, the transaction is handled directly with the owner.',
+        },
+        {
+          q: 'What is the price?',
+          a: 'Price available upon request, after completing the form.',
+        },
+      ],
+    },
+
+    form: {
+      title: 'Request acquisition information',
+      lead: 'A few short questions, so we know whether the opportunity fits you.',
+      close: 'Close',
+      yes: 'Yes',
+      no: 'No',
+      acquisition: 'Are you interested in acquiring the entire property?',
+      agency: 'Do you represent a real estate agency?',
+      buyerType: 'Buyer type',
+      // Stable ids so a language switch never drops the current selection.
+      buyerOptions: [
+        { id: 'individual', label: 'Individual' },
+        { id: 'developer', label: 'Developer' },
+        { id: 'fund', label: 'Investment fund' },
+      ],
+      budget: 'Estimated budget range (optional)',
+      budgetPlaceholder: 'Select a range',
+      budgetOptions: [
+        { id: 'under-500', label: 'under €500,000' },
+        { id: '500-750', label: '€500,000 – €750,000' },
+        { id: '750-1000', label: '€750,000 – €1,000,000' },
+        { id: 'over-1000', label: 'over €1,000,000' },
+      ],
+      submit: 'Submit request',
+      reassurance: 'We will only contact you regarding this opportunity.',
+      requiredNotice: 'Please answer all the marked questions.',
+      successTitle: 'Request sent',
+      successBody:
+        'Thank you. We will be in touch shortly regarding this opportunity.',
+      successClose: 'Close',
     },
 
     intro: {
@@ -539,8 +643,10 @@ export const content = {
       addressLabel: 'Address',
       address: 'Iuliu Maniu Street, Oradea, Bihor County, Romania',
       phoneLabel: 'Phone',
+      phone: '0765 776 955',
       emailLabel: 'Email',
       placeholder: 'to follow',
+      reach: 'Contact us',
     },
 
     footer: {

@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import { MapPin } from '@phosphor-icons/react'
+import { MapPin, Phone } from '@phosphor-icons/react'
 import { useLanguage } from '../i18n/LanguageContext.jsx'
 import { units } from '../data/units.js'
 
@@ -42,11 +42,18 @@ export default function Footer() {
 
           <div className="lg:col-span-3">
             <p className="text-[11px] font-medium tracking-[0.2em] uppercase text-white/35">
-              {t.nav.contact}
+              {t.contact.reach}
             </p>
-            <p className="mt-6 text-[15px] leading-relaxed text-white/60">
-              {t.contact.phoneLabel}: {t.contact.placeholder}
-              <br />
+            {/* Secondary on purpose: the hero drives enquiries through the
+                qualifying form, this is here for anyone who prefers to call. */}
+            <a
+              href={`tel:${t.contact.phone.replace(/\s/g, '')}`}
+              className="mt-6 flex w-fit items-center gap-2.5 text-[17px] text-white/80 transition-colors duration-200 hover:text-brass-300"
+            >
+              <Phone size={17} weight="light" />
+              {t.contact.phone}
+            </a>
+            <p className="mt-3 text-[15px] leading-relaxed text-white/60">
               {t.contact.emailLabel}: {t.contact.placeholder}
             </p>
           </div>
