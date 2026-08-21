@@ -94,13 +94,6 @@ export function Hero() {
               <FileText size={19} weight="light" />
               {t.hero.cta}
             </button>
-
-            <Link
-              to="/apartamente"
-              className="rounded-sm bg-white/12 px-8 py-5 text-[12px] font-medium tracking-[0.16em] uppercase text-white backdrop-blur-md transition-colors duration-300 hover:bg-white/22"
-            >
-              {t.hero.secondary}
-            </Link>
           </div>
         </Reveal>
 

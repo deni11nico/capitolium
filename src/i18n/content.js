@@ -51,7 +51,6 @@ export const content = {
       titleAccent: 'în inima Oradei',
       lead: 'Oportunitate unică de investiție: imobil complet modernizat, 6 unități independente, vândut integral, într-o singură tranzacție. Ideal pentru dezvoltatori și investitori.',
       cta: 'Solicită informații despre achiziție',
-      secondary: 'Vezi apartamentele',
       scroll: 'Derulează',
       confidential:
         'Informațiile sunt confidențiale și folosite exclusiv pentru procesul de vânzare.',
@@ -396,7 +395,6 @@ export const content = {
       titleAccent: 'in the heart of Oradea',
       lead: 'Unique investment opportunity: fully modernized property, 6 independent units, sold as a single transaction. Ideal for developers and investors.',
       cta: 'Request acquisition information',
-      secondary: 'View apartments',
       scroll: 'Scroll',
       confidential:
         'Your information is confidential and used solely for the sale process.',
