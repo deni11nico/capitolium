@@ -9,6 +9,7 @@ import {
   CaretDown,
   CheckCircle,
   FileText,
+  Info,
   Leaf,
   LockSimple,
   MapPin,
@@ -176,28 +177,40 @@ export function Opportunities({ onOpenPhoto }) {
           </p>
         </Reveal>
 
-        <div className="grid grid-cols-2 gap-4 lg:col-span-8 lg:grid-cols-4">
-          {t.opportunities.items.map((label, index) => (
-            <Reveal key={label} delay={index * 80}>
-              <button
-                type="button"
-                onClick={() => onOpenPhoto?.(index)}
-                aria-label={`${t.a11y.openGallery} ${label}`}
-                className="group block w-full overflow-hidden rounded-sm"
-              >
-                <Photo
-                  photo={opportunityPhotos[index]}
-                  alt={label}
-                  className="aspect-[4/3] w-full"
-                  imgClassName="transition-transform duration-[900ms] ease-out group-hover:scale-[1.05]"
-                  sizes="(max-width: 1024px) 50vw, 20vw"
-                />
-              </button>
-              <p className="mt-4 text-center text-[11px] font-medium tracking-[0.16em] uppercase text-ink/60">
-                {label}
-              </p>
-            </Reveal>
-          ))}
+        <div className="lg:col-span-8">
+          <div className="grid grid-cols-2 gap-4 lg:grid-cols-4">
+            {t.opportunities.items.map((label, index) => (
+              <Reveal key={label} delay={index * 80}>
+                <button
+                  type="button"
+                  onClick={() => onOpenPhoto?.(index)}
+                  aria-label={`${t.a11y.openGallery} ${label}`}
+                  className="group block w-full overflow-hidden rounded-sm"
+                >
+                  <Photo
+                    photo={opportunityPhotos[index]}
+                    alt={label}
+                    className="aspect-[4/3] w-full"
+                    imgClassName="transition-transform duration-[900ms] ease-out group-hover:scale-[1.05]"
+                    sizes="(max-width: 1024px) 50vw, 20vw"
+                  />
+                </button>
+                <p className="mt-4 text-center text-[11px] font-medium tracking-[0.16em] uppercase text-ink/60">
+                  {label}
+                </p>
+              </Reveal>
+            ))}
+          </div>
+
+          {/* These four are renders of what the building could become, not
+              photographs of it, and saying so belongs next to them rather
+              than in the small print. */}
+          <Reveal delay={340}>
+            <p className="mt-8 flex items-start gap-3 rounded-2xl bg-stone-warm px-5 py-4 text-[12px] leading-relaxed text-ink/45 sm:text-[13px]">
+              <Info size={16} weight="light" className="mt-px shrink-0" />
+              {t.opportunities.disclaimer}
+            </p>
+          </Reveal>
         </div>
       </div>
     </Section>

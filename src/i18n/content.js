@@ -70,6 +70,8 @@ export const content = {
       titleLineTwo: 'Multiple oportunități.',
       body: 'Ideală pentru proiecte de anvergură care aduc valoare într-o locație premium, cu potențial ridicat de randament.',
       items: ['Boutique hotel', 'Aparthotel', 'Clinică', 'Sediu premium'],
+      disclaimer:
+        'Imaginile sunt generate cu AI doar pentru a ilustra posibilitățile de utilizare ale proprietății. Imaginile reale, actuale le găsiți în galeria foto.',
     },
 
     faq: {
@@ -443,6 +445,8 @@ export const content = {
       titleLineTwo: 'Multiple opportunities.',
       body: 'Suited to substantial projects that create value in a premium location, with strong yield potential.',
       items: ['Boutique hotel', 'Aparthotel', 'Clinic', 'Premium offices'],
+      disclaimer:
+        'These images are AI-generated, intended only to illustrate possible uses of the property. Real, current photos can be found in the photo gallery.',
     },
 
     faq: {
