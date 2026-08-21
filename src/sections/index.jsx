@@ -30,6 +30,7 @@ import {
   architecturePhoto,
   courtyard,
   courtyardFeature,
+  courtyardGallery,
   courtyardPair,
   entrancePhoto,
   gatePhoto,
@@ -800,16 +801,18 @@ export function CourtyardGallery({ onOpen }) {
       <Reveal>
         <Eyebrow>{t.common.courtyardGallery}</Eyebrow>
         <h2 className="mt-5 font-display text-4xl leading-tight sm:text-5xl">
-          {courtyard.length} {t.units.photosLabel}
+          {courtyardGallery.length} {t.units.photosLabel}
         </h2>
       </Reveal>
 
       <div className="mt-12 grid auto-rows-fr grid-cols-2 items-stretch gap-3 sm:gap-4 lg:grid-cols-3">
-        {courtyard.map((photo, index) => (
+        {courtyardGallery.map((photo, index) => (
           <Reveal key={photo.id} delay={(index % 3) * 80}>
             <button
               type="button"
-              onClick={() => onOpen(index)}
+              // Resolved against the full set, which the viewer still browses,
+              // so the grid never has to match its own order to that one.
+              onClick={() => onOpen(courtyard.findIndex((item) => item.id === photo.id))}
               aria-label={`${t.a11y.openGallery} ${index + 1}`}
               className="group block aspect-[4/3] w-full overflow-hidden rounded-3xl"
             >

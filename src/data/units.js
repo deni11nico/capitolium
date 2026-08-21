@@ -132,4 +132,12 @@ export const courtyardFeature = byId(courtyard, 'las-7389-faf1dc')
 export const courtyardPair = ['curte1-848521', 'curte2-c093a1']
   .map((id) => exactly(courtyard, id))
   .filter(Boolean)
+/**
+ * The gallery grid, without the two collage sheets. Those already appear at
+ * full width in the block above it, so showing them again only padded the
+ * grid. They stay in `courtyard`, so the viewer still opens on them there.
+ */
+export const courtyardGallery = courtyard.filter(
+  (photo) => !courtyardPair.some((item) => item.id === photo.id),
+)
 export const investmentPhoto = byId(facade, 'las-7843-b9a09d')
