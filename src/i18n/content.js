@@ -21,6 +21,7 @@ export const content = {
       units: 'Apartamente',
       investment: 'Investiție',
       contact: 'Contact',
+      requestCta: 'Solicită informații',
       menu: 'Meniu',
       close: 'Închide',
     },
@@ -50,7 +51,7 @@ export const content = {
       title: 'Proprietate exclusivistă',
       titleAccent: 'în inima Oradiei',
       lead: 'Oportunitate unică de investiție: imobil complet modernizat, 6 unități independente, vândut integral, într-o singură tranzacție. Ideal pentru dezvoltatori și investitori.',
-      cta: 'Solicită informații despre achiziție',
+      cta: 'Vezi proprietatea',
       scroll: 'Derulează',
       confidential:
         'Informațiile sunt confidențiale și folosite exclusiv pentru procesul de vânzare.',
@@ -91,6 +92,8 @@ export const content = {
     },
 
     form: {
+      eyebrow: 'Solicitare',
+      sectionTitle: 'Interesat de această proprietate?',
       title: 'Solicită informații despre achiziție',
       lead: 'Câteva întrebări scurte, ca să știm dacă oportunitatea vi se potrivește.',
       close: 'Închide',
@@ -390,6 +393,7 @@ export const content = {
       units: 'Apartments',
       investment: 'Investment',
       contact: 'Contact',
+      requestCta: 'Request information',
       menu: 'Menu',
       close: 'Close',
     },
@@ -419,7 +423,7 @@ export const content = {
       title: 'An exclusive property',
       titleAccent: 'in the heart of Oradea',
       lead: 'Unique investment opportunity: fully modernized property, 6 independent units, sold as a single transaction. Ideal for developers and investors.',
-      cta: 'Request acquisition information',
+      cta: 'View the property',
       scroll: 'Scroll',
       confidential:
         'Your information is confidential and used solely for the sale process.',
@@ -460,6 +464,8 @@ export const content = {
     },
 
     form: {
+      eyebrow: 'Enquiry',
+      sectionTitle: 'Interested in this property?',
       title: 'Request acquisition information',
       lead: 'A few short questions, so we know whether the opportunity fits you.',
       close: 'Close',

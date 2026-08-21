@@ -1,9 +1,10 @@
 import { useEffect, useState } from 'react'
 import { Link, NavLink, useLocation } from 'react-router-dom'
-import { List, X } from '@phosphor-icons/react'
+import { FileText, List, X } from '@phosphor-icons/react'
 import { useLanguage } from '../i18n/LanguageContext.jsx'
 import { BRAND_DESCRIPTOR, BRAND_NAME } from '../brand.js'
 import { ROUTES } from '../routes.js'
+import { useGoToRequest } from './useGoToRequest.js'
 
 function LanguageToggle() {
   const { lang, setLang, t } = useLanguage()
@@ -34,6 +35,7 @@ function LanguageToggle() {
 export default function Header() {
   const { t } = useLanguage()
   const location = useLocation()
+  const goToRequest = useGoToRequest()
   const [scrolled, setScrolled] = useState(false)
   const [menuOpen, setMenuOpen] = useState(false)
 
@@ -109,7 +111,24 @@ export default function Header() {
           ))}
         </nav>
 
-        <div className="flex shrink-0 items-center gap-3">
+        <div className="flex shrink-0 items-center gap-2 sm:gap-3">
+          {/* Fast path to the qualifying form for anyone who already knows
+              they want to enquire. Label collapses to the icon on phones,
+              where the wordmark and toggle already claim the width. */}
+          <button
+            type="button"
+            onClick={goToRequest}
+            aria-label={t.nav.requestCta}
+            className={`flex items-center gap-2 rounded-full py-2.5 pl-3.5 pr-3.5 text-[12px] font-medium transition-colors duration-300 sm:pr-5 ${
+              solid
+                ? 'bg-forest-700 text-white hover:bg-forest-800'
+                : 'bg-white/15 text-white backdrop-blur-md hover:bg-white/25'
+            }`}
+          >
+            <FileText size={16} weight="light" className="shrink-0" />
+            <span className="hidden sm:inline">{t.nav.requestCta}</span>
+          </button>
+
           <LanguageToggle />
 
           <button

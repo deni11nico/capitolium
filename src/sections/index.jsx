@@ -19,8 +19,9 @@ import {
 } from '@phosphor-icons/react'
 import ContactForm from '../components/ContactForm.jsx'
 import Photo from '../components/Photo.jsx'
-import { useRequestModal } from '../components/RequestModal.jsx'
+import RequestForm from '../components/RequestForm.jsx'
 import Reveal from '../components/Reveal.jsx'
+import { REQUEST_ID, useGoToRequest } from '../components/useGoToRequest.js'
 import UnitCard from '../components/UnitCard.jsx'
 import { Eyebrow, FeatureCard, Section, SectionHeading } from '../components/Section.jsx'
 import { icons, investmentIcons } from '../components/icons.js'
@@ -47,7 +48,6 @@ import {
 
 export function Hero() {
   const { t } = useLanguage()
-  const { openRequest } = useRequestModal()
 
   const toOverview = () =>
     document.getElementById('overview')?.scrollIntoView({ behavior: 'smooth' })
@@ -93,10 +93,10 @@ export function Hero() {
           <div className="mt-10 flex flex-wrap items-center gap-3">
             <button
               type="button"
-              onClick={openRequest}
+              onClick={toOverview}
               className="flex items-center gap-3.5 rounded-sm bg-brass-400 px-8 py-5 text-[12px] font-medium tracking-[0.16em] uppercase text-forest-900 transition-colors duration-300 hover:bg-brass-300"
             >
-              <FileText size={19} weight="light" />
+              <ArrowDown size={19} weight="light" />
               {t.hero.cta}
             </button>
           </div>
@@ -930,7 +930,7 @@ function ContactRow({ icon: Icon, label, value, href }) {
 
 export function Contact({ withHeading = true }) {
   const { t } = useLanguage()
-  const { openRequest } = useRequestModal()
+  const goToRequest = useGoToRequest()
 
   return (
     <Section id="contact" tone="warm">
@@ -972,7 +972,7 @@ export function Contact({ withHeading = true }) {
 
             <button
               type="button"
-              onClick={openRequest}
+              onClick={goToRequest}
               className="group mt-10 flex w-full items-center justify-center gap-3 rounded-full bg-forest-700 px-7 py-4 text-sm font-medium text-white transition-colors duration-300 hover:bg-forest-800"
             >
               {t.contact.cta}
@@ -1023,7 +1023,6 @@ export function Contact({ withHeading = true }) {
 /** Compact closing band on the home page, pointing at the contact page. */
 export function HomeCta() {
   const { t } = useLanguage()
-  const { openRequest } = useRequestModal()
 
   return (
     <Section id="cta" tone="warm">
@@ -1040,18 +1039,42 @@ export function HomeCta() {
           </p>
         </div>
 
-        <button
-          type="button"
-          onClick={openRequest}
+        <Link
+          to="/contact"
           className="group flex shrink-0 items-center gap-3 rounded-full bg-brass-300 px-8 py-4 text-sm font-medium text-forest-900 transition-colors duration-300 hover:bg-white"
         >
-          {t.contact.cta}
+          {t.contact.reach}
           <ArrowRight
             size={16}
             weight="light"
             className="transition-transform duration-300 group-hover:translate-x-1"
           />
-        </button>
+        </Link>
+      </Reveal>
+    </Section>
+  )
+}
+
+/**
+ * The qualifying form, as a section of its own near the foot of the home page.
+ * It used to open in a modal from the hero, which asked people to qualify
+ * themselves before they had seen anything; by here they have.
+ */
+export function RequestSection() {
+  const { t } = useLanguage()
+
+  return (
+    <Section id={REQUEST_ID} tone="warm" tightBottom>
+      <SectionHeading
+        eyebrow={t.form.eyebrow}
+        title={t.form.sectionTitle}
+        body={t.form.lead}
+      />
+
+      <Reveal delay={120} className="mt-14 max-w-3xl">
+        <div className="rounded-[2rem] bg-white p-8 sm:p-10">
+          <RequestForm />
+        </div>
       </Reveal>
     </Section>
   )
