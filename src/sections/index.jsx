@@ -26,6 +26,7 @@ import {
   architecturePhoto,
   courtyard,
   courtyardFeature,
+  courtyardPair,
   entrancePhoto,
   gatePhoto,
   heroPhoto,
@@ -689,8 +690,47 @@ export function Energy() {
   )
 }
 
-export function Exterior() {
+export function Exterior({ onOpenPhoto }) {
   const { t } = useLanguage()
+
+  // The viewer on this page browses the whole courtyard set, so each frame
+  // opens at its own position within it rather than in a set of its own.
+  const openAt = (photo) => {
+    if (!onOpenPhoto || !photo) return undefined
+    const index = courtyard.findIndex((item) => item.id === photo.id)
+    return index === -1 ? undefined : () => onOpenPhoto(index)
+  }
+
+  const frame = (photo, ratio, sizes, delay) => {
+    const open = openAt(photo)
+    const image = (
+      <Photo
+        photo={photo}
+        alt={t.exterior.title}
+        variant="full"
+        className={`${ratio} w-full`}
+        imgClassName="transition-transform duration-[900ms] ease-out group-hover:scale-[1.04]"
+        sizes={sizes}
+      />
+    )
+
+    return (
+      <Reveal delay={delay}>
+        {open ? (
+          <button
+            type="button"
+            onClick={open}
+            aria-label={`${t.a11y.openGallery} ${t.exterior.title}`}
+            className="group block w-full overflow-hidden rounded-[2rem]"
+          >
+            {image}
+          </button>
+        ) : (
+          <div className="overflow-hidden rounded-[2rem]">{image}</div>
+        )}
+      </Reveal>
+    )
+  }
 
   return (
     <Section id="exterior" tone="warm">
@@ -701,15 +741,20 @@ export function Exterior() {
       />
 
       <div className="mt-16 grid gap-4 lg:grid-cols-12">
-        <Reveal className="lg:col-span-7">
-          <Photo
-            photo={courtyardFeature}
-            alt={t.exterior.title}
-            variant="full"
-            className="aspect-[4/3] w-full rounded-[2rem] lg:aspect-auto lg:h-full"
-            sizes="(max-width: 1024px) 100vw, 58vw"
-          />
-        </Reveal>
+        {/* Lead frame, with the two courtyard sheets side by side beneath it. */}
+        <div className="flex flex-col gap-4 lg:col-span-7">
+          {frame(courtyardFeature, 'aspect-[4/3]', '(max-width: 1024px) 100vw, 58vw', 0)}
+
+          {courtyardPair.length > 0 && (
+            <div className="grid grid-cols-2 gap-4">
+              {courtyardPair.map((photo, index) =>
+                <div key={photo.id}>
+                  {frame(photo, 'aspect-[3/2]', '(max-width: 1024px) 50vw, 29vw', (index + 1) * 90)}
+                </div>,
+              )}
+            </div>
+          )}
+        </div>
 
         <div className="grid gap-4 lg:col-span-5">
           {t.exterior.items.map((item, index) => (

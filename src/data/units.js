@@ -127,5 +127,9 @@ export const worksPhotos = ['p1-103056', 'p3-8383fb', 'p4-9a3ea4']
 export const heroPhoto = exactly(uses, 'fatada-146e0a') ?? byId(facade, 'las-7844-b43f0d')
 export const architecturePhoto = byId(courtyard, 'las-7417-8e26ab')
 export const entrancePhoto = byId(facade, 'las-7857-d449fd')
-export const courtyardFeature = byId(courtyard, 'las-7408-e1c25e')
+/** Lead frame for the exterior block, with two collage sheets beneath it. */
+export const courtyardFeature = byId(courtyard, 'las-7389-faf1dc')
+export const courtyardPair = ['curte1-848521', 'curte2-c093a1']
+  .map((id) => exactly(courtyard, id))
+  .filter(Boolean)
 export const investmentPhoto = byId(facade, 'las-7843-b9a09d')

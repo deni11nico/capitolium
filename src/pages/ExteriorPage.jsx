@@ -16,7 +16,7 @@ export default function ExteriorPage() {
         title={t.pages.exterior.title}
         lead={t.pages.exterior.lead}
       />
-      <Exterior />
+      <Exterior onOpenPhoto={setIndex} />
       <CourtyardGallery onOpen={setIndex} />
 
       <Lightbox
