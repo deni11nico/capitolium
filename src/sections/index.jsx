@@ -985,16 +985,16 @@ export function Contact({ withHeading = true }) {
           </Reveal>
 
           <Reveal delay={80}>
-            {/* Square, so the height follows the column rather than being a
-                number that has to be kept in step with it. */}
-            <div className="aspect-square overflow-hidden rounded-[2rem] bg-white">
+            {/* 364 x 350. The width is a cap rather than a fixed size, so a
+                phone narrower than 364 shrinks it instead of overflowing. */}
+            <div className="max-w-[364px] overflow-hidden rounded-[2rem] bg-white">
               <iframe
                 src={MAP_EMBED}
                 title={t.contact.mapTitle}
                 loading="lazy"
                 allowFullScreen
                 referrerPolicy="no-referrer-when-downgrade"
-                className="block h-full w-full"
+                className="block h-[350px] w-full"
               />
             </div>
             <a
