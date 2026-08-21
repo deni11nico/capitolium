@@ -167,7 +167,7 @@ export default function EnquiryForm() {
 
   const filled = (key) => values[key].trim()
 
-  // Budget is the only optional answer.
+  // Subject and budget are the optional ones.
   const errors = {
     name: filled('name') ? null : t.form.requiredField,
     phone: !filled('phone')
@@ -180,7 +180,6 @@ export default function EnquiryForm() {
       : EMAIL.test(filled('email'))
         ? null
         : t.form.invalidEmail,
-    subject: filled('subject') ? null : t.form.requiredField,
     acquisition: values.acquisition ? null : t.form.requiredNotice,
     agency: values.agency ? null : t.form.requiredNotice,
     buyerType: values.buyerType ? null : t.form.requiredNotice,
@@ -208,7 +207,7 @@ export default function EnquiryForm() {
         Nume: filled('name'),
         Telefon: filled('phone'),
         Email: filled('email'),
-        Subiect: filled('subject'),
+        Subiect: filled('subject') || 'nespecificat',
         'Achizitie integrala': yesNoLabel(values.acquisition),
         Agentie: yesNoLabel(values.agency),
         'Tip cumparator': labelIn(ro.buyerOptions, values.buyerType),
@@ -295,7 +294,6 @@ export default function EnquiryForm() {
         label={t.form.fields.subject}
         value={values.subject}
         onChange={set('subject')}
-        error={shown('subject')}
       />
 
       {/* The qualifying questions, set apart from the contact details above
