@@ -3,7 +3,7 @@ import { CheckCircle } from '@phosphor-icons/react'
 import { useLanguage } from '../i18n/LanguageContext.jsx'
 import { CONTACT_FORM_ENDPOINT, submitForm } from '../formEndpoints.js'
 
-const EMPTY = { name: '', email: '', phone: '', subject: '', message: '' }
+const EMPTY = { name: '', email: '', phone: '', subject: '' }
 
 // Deliberately loose. Anything stricter starts rejecting addresses that work,
 // and the real check is whether our reply arrives.
@@ -13,7 +13,7 @@ const EMAIL = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
  * One labelled input. Errors are shown by tinting the field and adding a line
  * of text rather than by drawing a border, matching the rest of the site.
  */
-function Field({ id, label, value, onChange, error, type = 'text', rows, autoComplete }) {
+function Field({ id, label, value, onChange, error, type = 'text', autoComplete }) {
   const surface = error ? 'bg-[#f8ece8]' : 'bg-stone-warm focus:bg-forest-50'
   const shared = `w-full rounded-xl px-4 py-3.5 text-[15px] leading-relaxed text-ink outline-none transition-colors duration-200 ${surface}`
   const describedBy = error ? `${id}-error` : undefined
@@ -25,30 +25,17 @@ function Field({ id, label, value, onChange, error, type = 'text', rows, autoCom
       </label>
 
       <div className="mt-2.5">
-        {rows ? (
-          <textarea
-            id={id}
-            name={id}
-            rows={rows}
-            value={value}
-            onChange={(event) => onChange(event.target.value)}
-            aria-invalid={Boolean(error)}
-            aria-describedby={describedBy}
-            className={`${shared} resize-y`}
-          />
-        ) : (
-          <input
-            id={id}
-            name={id}
-            type={type}
-            value={value}
-            autoComplete={autoComplete}
-            onChange={(event) => onChange(event.target.value)}
-            aria-invalid={Boolean(error)}
-            aria-describedby={describedBy}
-            className={shared}
-          />
-        )}
+        <input
+          id={id}
+          name={id}
+          type={type}
+          value={value}
+          autoComplete={autoComplete}
+          onChange={(event) => onChange(event.target.value)}
+          aria-invalid={Boolean(error)}
+          aria-describedby={describedBy}
+          className={shared}
+        />
       </div>
 
       {error && (
@@ -83,7 +70,6 @@ export default function ContactForm() {
         ? null
         : t.contact.invalidEmail,
     phone: values.phone.trim() ? null : t.contact.requiredNotice,
-    message: values.message.trim() ? null : t.contact.requiredNotice,
   }
   const hasErrors = Object.values(errors).some(Boolean)
 
@@ -161,15 +147,6 @@ export default function ContactForm() {
         label={t.contact.fields.subject}
         value={values.subject}
         onChange={set('subject')}
-      />
-
-      <Field
-        id="contact-message"
-        label={t.contact.fields.message}
-        rows={5}
-        value={values.message}
-        onChange={set('message')}
-        error={shown('message')}
       />
 
       <div className="mt-1">
