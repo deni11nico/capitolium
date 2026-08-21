@@ -21,6 +21,29 @@ const EMPTY = {
 // and the real check is whether our reply arrives.
 const EMAIL = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
 
+/** Whatever people put between the digits: spaces, dashes, dots, brackets. */
+const SEPARATORS = /[\s().\-‐-―]/g
+
+/** A Romanian number in national form: ten digits, the first a zero. */
+const RO_NATIONAL = /^0\d{9}$/
+
+/** Anything foreign, on the loose rule that + and 8 to 15 digits is plausible. */
+const INTERNATIONAL = /^\+\d{8,15}$/
+
+/**
+ * Romanian numbers are the expected case, so "+40" and "0040" are folded back
+ * to the national leading zero and judged by the same rule. A foreign number
+ * is still accepted: a buyer calling from abroad should not be turned away by
+ * a regex, and the number only has to be good enough to ring.
+ *
+ * Separators are stripped first, so "0765 776 955" and "(0765) 776-955" both
+ * pass, as does the en dash a phone keyboard sometimes inserts.
+ */
+export function isValidPhone(value) {
+  const compact = value.replace(SEPARATORS, '').replace(/^(?:\+40|0040)/, '0')
+  return RO_NATIONAL.test(compact) || INTERNATIONAL.test(compact)
+}
+
 /**
  * Answers are sent as their Romanian labels whatever language the visitor was
  * reading, so one inbox does not end up holding a mix of two languages. The
@@ -34,7 +57,8 @@ const yesNoLabel = (value) => (value === 'yes' ? ro.yes : ro.no)
  * One labelled text field. Errors tint the field and add a line of text rather
  * than drawing a border, matching the rest of the site.
  */
-function Field({ id, label, value, onChange, error, type = 'text', rows, autoComplete }) {
+function Field({ id, label, value, onChange, error, type = 'text', rows, autoComplete, required, inputMode }) {
+  const { t } = useLanguage()
   const surface = error ? 'bg-[#f8ece8]' : 'bg-stone-warm focus:bg-forest-50'
   // 16px on phones: below that, iOS Safari zooms the page on focus.
   const shared = `w-full rounded-xl px-4 py-3.5 text-[16px] leading-relaxed text-ink outline-none transition-colors duration-200 sm:text-[15px] ${surface}`
@@ -44,6 +68,7 @@ function Field({ id, label, value, onChange, error, type = 'text', rows, autoCom
     <div>
       <label htmlFor={id} className="block text-[14px] text-ink/75">
         {label}
+        {required && <span className="ml-1.5 text-ink/40">{t.form.requiredMark}</span>}
       </label>
 
       <div className="mt-2.5">
@@ -63,6 +88,7 @@ function Field({ id, label, value, onChange, error, type = 'text', rows, autoCom
             id={id}
             name={id}
             type={type}
+            inputMode={inputMode}
             value={value}
             autoComplete={autoComplete}
             onChange={(event) => onChange(event.target.value)}
@@ -158,7 +184,11 @@ export default function EnquiryForm() {
   // Budget is the only optional answer.
   const errors = {
     name: filled('name') ? null : t.form.requiredField,
-    phone: filled('phone') ? null : t.form.requiredField,
+    phone: !filled('phone')
+      ? t.form.requiredField
+      : isValidPhone(filled('phone'))
+        ? null
+        : t.form.invalidPhone,
     email: !filled('email')
       ? t.form.requiredField
       : EMAIL.test(filled('email'))
@@ -245,6 +275,7 @@ export default function EnquiryForm() {
       <Field
         id="enquiry-name"
         label={t.form.fields.name}
+        required
         value={values.name}
         onChange={set('name')}
         error={shown('name')}
@@ -255,7 +286,9 @@ export default function EnquiryForm() {
         <Field
           id="enquiry-phone"
           label={t.form.fields.phone}
+          required
           type="tel"
+          inputMode="tel"
           value={values.phone}
           onChange={set('phone')}
           error={shown('phone')}
@@ -264,6 +297,7 @@ export default function EnquiryForm() {
         <Field
           id="enquiry-email"
           label={t.form.fields.email}
+          required
           type="email"
           value={values.email}
           onChange={set('email')}
