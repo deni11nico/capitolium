@@ -954,32 +954,58 @@ export function Contact({ withHeading = true }) {
       )}
 
       <div className="grid items-start gap-6 lg:grid-cols-12 lg:gap-8">
-        <Reveal className="lg:col-span-5">
-          <div className="rounded-[2rem] bg-white p-6 sm:p-10">
-            <h3 className="font-display text-2xl leading-snug sm:text-[26px]">{t.contact.detailsTitle}</h3>
+        {/* Details and the map share the narrow column: the map is about where
+            the property is, which is the last line of the card above it. */}
+        <div className="flex flex-col gap-6 lg:col-span-5">
+          <Reveal>
+            <div className="rounded-[2rem] bg-white p-6 sm:p-10">
+              <h3 className="font-display text-2xl leading-snug sm:text-[26px]">{t.contact.detailsTitle}</h3>
 
-            <dl className="mt-8 flex flex-col gap-7">
-              {/* `key` is pulled out of the spread: React treats a spread
-                  key as a missing one and warns. */}
-              {contactChannels(t).map(({ key, ...channel }) => (
-                <ContactRow key={key} {...channel} />
-              ))}
-            </dl>
+              <dl className="mt-8 flex flex-col gap-7">
+                {/* `key` is pulled out of the spread: React treats a spread
+                    key as a missing one and warns. */}
+                {contactChannels(t).map(({ key, ...channel }) => (
+                  <ContactRow key={key} {...channel} />
+                ))}
+              </dl>
 
-            <button
-              type="button"
-              onClick={goToRequest}
-              className="group mt-10 flex w-full items-center justify-center gap-3 rounded-full bg-forest-700 px-7 py-4 text-sm font-medium text-white transition-colors duration-300 hover:bg-forest-800"
-            >
-              {t.contact.cta}
-              <ArrowRight
-                size={16}
-                weight="light"
-                className="transition-transform duration-300 group-hover:translate-x-1"
+              <button
+                type="button"
+                onClick={goToRequest}
+                className="group mt-10 flex w-full items-center justify-center gap-3 rounded-full bg-forest-700 px-7 py-4 text-sm font-medium text-white transition-colors duration-300 hover:bg-forest-800"
+              >
+                {t.contact.cta}
+                <ArrowRight
+                  size={16}
+                  weight="light"
+                  className="transition-transform duration-300 group-hover:translate-x-1"
+                />
+              </button>
+            </div>
+          </Reveal>
+
+          <Reveal delay={80}>
+            <div className="overflow-hidden rounded-[2rem] bg-white">
+              <iframe
+                src={MAP_EMBED}
+                title={t.contact.mapTitle}
+                loading="lazy"
+                allowFullScreen
+                referrerPolicy="no-referrer-when-downgrade"
+                className="block h-[220px] w-full sm:h-[260px]"
               />
-            </button>
-          </div>
-        </Reveal>
+            </div>
+            <a
+              href={MAP_LINK}
+              target="_blank"
+              rel="noreferrer"
+              className="mt-3 inline-flex items-center gap-2 text-[13px] font-medium text-forest-700 transition-colors duration-200 hover:text-forest-800"
+            >
+              {t.contact.openInMaps}
+              <ArrowSquareOut size={14} weight="light" />
+            </a>
+          </Reveal>
+        </div>
 
         <Reveal delay={140} className="lg:col-span-7">
           <div className="rounded-[2rem] bg-white p-6 sm:p-10">
@@ -990,28 +1016,6 @@ export function Contact({ withHeading = true }) {
           </div>
         </Reveal>
       </div>
-
-      <Reveal delay={80} className="mt-6">
-        <div className="overflow-hidden rounded-[2rem] bg-white">
-          <iframe
-            src={MAP_EMBED}
-            title={t.contact.mapTitle}
-            loading="lazy"
-            allowFullScreen
-            referrerPolicy="no-referrer-when-downgrade"
-            className="block h-[320px] w-full sm:h-[420px]"
-          />
-        </div>
-        <a
-          href={MAP_LINK}
-          target="_blank"
-          rel="noreferrer"
-          className="mt-4 inline-flex items-center gap-2 text-[13px] font-medium text-forest-700 transition-colors duration-200 hover:text-forest-800"
-        >
-          {t.contact.openInMaps}
-          <ArrowSquareOut size={14} weight="light" />
-        </a>
-      </Reveal>
     </Section>
   )
 }
