@@ -953,7 +953,7 @@ export function Contact({ withHeading = true }) {
         </div>
       )}
 
-      <div className="grid items-start gap-6 lg:grid-cols-12 lg:gap-8">
+      <div className="grid gap-6 lg:grid-cols-12 lg:gap-8">
         {/* Details and the map share the narrow column: the map is about where
             the property is, which is the last line of the card above it. */}
         <div className="flex flex-col gap-6 lg:col-span-5">
@@ -984,17 +984,20 @@ export function Contact({ withHeading = true }) {
             </div>
           </Reveal>
 
-          <Reveal delay={80}>
-            {/* 364 x 350. The width is a cap rather than a fixed size, so a
-                phone narrower than 364 shrinks it instead of overflowing. */}
-            <div className="max-w-[364px] overflow-hidden rounded-[2rem] bg-white">
+          <Reveal delay={80} className="flex flex-col lg:flex-1">
+            {/* Full column width, so its edges line up with the card above.
+                From lg it absorbs whatever height is left once that card is
+                placed, which is what squares the column off against the form.
+                Below lg the column has no height to divide up, so it falls
+                back to a fixed one. */}
+            <div className="min-h-[320px] overflow-hidden rounded-[2rem] bg-white lg:min-h-0 lg:flex-1">
               <iframe
                 src={MAP_EMBED}
                 title={t.contact.mapTitle}
                 loading="lazy"
                 allowFullScreen
                 referrerPolicy="no-referrer-when-downgrade"
-                className="block h-[350px] w-full"
+                className="block h-full w-full"
               />
             </div>
             <a
