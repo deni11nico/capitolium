@@ -19,7 +19,7 @@ import {
 import Photo from '../components/Photo.jsx'
 import EnquiryForm from '../components/EnquiryForm.jsx'
 import Reveal from '../components/Reveal.jsx'
-import { REQUEST_ID, useGoToRequest } from '../components/useGoToRequest.js'
+import { REQUEST_ID } from '../components/useGoToRequest.js'
 import UnitCard from '../components/UnitCard.jsx'
 import { Eyebrow, FeatureCard, Section, SectionHeading } from '../components/Section.jsx'
 import { icons, investmentIcons } from '../components/icons.js'
@@ -939,7 +939,6 @@ function ContactRow({ icon: Icon, label, value, href, external }) {
 
 export function Contact({ withHeading = true }) {
   const { t } = useLanguage()
-  const goToRequest = useGoToRequest()
 
   return (
     <Section id="contact" tone="warm">
@@ -969,18 +968,6 @@ export function Contact({ withHeading = true }) {
                 ))}
               </dl>
 
-              <button
-                type="button"
-                onClick={goToRequest}
-                className="group mt-10 flex w-full items-center justify-center gap-3 rounded-full bg-forest-700 px-7 py-4 text-sm font-medium text-white transition-colors duration-300 hover:bg-forest-800"
-              >
-                {t.contact.cta}
-                <ArrowRight
-                  size={16}
-                  weight="light"
-                  className="transition-transform duration-300 group-hover:translate-x-1"
-                />
-              </button>
             </div>
           </Reveal>
 
