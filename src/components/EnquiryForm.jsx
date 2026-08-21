@@ -13,7 +13,6 @@ const EMPTY = {
   agency: '',
   buyerType: '',
   budget: '',
-  message: '',
   botcheck: '',
 }
 
@@ -57,7 +56,7 @@ const yesNoLabel = (value) => (value === 'yes' ? ro.yes : ro.no)
  * One labelled text field. Errors tint the field and add a line of text rather
  * than drawing a border, matching the rest of the site.
  */
-function Field({ id, label, value, onChange, error, type = 'text', rows, autoComplete, required, inputMode }) {
+function Field({ id, label, value, onChange, error, type = 'text', autoComplete, required, inputMode }) {
   const { t } = useLanguage()
   const surface = error ? 'bg-[#f8ece8]' : 'bg-stone-warm focus:bg-forest-50'
   // 16px on phones: below that, iOS Safari zooms the page on focus.
@@ -72,31 +71,18 @@ function Field({ id, label, value, onChange, error, type = 'text', rows, autoCom
       </label>
 
       <div className="mt-2.5">
-        {rows ? (
-          <textarea
-            id={id}
-            name={id}
-            rows={rows}
-            value={value}
-            onChange={(event) => onChange(event.target.value)}
-            aria-invalid={Boolean(error)}
-            aria-describedby={describedBy}
-            className={`${shared} resize-y`}
-          />
-        ) : (
-          <input
-            id={id}
-            name={id}
-            type={type}
-            inputMode={inputMode}
-            value={value}
-            autoComplete={autoComplete}
-            onChange={(event) => onChange(event.target.value)}
-            aria-invalid={Boolean(error)}
-            aria-describedby={describedBy}
-            className={shared}
-          />
-        )}
+        <input
+          id={id}
+          name={id}
+          type={type}
+          inputMode={inputMode}
+          value={value}
+          autoComplete={autoComplete}
+          onChange={(event) => onChange(event.target.value)}
+          aria-invalid={Boolean(error)}
+          aria-describedby={describedBy}
+          className={shared}
+        />
       </div>
 
       {error && (
@@ -198,7 +184,6 @@ export default function EnquiryForm() {
     acquisition: values.acquisition ? null : t.form.requiredNotice,
     agency: values.agency ? null : t.form.requiredNotice,
     buyerType: values.buyerType ? null : t.form.requiredNotice,
-    message: filled('message') ? null : t.form.requiredField,
   }
   const hasErrors = Object.values(errors).some(Boolean)
 
@@ -228,7 +213,6 @@ export default function EnquiryForm() {
         Agentie: yesNoLabel(values.agency),
         'Tip cumparator': labelIn(ro.buyerOptions, values.buyerType),
         Buget: values.budget ? labelIn(ro.budgetOptions, values.budget) : 'nespecificat',
-        Mesaj: filled('message'),
       })
       if (ok) setSent(true)
       else setFailed(true)
@@ -364,19 +348,6 @@ export default function EnquiryForm() {
             ))}
           </select>
         </div>
-      </div>
-
-      <div aria-hidden="true" className="mt-3 h-px bg-ink/8" />
-
-      <div>
-        <Field
-          id="enquiry-message"
-          label={t.form.fields.message}
-          rows={5}
-          value={values.message}
-          onChange={set('message')}
-          error={shown('message')}
-        />
       </div>
 
       <div className="mt-1">
