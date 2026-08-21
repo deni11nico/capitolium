@@ -48,7 +48,7 @@ export const content = {
     hero: {
       eyebrow: 'Str. Iuliu Maniu · Ultracentral, Oradea',
       title: 'Proprietate exclusivistă',
-      titleAccent: 'în inima Oradei',
+      titleAccent: 'în inima Oradiei',
       lead: 'Oportunitate unică de investiție: imobil complet modernizat, 6 unități independente, vândut integral, într-o singură tranzacție. Ideal pentru dezvoltatori și investitori.',
       cta: 'Solicită informații despre achiziție',
       scroll: 'Derulează',
@@ -128,7 +128,7 @@ export const content = {
       eyebrow: 'Prezentare',
       title: 'Un imobil cu adevărat remarcabil',
       paragraphs: [
-        'Într-una dintre cele mai prestigioase și căutate zone ale Oradei, vă prezentăm un imobil cu adevărat remarcabil, conceput pentru a satisface cele mai exigente standarde investiționale și operaționale.',
+        'Într-una dintre cele mai prestigioase și căutate zone ale Oradiei, vă prezentăm un imobil cu adevărat remarcabil, conceput pentru a satisface cele mai exigente standarde investiționale și operaționale.',
         'Această proprietate reprezintă o combinație rară între poziționare strategică, execuție impecabilă și tehnologie de ultimă generație, fiind pregătită pentru exploatare imediată în segmente premium: hotel boutique, apartamente în regim hotelier sau spații profesionale de elită.',
       ],
       uses: [
@@ -363,7 +363,7 @@ export const content = {
     },
 
     footer: {
-      tagline: 'Proprietate exclusivistă în ultracentrul Oradei.',
+      tagline: 'Proprietate exclusivistă în ultracentrul Oradiei.',
       rights: 'Toate drepturile rezervate.',
       disclaimer:
         'Fotografiile și informațiile au caracter de prezentare și nu constituie ofertă contractuală.',
