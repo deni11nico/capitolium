@@ -50,7 +50,7 @@ export const content = {
       eyebrow: 'Str. Iuliu Maniu · Ultracentral, Oradea',
       title: 'Proprietate exclusivistă',
       titleAccent: 'în inima Oradiei',
-      lead: 'Oportunitate unică de investiție: imobil complet modernizat, 6 unități independente, vândut integral, într-o singură tranzacție. Ideal pentru dezvoltatori și investitori.',
+      lead: 'Oportunitate unică de investiție: imobil complet modernizat, 6 unități independente, vândut integral, într-o singură tranzacție. Ideal pentru investiție, oportunitate de business.',
       cta: 'Vezi proprietatea',
       scroll: 'Derulează',
       confidential:
@@ -423,7 +423,7 @@ export const content = {
       eyebrow: 'Iuliu Maniu Street · Ultra-central, Oradea',
       title: 'An exclusive property',
       titleAccent: 'in the heart of Oradea',
-      lead: 'Unique investment opportunity: fully modernized property, 6 independent units, sold as a single transaction. Ideal for developers and investors.',
+      lead: 'Unique investment opportunity: fully modernized property, 6 independent units, sold as a single transaction. Ideal for investment, a strong business opportunity.',
       cta: 'View the property',
       scroll: 'Scroll',
       confidential:
