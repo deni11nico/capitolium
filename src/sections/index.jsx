@@ -19,7 +19,6 @@ import {
 } from '@phosphor-icons/react'
 import ContactForm from '../components/ContactForm.jsx'
 import Photo from '../components/Photo.jsx'
-import RequestForm from '../components/RequestForm.jsx'
 import { useRequestModal } from '../components/RequestModal.jsx'
 import Reveal from '../components/Reveal.jsx'
 import UnitCard from '../components/UnitCard.jsx'
@@ -207,9 +206,9 @@ export function Opportunities({ onOpenPhoto }) {
 }
 
 /**
- * Answers the three questions that disqualify most enquiries, beside the
- * qualifying form itself, so a visitor can read the terms and respond in the
- * same view. One FAQ panel open at a time.
+ * Answers the three questions that disqualify most enquiries. The qualifying
+ * form used to sit beside it; it now lives only behind the hero button, so
+ * there is one way in rather than two competing ones.
  */
 export function Faq() {
   const { t } = useLanguage()
@@ -225,67 +224,55 @@ export function Faq() {
 
   return (
     <Section id="faq" tone="warm">
-      <div className="grid gap-6 lg:grid-cols-2 lg:gap-8">
-        <div>
-          <Reveal>
-            <p className="text-[11px] font-medium tracking-[0.18em] uppercase text-ink/45">
-              {t.faq.eyebrow}
-            </p>
-          </Reveal>
+      {/* The heading uses the shared SectionHeading, so the type scale here is
+          the same one Prezentare, Arhitectură and Execuție are set in. */}
+      <SectionHeading eyebrow={t.faq.eyebrow} title={t.faq.title} />
 
-          <div className="mt-6 flex flex-col gap-3">
-            {t.faq.items.map((item, index) => {
-              const isOpen = !closed.has(index)
-              return (
-                <Reveal key={item.q} delay={index * 80}>
-                  <div className="overflow-hidden rounded-sm bg-white">
-                    <h3>
-                      <button
-                        type="button"
-                        onClick={() => toggle(index)}
-                        aria-expanded={isOpen}
-                        aria-controls={`faq-panel-${index}`}
-                        className="flex w-full items-center justify-between gap-6 px-6 pt-5 text-left"
-                      >
-                        <span className="text-[15px] font-medium leading-snug text-ink/85">
-                          {item.q}
-                        </span>
-                        <CaretDown
-                          size={17}
-                          weight="light"
-                          className={`shrink-0 text-ink/40 transition-transform duration-300 ${
-                            isOpen ? 'rotate-180' : ''
-                          }`}
-                        />
-                      </button>
-                    </h3>
+      <div className="mt-14 flex max-w-4xl flex-col gap-4">
+        {t.faq.items.map((item, index) => {
+          const isOpen = !closed.has(index)
+          return (
+            <Reveal key={item.q} delay={index * 80}>
+              <div className="overflow-hidden rounded-sm bg-white">
+                <h3>
+                  <button
+                    type="button"
+                    onClick={() => toggle(index)}
+                    aria-expanded={isOpen}
+                    aria-controls={`faq-panel-${index}`}
+                    className="flex w-full items-center justify-between gap-6 px-8 pt-7 text-left sm:px-9 sm:pt-8"
+                  >
+                    {/* Same size as every other h3 on the site, the one
+                        FeatureCard and the technical blocks use. */}
+                    <span className="font-display text-2xl leading-snug sm:text-[26px]">
+                      {item.q}
+                    </span>
+                    <CaretDown
+                      size={22}
+                      weight="light"
+                      className={`shrink-0 text-forest-600 transition-transform duration-300 ${
+                        isOpen ? 'rotate-180' : ''
+                      }`}
+                    />
+                  </button>
+                </h3>
 
-                    {isOpen ? (
-                      <div id={`faq-panel-${index}`} className="px-6 pb-5 pt-1.5">
-                        <p className="max-w-md text-[14px] leading-relaxed text-ink/55">
-                          {item.a}
-                        </p>
-                      </div>
-                    ) : (
-                      <div className="pb-5" />
-                    )}
+                {isOpen ? (
+                  <div
+                    id={`faq-panel-${index}`}
+                    className="px-8 pb-7 pt-3 sm:px-9 sm:pb-8"
+                  >
+                    <p className="max-w-2xl text-[15px] leading-relaxed text-ink/60">
+                      {item.a}
+                    </p>
                   </div>
-                </Reveal>
-              )
-            })}
-          </div>
-        </div>
-
-        <Reveal delay={120}>
-          <div className="rounded-sm bg-white p-7 sm:p-9">
-            <p className="text-[11px] font-medium tracking-[0.18em] uppercase text-ink/45">
-              {t.form.title}
-            </p>
-            <div className="mt-7">
-              <RequestForm />
-            </div>
-          </div>
-        </Reveal>
+                ) : (
+                  <div className="pb-7 sm:pb-8" />
+                )}
+              </div>
+            </Reveal>
+          )
+        })}
       </div>
     </Section>
   )
@@ -960,7 +947,7 @@ export function Contact({ withHeading = true }) {
       <div className="grid items-start gap-6 lg:grid-cols-12 lg:gap-8">
         <Reveal className="lg:col-span-5">
           <div className="rounded-[2rem] bg-white p-6 sm:p-10">
-            <h3 className="font-display text-2xl">{t.contact.detailsTitle}</h3>
+            <h3 className="font-display text-2xl leading-snug sm:text-[26px]">{t.contact.detailsTitle}</h3>
 
             <dl className="mt-8 flex flex-col gap-7">
               <ContactRow
@@ -1000,7 +987,7 @@ export function Contact({ withHeading = true }) {
 
         <Reveal delay={140} className="lg:col-span-7">
           <div className="rounded-[2rem] bg-white p-6 sm:p-10">
-            <h3 className="font-display text-2xl">{t.contact.formTitle}</h3>
+            <h3 className="font-display text-2xl leading-snug sm:text-[26px]">{t.contact.formTitle}</h3>
             <div className="mt-8">
               <ContactForm />
             </div>
