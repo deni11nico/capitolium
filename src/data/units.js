@@ -93,12 +93,23 @@ export const gatePhoto = exactly(technical, 'p5-9d19a0')
 
 /**
  * Four interiors standing for the uses the building suits: boutique hotel,
- * aparthotel, clinic, premium offices. These are the property's own rooms
- * rather than stock imagery of those businesses, so the captions describe the
- * intended use, not what is pictured.
+ * aparthotel, clinic, premium offices.
+ *
+ * Sourced from poze3/imag1..imag4, in that order. Any slot whose file is
+ * missing or unreadable falls back to a room from the matching apartment, so
+ * the row is never left with a hole.
  */
-export const opportunityPhotos = ['ap-1', 'ap-3', 'ap-6', 'ap-7'].map((slug) => {
-  const list = (media.groups[slug] ?? []).filter((photo) => photo.source !== 'imagini')
+const uses = media.groups.uz ?? []
+
+const FALLBACK_USE_SLUGS = ['ap-1', 'ap-3', 'ap-6', 'ap-7']
+
+export const opportunityPhotos = [1, 2, 3, 4].map((n, index) => {
+  const supplied = uses.find((photo) => photo.id.startsWith(`imag${n}-`))
+  if (supplied) return supplied
+
+  const list = (media.groups[FALLBACK_USE_SLUGS[index]] ?? []).filter(
+    (photo) => photo.source !== 'imagini',
+  )
   return list[0] ?? null
 })
 

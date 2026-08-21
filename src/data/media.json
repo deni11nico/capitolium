@@ -285,6 +285,15 @@
         "source": "poze2"
       },
       {
+        "id": "las-7439-staging-source-6b5bad",
+        "thumb": "/media/ap-1/las-7439-staging-source-6b5bad-t.webp",
+        "full": "/media/ap-1/las-7439-staging-source-6b5bad-f.webp",
+        "width": 1920,
+        "height": 1280,
+        "color": "#c8c8c8",
+        "source": "poze2"
+      },
+      {
         "id": "las-7443-2c4553",
         "thumb": "/media/ap-1/las-7443-2c4553-t.webp",
         "full": "/media/ap-1/las-7443-2c4553-f.webp",
@@ -1970,6 +1979,53 @@
         "width": 1200,
         "height": 1600,
         "color": "#281808",
+        "source": "poze2"
+      }
+    ],
+    "uz": [
+      {
+        "id": "fatada-146e0a",
+        "thumb": "/media/uz/fatada-146e0a-t.webp",
+        "full": "/media/uz/fatada-146e0a-f.webp",
+        "width": 1537,
+        "height": 1023,
+        "color": "#483828",
+        "source": "poze2"
+      },
+      {
+        "id": "imag1-c04e84",
+        "thumb": "/media/uz/imag1-c04e84-t.webp",
+        "full": "/media/uz/imag1-c04e84-f.webp",
+        "width": 1536,
+        "height": 1024,
+        "color": "#987868",
+        "source": "poze2"
+      },
+      {
+        "id": "imag2-be4d2c",
+        "thumb": "/media/uz/imag2-be4d2c-t.webp",
+        "full": "/media/uz/imag2-be4d2c-f.webp",
+        "width": 1537,
+        "height": 1023,
+        "color": "#987858",
+        "source": "poze2"
+      },
+      {
+        "id": "imag3-183a36",
+        "thumb": "/media/uz/imag3-183a36-t.webp",
+        "full": "/media/uz/imag3-183a36-f.webp",
+        "width": 1536,
+        "height": 1024,
+        "color": "#a88878",
+        "source": "poze2"
+      },
+      {
+        "id": "imag4-4f3d66",
+        "thumb": "/media/uz/imag4-4f3d66-t.webp",
+        "full": "/media/uz/imag4-4f3d66-f.webp",
+        "width": 1536,
+        "height": 1024,
+        "color": "#d8c8c8",
         "source": "poze2"
       }
     ]

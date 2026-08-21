@@ -48,6 +48,8 @@ const GROUPS = [
   { slug: 'ap-7', sources: ['poze2/ap 7', { dir: 'imagini', match: /^ap7[.\-]/i }] },
   // Construction and product documentation, shown on the technical details page.
   { slug: 'tehnic', sources: ['pozenoi'] },
+  // The four uses the building is positioned for, on the home page.
+  { slug: 'uz', sources: ['poze3'] },
 ]
 
 /**
@@ -209,7 +211,23 @@ async function processGroup(group) {
 
   await fs.mkdir(path.join(OUT_DIR, group.slug), { recursive: true })
 
-  const photos = await pool(entries, CONCURRENCY, (entry) => processPhoto(group, entry))
+  // A single unreadable file should not take the whole run down with it, so
+  // failures are reported and skipped rather than thrown.
+  const processed = await pool(entries, CONCURRENCY, async (entry) => {
+    try {
+      return await processPhoto(group, entry)
+    } catch (error) {
+      log(`skipped ${group.slug}/${entry.filename}: ${error.message}`)
+      return null
+    }
+  })
+
+  const photos = processed.filter(Boolean)
+  if (photos.length === 0) {
+    log(`skipped ${group.slug}, nothing usable`)
+    return null
+  }
+
   const built = photos.filter((p) => !p.cached).length
   const extra = entries.filter((entry) => entry.dir === 'imagini').length
   log(
