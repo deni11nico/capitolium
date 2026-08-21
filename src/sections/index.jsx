@@ -224,10 +224,12 @@ export function Faq() {
   return (
     <Section id="faq" tone="warm">
       {/* The heading uses the shared SectionHeading, so the type scale here is
-          the same one Prezentare, Arhitectură and Execuție are set in. */}
-      <SectionHeading eyebrow={t.faq.eyebrow} title={t.faq.title} />
+          the same one Prezentare, Arhitectură and Execuție are set in.
+          Centred as a column with the list below it, which shares its width:
+          left-aligned, the pair left a wide gutter open down the right. */}
+      <SectionHeading eyebrow={t.faq.eyebrow} title={t.faq.title} className="mx-auto" />
 
-      <div className="mt-14 flex max-w-4xl flex-col gap-4">
+      <div className="mx-auto mt-14 flex max-w-4xl flex-col gap-4">
         {t.faq.items.map((item, index) => {
           const isOpen = !closed.has(index)
           return (
@@ -1047,13 +1049,16 @@ export function RequestSection() {
 
   return (
     <Section id={REQUEST_ID} tone="warm" tightBottom>
+      {/* Heading and form centred as one column, both to the same width so
+          their edges line up rather than stepping in from each other. */}
       <SectionHeading
         eyebrow={t.form.eyebrow}
         title={t.form.sectionTitle}
         body={t.form.lead}
+        className="mx-auto"
       />
 
-      <Reveal delay={120} className="mt-14 max-w-3xl">
+      <Reveal delay={120} className="mx-auto mt-14 max-w-4xl">
         <div className="rounded-[2rem] bg-white p-8 sm:p-10">
           <RequestForm />
         </div>
