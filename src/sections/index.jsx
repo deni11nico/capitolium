@@ -426,8 +426,12 @@ export function Execution() {
   )
 }
 
-/** Manufacturer page for the wall insulation. TODO: replace with the real URL. */
-const PETRALANA_URL = '#TODO-petralana-link'
+/**
+ * Manufacturer page for the wall insulation. The English page is used because
+ * Petralana publishes only English and Polish; there is no Romanian edition.
+ * Set to an empty string to hide the link rather than leave a dead one.
+ */
+const PETRALANA_URL = 'https://www.petralana.eu/en/products/petrafas_34'
 
 /** Reference for the ceiling insulation claims. */
 const CEILING_SOURCE_URL = 'https://search.app/s6GMBiMySJEf29AA6'
@@ -535,19 +539,23 @@ export function TechnicalDetails({ onOpenPhoto }) {
         <p className="mt-4 max-w-3xl text-[15px] leading-relaxed text-ink/60">
           {t.technical.walls.extra}
         </p>
-        <a
-          href={PETRALANA_URL}
-          target="_blank"
-          rel="noreferrer"
-          className="group mt-7 inline-flex items-center gap-2.5 rounded-full bg-white px-6 py-3 text-[13px] font-medium text-forest-700 transition-colors duration-300 hover:bg-forest-700 hover:text-white"
-        >
-          {t.technical.walls.linkLabel}
-          <ArrowUpRight
-            size={15}
-            weight="light"
-            className="transition-transform duration-300 group-hover:translate-x-0.5"
-          />
-        </a>
+        {/* Rendered only when there is somewhere to go, so the button can never
+            sit on the page looking clickable while doing nothing. */}
+        {PETRALANA_URL && (
+          <a
+            href={PETRALANA_URL}
+            target="_blank"
+            rel="noreferrer"
+            className="group mt-7 inline-flex items-center gap-2.5 rounded-full bg-white px-6 py-3 text-[13px] font-medium text-forest-700 transition-colors duration-300 hover:bg-forest-700 hover:text-white"
+          >
+            {t.technical.walls.linkLabel}
+            <ArrowUpRight
+              size={15}
+              weight="light"
+              className="transition-transform duration-300 group-hover:translate-x-0.5"
+            />
+          </a>
+        )}
       </Reveal>
 
       {/* Ceilings: copy with a footnote link, beside the site photographs. */}
