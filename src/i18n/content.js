@@ -357,7 +357,7 @@ export const content = {
       pageLead:
         'Ne poți contacta prin formularul de contact sau folosind datele noastre de contact.',
       detailsTitle: 'Date de contact',
-      formTitle: 'Formular de contact',
+      formTitle: 'Solicitare',
       mapTitle: 'Locația proprietății',
       openInMaps: 'Deschide în Google Maps',
     },
@@ -724,7 +724,7 @@ export const content = {
       pageLead:
         'You can reach us through the contact form or using our contact details.',
       detailsTitle: 'Contact details',
-      formTitle: 'Contact form',
+      formTitle: 'Request',
       mapTitle: 'Property location',
       openInMaps: 'Open in Google Maps',
     },
