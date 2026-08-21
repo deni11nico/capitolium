@@ -155,7 +155,7 @@ export function TrustBar() {
 }
 
 /** The four uses the building is positioned for, each with a photograph. */
-export function Opportunities() {
+export function Opportunities({ onOpenPhoto }) {
   const { t } = useLanguage()
 
   return (
@@ -176,14 +176,20 @@ export function Opportunities() {
         <div className="grid grid-cols-2 gap-4 lg:col-span-8 lg:grid-cols-4">
           {t.opportunities.items.map((label, index) => (
             <Reveal key={label} delay={index * 80}>
-              <div className="overflow-hidden rounded-sm">
+              <button
+                type="button"
+                onClick={() => onOpenPhoto?.(index)}
+                aria-label={`${t.a11y.openGallery} ${label}`}
+                className="group block w-full overflow-hidden rounded-sm"
+              >
                 <Photo
                   photo={opportunityPhotos[index]}
                   alt={label}
                   className="aspect-[4/3] w-full"
+                  imgClassName="transition-transform duration-[900ms] ease-out group-hover:scale-[1.05]"
                   sizes="(max-width: 1024px) 50vw, 20vw"
                 />
-              </div>
+              </button>
               <p className="mt-4 text-center text-[11px] font-medium tracking-[0.16em] uppercase text-ink/60">
                 {label}
               </p>
