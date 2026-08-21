@@ -16,9 +16,8 @@ import {
   Stack,
   UserCircle,
 } from '@phosphor-icons/react'
-import ContactForm from '../components/ContactForm.jsx'
 import Photo from '../components/Photo.jsx'
-import RequestForm from '../components/RequestForm.jsx'
+import EnquiryForm from '../components/EnquiryForm.jsx'
 import Reveal from '../components/Reveal.jsx'
 import { REQUEST_ID, useGoToRequest } from '../components/useGoToRequest.js'
 import UnitCard from '../components/UnitCard.jsx'
@@ -986,7 +985,7 @@ export function Contact({ withHeading = true }) {
           <div className="rounded-[2rem] bg-white p-6 sm:p-10">
             <h3 className="font-display text-2xl leading-snug sm:text-[26px]">{t.contact.formTitle}</h3>
             <div className="mt-8">
-              <ContactForm />
+              <EnquiryForm />
             </div>
           </div>
         </Reveal>
@@ -1073,7 +1072,7 @@ export function RequestSection() {
 
       <Reveal delay={120} className="mx-auto mt-14 max-w-4xl">
         <div className="rounded-[2rem] bg-white p-8 sm:p-10">
-          <RequestForm />
+          <EnquiryForm />
         </div>
       </Reveal>
     </Section>
