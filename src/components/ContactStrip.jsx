@@ -1,18 +1,31 @@
+import { useLocation } from 'react-router-dom'
 import Reveal from './Reveal.jsx'
 import { useLanguage } from '../i18n/LanguageContext.jsx'
 import { contactChannels } from '../contactChannels.js'
 
 /**
- * Closes every page with the three ways to reach us, immediately above the
+ * The two routes that carry contact details of their own: the home page ends
+ * with the qualifying form, and /contact is the contact page. On those the
+ * strip would only repeat what is already on screen.
+ */
+const CARRY_THEIR_OWN = new Set(['/', '/contact'])
+
+/**
+ * Closes the remaining pages with the ways to reach us, immediately above the
  * footer. Deliberately the details only: the form itself stays on /contact,
  * so there is one place to fill it in rather than one per page.
  *
  * Rendered once in App rather than per page, which is what keeps it identical
- * everywhere including the unit pages.
+ * everywhere it does appear, including the unit pages.
  */
 export default function ContactStrip() {
   const { t } = useLanguage()
-  const channels = contactChannels(t)
+  const { pathname } = useLocation()
+
+  // The address is left to the footer, which carries it on every page anyway.
+  const channels = contactChannels(t).filter((channel) => channel.key !== 'address')
+
+  if (CARRY_THEIR_OWN.has(pathname)) return null
 
   return (
     <section className="bg-white">
@@ -30,7 +43,9 @@ export default function ContactStrip() {
               </p>
             </div>
 
-            <dl className="mt-10 grid gap-8 sm:grid-cols-3 sm:gap-6">
+            {/* Two items now, so they sit side by side at their natural width
+                rather than being stretched across the full card. */}
+            <dl className="mt-10 flex flex-col gap-8 sm:flex-row sm:gap-16">
               {channels.map(({ key, icon: Icon, label, value, href, external }) => (
                 <div key={key} className="flex items-start gap-4">
                   <span className="mt-0.5 flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-white text-forest-700">

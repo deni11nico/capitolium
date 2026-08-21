@@ -105,7 +105,7 @@ export const content = {
       // Stable ids so a language switch never drops the current selection.
       buyerOptions: [
         { id: 'individual', label: 'Persoană fizică' },
-        { id: 'developer', label: 'Dezvoltator' },
+        { id: 'investor', label: 'Investitor' },
         { id: 'fund', label: 'Fond de investiții' },
       ],
       budget: 'Interval buget estimat (opțional)',
@@ -478,7 +478,7 @@ export const content = {
       // Stable ids so a language switch never drops the current selection.
       buyerOptions: [
         { id: 'individual', label: 'Individual' },
-        { id: 'developer', label: 'Developer' },
+        { id: 'investor', label: 'Investor' },
         { id: 'fund', label: 'Investment fund' },
       ],
       budget: 'Estimated budget range (optional)',
