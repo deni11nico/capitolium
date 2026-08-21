@@ -959,7 +959,7 @@ export function Contact({ withHeading = true }) {
 
       <div className="grid items-start gap-6 lg:grid-cols-12 lg:gap-8">
         <Reveal className="lg:col-span-5">
-          <div className="rounded-[2rem] bg-white p-8 sm:p-10">
+          <div className="rounded-[2rem] bg-white p-6 sm:p-10">
             <h3 className="font-display text-2xl">{t.contact.detailsTitle}</h3>
 
             <dl className="mt-8 flex flex-col gap-7">
@@ -999,7 +999,7 @@ export function Contact({ withHeading = true }) {
         </Reveal>
 
         <Reveal delay={140} className="lg:col-span-7">
-          <div className="rounded-[2rem] bg-white p-8 sm:p-10">
+          <div className="rounded-[2rem] bg-white p-6 sm:p-10">
             <h3 className="font-display text-2xl">{t.contact.formTitle}</h3>
             <div className="mt-8">
               <ContactForm />

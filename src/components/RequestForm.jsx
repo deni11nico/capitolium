@@ -9,19 +9,28 @@ const EMPTY = { acquisition: '', agency: '', buyerType: '', budget: '' }
  * A labelled group of radio buttons. Rendered as real inputs with a visible
  * ring rather than pills, matching the approved design, and still operable by
  * keyboard because the input keeps focus.
+ *
+ * A div with role="radiogroup" rather than fieldset/legend on purpose. A legend
+ * cannot be laid out as a flex item, so putting the question beside its answers
+ * needed `float-left`, and on a phone the floated question was wider than the
+ * row: the answers wrapped around it and off the right edge of the screen.
  */
 function RadioRow({ label, name, options, value, onChange, invalid, stacked }) {
+  const labelId = `${name}-label`
+
   return (
-    <fieldset
+    <div
+      role="radiogroup"
+      aria-labelledby={labelId}
       className={
         stacked
           ? ''
           : 'flex flex-col gap-3 sm:flex-row sm:items-start sm:justify-between sm:gap-8'
       }
     >
-      <legend className="float-left text-[14px] leading-snug text-ink/75 sm:max-w-[16rem]">
+      <p id={labelId} className="text-[14px] leading-snug text-ink/75 sm:max-w-[16rem]">
         {label}
-      </legend>
+      </p>
 
       <div className={`flex flex-wrap items-center gap-x-7 gap-y-2 ${stacked ? 'mt-3' : 'sm:pt-0.5'}`}>
         {options.map((option) => {
@@ -29,7 +38,7 @@ function RadioRow({ label, name, options, value, onChange, invalid, stacked }) {
           return (
             <label
               key={option.id}
-              className="flex cursor-pointer items-center gap-2.5 text-[14px] text-ink/70"
+              className="flex cursor-pointer items-center gap-2.5 py-2 text-[14px] text-ink/70"
             >
               <span
                 className={`flex h-[18px] w-[18px] shrink-0 items-center justify-center rounded-full transition-colors duration-200 ${
@@ -57,7 +66,7 @@ function RadioRow({ label, name, options, value, onChange, invalid, stacked }) {
       </div>
 
       {invalid && <p className="mt-2 w-full text-[13px] text-[#a6402f]">{invalid}</p>}
-    </fieldset>
+    </div>
   )
 }
 
@@ -165,7 +174,7 @@ export default function RequestForm({ onDone, compact = false }) {
           id="budget"
           value={values.budget}
           onChange={(event) => set('budget')(event.target.value)}
-          className={`appearance-none rounded-xl bg-stone-warm px-4 py-3 text-[14px] text-ink/80 outline-none transition-colors duration-200 focus:bg-forest-50 ${
+          className={`appearance-none rounded-xl bg-stone-warm px-4 py-3 text-[16px] text-ink/80 sm:text-[14px] outline-none transition-colors duration-200 focus:bg-forest-50 ${
             compact ? 'mt-3 w-full' : 'w-full sm:w-[17rem]'
           }`}
         >

@@ -123,7 +123,7 @@ export const worksPhotos = ['p1-103056', 'p3-8383fb', 'p4-9a3ea4']
   .filter(Boolean)
 
 /** Hand-picked frames so the key sections never depend on folder ordering. */
-/** The facade at dusk, supplied separately from the daytime shoot. */
+/** The facade, supplied separately from the main shoot. */
 export const heroPhoto = exactly(uses, 'fatada-146e0a') ?? byId(facade, 'las-7844-b43f0d')
 export const architecturePhoto = byId(courtyard, 'las-7417-8e26ab')
 export const entrancePhoto = byId(facade, 'las-7857-d449fd')

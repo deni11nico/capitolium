@@ -15,7 +15,7 @@ const EMAIL = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
  */
 function Field({ id, label, value, onChange, error, type = 'text', autoComplete }) {
   const surface = error ? 'bg-[#f8ece8]' : 'bg-stone-warm focus:bg-forest-50'
-  const shared = `w-full rounded-xl px-4 py-3.5 text-[15px] leading-relaxed text-ink outline-none transition-colors duration-200 ${surface}`
+  const shared = `w-full rounded-xl px-4 py-3.5 text-[16px] leading-relaxed text-ink outline-none sm:text-[15px] transition-colors duration-200 ${surface}`
   const describedBy = error ? `${id}-error` : undefined
 
   return (

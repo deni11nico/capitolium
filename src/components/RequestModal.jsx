@@ -67,7 +67,7 @@ function RequestModal({ open, onClose }) {
         role="dialog"
         aria-modal="true"
         aria-label={t.form.title}
-        className="relative w-full max-w-2xl rounded-[2rem] bg-white p-7 sm:p-10"
+        className="relative w-full max-w-2xl rounded-[2rem] bg-white p-6 sm:p-10"
       >
         <button
           ref={closeRef}
