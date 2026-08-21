@@ -340,6 +340,7 @@ export const content = {
       phoneLabel: 'Telefon',
       phone: '0765 776 955',
       emailLabel: 'Email',
+      email: 'maniucentralproperty@gmail.com',
       placeholder: 'urmează',
       reach: 'Contactează-ne',
 
@@ -710,6 +711,7 @@ export const content = {
       phoneLabel: 'Phone',
       phone: '0765 776 955',
       emailLabel: 'Email',
+      email: 'maniucentralproperty@gmail.com',
       placeholder: 'to follow',
       reach: 'Contact us',
 

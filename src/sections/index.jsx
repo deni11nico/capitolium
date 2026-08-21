@@ -8,12 +8,10 @@ import {
   Buildings,
   CaretDown,
   CheckCircle,
-  EnvelopeSimple,
   FileText,
   Leaf,
   LockSimple,
   MapPin,
-  Phone,
   Stack,
   UserCircle,
 } from '@phosphor-icons/react'
@@ -26,6 +24,7 @@ import UnitCard from '../components/UnitCard.jsx'
 import { Eyebrow, FeatureCard, Section, SectionHeading } from '../components/Section.jsx'
 import { icons, investmentIcons } from '../components/icons.js'
 import { useLanguage } from '../i18n/LanguageContext.jsx'
+import { MAP_EMBED, MAP_LINK, contactChannels } from '../contactChannels.js'
 import {
   architecturePhoto,
   courtyard,
@@ -897,16 +896,8 @@ export function Investment() {
   )
 }
 
-/**
- * The address as Google Maps should read it. Kept as one query string so the
- * embed and the outbound link can never point at two different places.
- */
-const MAP_QUERY = 'Strada Iuliu Maniu 65, Oradea, Bihor, Romania'
-const MAP_EMBED = `https://www.google.com/maps?q=${encodeURIComponent(MAP_QUERY)}&output=embed`
-const MAP_LINK = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(MAP_QUERY)}`
-
 /** One line of the contact card: accent icon, label, value. */
-function ContactRow({ icon: Icon, label, value, href }) {
+function ContactRow({ icon: Icon, label, value, href, external }) {
   return (
     <div className="flex items-start gap-4">
       <span className="mt-0.5 flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-forest-50 text-forest-700">
@@ -916,7 +907,11 @@ function ContactRow({ icon: Icon, label, value, href }) {
         <dt className="text-[11px] font-medium tracking-[0.2em] uppercase text-ink/40">{label}</dt>
         <dd className="mt-1.5 text-[16px] leading-relaxed text-ink/85">
           {href ? (
-            <a href={href} className="transition-colors duration-200 hover:text-forest-700">
+            <a
+              href={href}
+              {...(external ? { target: '_blank', rel: 'noreferrer' } : {})}
+              className="-my-2 inline-block py-2 transition-colors duration-200 hover:text-forest-700"
+            >
               {value}
             </a>
           ) : (
@@ -950,24 +945,11 @@ export function Contact({ withHeading = true }) {
             <h3 className="font-display text-2xl leading-snug sm:text-[26px]">{t.contact.detailsTitle}</h3>
 
             <dl className="mt-8 flex flex-col gap-7">
-              <ContactRow
-                icon={Phone}
-                label={t.contact.phoneLabel}
-                value={t.contact.phone}
-                href={`tel:${t.contact.phone.replace(/\s/g, '')}`}
-              />
-              <ContactRow
-                icon={EnvelopeSimple}
-                label={t.contact.emailLabel}
-                // TODO: replace with the real address, then pass href={`mailto:${...}`}
-                value={t.contact.placeholder}
-              />
-              <ContactRow
-                icon={MapPin}
-                label={t.contact.addressLabel}
-                value={t.contact.address}
-                href={MAP_LINK}
-              />
+              {/* `key` is pulled out of the spread: React treats a spread
+                  key as a missing one and warns. */}
+              {contactChannels(t).map(({ key, ...channel }) => (
+                <ContactRow key={key} {...channel} />
+              ))}
             </dl>
 
             <button

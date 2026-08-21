@@ -3,10 +3,14 @@ import { MapPin, Phone } from '@phosphor-icons/react'
 import { useLanguage } from '../i18n/LanguageContext.jsx'
 import { BRAND_DESCRIPTOR, BRAND_FULL, BRAND_NAME } from '../brand.js'
 import { units } from '../data/units.js'
+import { contactChannels } from '../contactChannels.js'
 
 export default function Footer() {
   const { lang, t } = useLanguage()
   const year = new Date().getFullYear()
+  // Shared with the contact page and the strip above, so the address only
+  // ever has to be filled in once.
+  const email = contactChannels(t).find((channel) => channel.key === 'email')
 
   return (
     <footer className="bg-ink text-white">
@@ -65,7 +69,17 @@ export default function Footer() {
               {t.contact.phone}
             </a>
             <p className="mt-3 text-[15px] leading-relaxed text-white/60">
-              {t.contact.emailLabel}: {t.contact.placeholder}
+              {t.contact.emailLabel}:{' '}
+              {email.href ? (
+                <a
+                  href={email.href}
+                  className="transition-colors duration-200 hover:text-brass-300"
+                >
+                  {email.value}
+                </a>
+              ) : (
+                email.value
+              )}
             </p>
           </div>
         </div>

@@ -1,6 +1,7 @@
 import { Route, Routes } from 'react-router-dom'
 import Header from './components/Header.jsx'
 import Footer from './components/Footer.jsx'
+import ContactStrip from './components/ContactStrip.jsx'
 import { Page } from './components/Page.jsx'
 import Home from './pages/Home.jsx'
 import Property from './pages/Property.jsx'
@@ -30,6 +31,8 @@ export default function App() {
           </Routes>
         </Page>
       </main>
+      {/* Same closing block on every route, so it cannot drift per page. */}
+      <ContactStrip />
       <Footer />
     </div>
   )
