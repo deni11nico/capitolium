@@ -1,9 +1,9 @@
 import { useState } from 'react'
 import { CheckCircle } from '@phosphor-icons/react'
 import { useLanguage } from '../i18n/LanguageContext.jsx'
-import { CONTACT_FORM_ENDPOINT, submitForm } from '../formEndpoints.js'
+import { submitForm } from '../formDelivery.js'
 
-const EMPTY = { name: '', email: '', phone: '', subject: '' }
+const EMPTY = { name: '', email: '', phone: '', subject: '', botcheck: '' }
 
 // Deliberately loose. Anything stricter starts rejecting addresses that work,
 // and the real check is whether our reply arrives.
@@ -83,9 +83,18 @@ export default function ContactForm() {
     setSending(true)
     setFailed(false)
     try {
-      const ok = await submitForm(CONTACT_FORM_ENDPOINT, {
-        form: 'contact',
-        ...values,
+      // Field names are the labels that appear in the email, so they are
+      // written for the person reading the inbox rather than for the code.
+      const ok = await submitForm({
+        subject: `Mesaj de contact: ${values.name}`,
+        from_name: 'Maniu 65 Central',
+        // Puts the sender on Reply-To, so answering the email answers them.
+        replyto: values.email.trim(),
+        botcheck: values.botcheck,
+        Nume: values.name.trim(),
+        Email: values.email.trim(),
+        Telefon: values.phone.trim(),
+        Subiect: values.subject.trim() || 'nespecificat',
       })
       if (ok) setSent(true)
       else setFailed(true)
@@ -112,6 +121,19 @@ export default function ContactForm() {
 
   return (
     <form onSubmit={onSubmit} noValidate className="flex flex-col gap-5">
+      {/* Honeypot. Hidden from people, so anything filling it is a bot and
+          Web3Forms drops the submission. Kept out of the tab order too. */}
+      <input
+        type="checkbox"
+        name="botcheck"
+        tabIndex={-1}
+        autoComplete="off"
+        aria-hidden="true"
+        checked={Boolean(values.botcheck)}
+        onChange={(event) => set('botcheck')(event.target.checked ? 'on' : '')}
+        className="hidden"
+      />
+
       <Field
         id="contact-name"
         label={t.contact.fields.name}

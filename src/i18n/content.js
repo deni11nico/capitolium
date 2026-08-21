@@ -116,6 +116,8 @@ export const content = {
       submit: 'Trimite solicitarea',
       reassurance: 'Vă vom contacta doar în legătură cu această oportunitate.',
       requiredNotice: 'Vă rugăm să răspundeți la toate întrebările marcate.',
+      sending: 'Se trimite...',
+      sendFailed: 'Solicitarea nu a putut fi trimisă. Vă rugăm să ne sunați la 0765 776 955.',
       successTitle: 'Solicitare trimisă',
       successBody:
         'Vă mulțumim. Vă vom contacta în cel mai scurt timp în legătură cu această oportunitate.',
@@ -483,6 +485,8 @@ export const content = {
       submit: 'Submit request',
       reassurance: 'We will only contact you regarding this opportunity.',
       requiredNotice: 'Please answer all the marked questions.',
+      sending: 'Sending...',
+      sendFailed: 'The request could not be sent. Please call us on 0765 776 955.',
       successTitle: 'Request sent',
       successBody:
         'Thank you. We will be in touch shortly regarding this opportunity.',

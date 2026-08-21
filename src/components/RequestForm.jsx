@@ -1,9 +1,19 @@
 import { useState } from 'react'
 import { CheckCircle, LockSimple } from '@phosphor-icons/react'
 import { useLanguage } from '../i18n/LanguageContext.jsx'
-import { REQUEST_FORM_ENDPOINT, submitForm } from '../formEndpoints.js'
+import { content } from '../i18n/content.js'
+import { submitForm } from '../formDelivery.js'
 
-const EMPTY = { acquisition: '', agency: '', buyerType: '', budget: '' }
+const EMPTY = { acquisition: '', agency: '', buyerType: '', budget: '', botcheck: '' }
+
+/**
+ * Answers are sent as their Romanian labels whatever language the visitor was
+ * reading, so one inbox does not end up holding a mix of two languages. The
+ * stored values are ids, which is what makes this translation possible.
+ */
+const ro = content.ro.form
+const labelIn = (options, id) => options.find((option) => option.id === id)?.label ?? id
+const yesNoLabel = (value) => (value === 'yes' ? ro.yes : ro.no)
 
 /**
  * A labelled group of radio buttons. Rendered as real inputs with a visible
@@ -78,7 +88,9 @@ export default function RequestForm({ onDone, compact = false }) {
   const { t } = useLanguage()
   const [values, setValues] = useState(EMPTY)
   const [showErrors, setShowErrors] = useState(false)
+  const [sending, setSending] = useState(false)
   const [sent, setSent] = useState(false)
+  const [failed, setFailed] = useState(false)
 
   const set = (key) => (value) => setValues((current) => ({ ...current, [key]: value }))
 
@@ -96,10 +108,28 @@ export default function RequestForm({ onDone, compact = false }) {
       setShowErrors(true)
       return
     }
-    // Falls back to logging while REQUEST_FORM_ENDPOINT is empty, so answers
-    // are never silently lost before delivery is wired up.
-    await submitForm(REQUEST_FORM_ENDPOINT, { form: 'acquisition', ...values })
-    setSent(true)
+
+    setSending(true)
+    setFailed(false)
+    try {
+      // Field names are the labels that appear in the email, so they are
+      // written for the person reading the inbox rather than for the code.
+      const ok = await submitForm({
+        subject: 'Solicitare achizitie - Maniu 65 Central',
+        from_name: 'Maniu 65 Central',
+        botcheck: values.botcheck,
+        'Achizitie integrala': yesNoLabel(values.acquisition),
+        Agentie: yesNoLabel(values.agency),
+        'Tip cumparator': labelIn(ro.buyerOptions, values.buyerType),
+        Buget: values.budget ? labelIn(ro.budgetOptions, values.budget) : 'nespecificat',
+      })
+      if (ok) setSent(true)
+      else setFailed(true)
+    } catch {
+      setFailed(true)
+    } finally {
+      setSending(false)
+    }
   }
 
   if (sent) {
@@ -130,6 +160,19 @@ export default function RequestForm({ onDone, compact = false }) {
 
   return (
     <form onSubmit={onSubmit} noValidate className="flex flex-col gap-6">
+      {/* Honeypot. Hidden from people, so anything filling it is a bot and
+          Web3Forms drops the submission. Kept out of the tab order too. */}
+      <input
+        type="checkbox"
+        name="botcheck"
+        tabIndex={-1}
+        autoComplete="off"
+        aria-hidden="true"
+        checked={Boolean(values.botcheck)}
+        onChange={(event) => set('botcheck')(event.target.checked ? 'on' : '')}
+        className="hidden"
+      />
+
       <RadioRow
         label={t.form.acquisition}
         name="acquisition"
@@ -190,10 +233,15 @@ export default function RequestForm({ onDone, compact = false }) {
       <div className="mt-1">
         <button
           type="submit"
-          className="w-full rounded-xl bg-ink px-8 py-4 text-[12px] font-medium tracking-[0.16em] uppercase text-white transition-colors duration-300 hover:bg-forest-800"
+          disabled={sending}
+          className="w-full rounded-xl bg-ink px-8 py-4 text-[12px] font-medium tracking-[0.16em] uppercase text-white transition-colors duration-300 hover:bg-forest-800 disabled:opacity-60"
         >
-          {t.form.submit}
+          {sending ? t.form.sending : t.form.submit}
         </button>
+
+        {failed && (
+          <p className="mt-4 text-center text-[13px] text-[#a6402f]">{t.form.sendFailed}</p>
+        )}
         <p className="mt-4 flex items-center justify-center gap-2 text-center text-[12px] text-ink/45">
           <LockSimple size={13} weight="light" />
           {t.form.reassurance}
