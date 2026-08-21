@@ -329,12 +329,36 @@ export const content = {
       body: 'Pentru dosarul complet de prezentare, planuri detaliate și condiții comerciale, luați legătura cu noi.',
       cta: 'Solicită detalii',
       addressLabel: 'Adresă',
-      address: 'Str. Iuliu Maniu, Oradea, județul Bihor, România',
+      // Confirmed against the cadastral surveys, which all read
+      // "Oradea, str. Iuliu Maniu, nr. 65, jud. Bihor".
+      address: 'Str. Iuliu Maniu nr. 65, Oradea, județul Bihor, România',
       phoneLabel: 'Telefon',
       phone: '0765 776 955',
       emailLabel: 'Email',
       placeholder: 'urmează',
       reach: 'Contactează-ne',
+
+      pageTitle: 'Contactează-ne',
+      pageLead:
+        'Ne poți contacta prin formularul de contact sau folosind datele noastre de contact.',
+      detailsTitle: 'Date de contact',
+      formTitle: 'Formular de contact',
+      fields: {
+        name: 'Numele tău (obligatoriu)',
+        email: 'Emailul tău (obligatoriu)',
+        phone: 'Telefon (obligatoriu)',
+        subject: 'Subiect',
+        message: 'Mesajul tău (obligatoriu)',
+      },
+      send: 'Trimite mesaj',
+      requiredNotice: 'Vă rugăm să completați acest câmp.',
+      invalidEmail: 'Vă rugăm să introduceți o adresă de email validă.',
+      sending: 'Se trimite...',
+      sentTitle: 'Mesaj trimis',
+      sentBody: 'Vă mulțumim. Vă vom răspunde în cel mai scurt timp.',
+      sendFailed: 'Mesajul nu a putut fi trimis. Vă rugăm să ne sunați la 0765 776 955.',
+      mapTitle: 'Locația proprietății',
+      openInMaps: 'Deschide în Google Maps',
     },
 
     footer: {
@@ -673,12 +697,34 @@ export const content = {
       body: 'For the full presentation file, detailed plans, and commercial terms, please get in touch.',
       cta: 'Request details',
       addressLabel: 'Address',
-      address: 'Iuliu Maniu Street, Oradea, Bihor County, Romania',
+      address: '65 Iuliu Maniu Street, Oradea, Bihor County, Romania',
       phoneLabel: 'Phone',
       phone: '0765 776 955',
       emailLabel: 'Email',
       placeholder: 'to follow',
       reach: 'Contact us',
+
+      pageTitle: 'Contact us',
+      pageLead:
+        'You can reach us through the contact form or using our contact details.',
+      detailsTitle: 'Contact details',
+      formTitle: 'Contact form',
+      fields: {
+        name: 'Your name (required)',
+        email: 'Your email (required)',
+        phone: 'Phone (required)',
+        subject: 'Subject',
+        message: 'Your message (required)',
+      },
+      send: 'Send message',
+      requiredNotice: 'Please fill in this field.',
+      invalidEmail: 'Please enter a valid email address.',
+      sending: 'Sending...',
+      sentTitle: 'Message sent',
+      sentBody: 'Thank you. We will get back to you shortly.',
+      sendFailed: 'The message could not be sent. Please call us on 0765 776 955.',
+      mapTitle: 'Property location',
+      openInMaps: 'Open in Google Maps',
     },
 
     footer: {

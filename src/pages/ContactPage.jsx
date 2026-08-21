@@ -7,7 +7,11 @@ export default function ContactPage() {
 
   return (
     <>
-      <PageHeader eyebrow={t.contact.eyebrow} title={t.contact.title} lead={t.contact.body} />
+      <PageHeader
+        eyebrow={t.contact.eyebrow}
+        title={t.contact.pageTitle}
+        lead={t.contact.pageLead}
+      />
       {/* The page header already carries the heading. */}
       <Contact withHeading={false} />
     </>

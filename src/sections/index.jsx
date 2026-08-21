@@ -3,17 +3,21 @@ import { Link } from 'react-router-dom'
 import {
   ArrowDown,
   ArrowRight,
+  ArrowSquareOut,
   ArrowUpRight,
   Buildings,
   CaretDown,
   CheckCircle,
+  EnvelopeSimple,
   FileText,
   Leaf,
   LockSimple,
   MapPin,
+  Phone,
   Stack,
   UserCircle,
 } from '@phosphor-icons/react'
+import ContactForm from '../components/ContactForm.jsx'
 import Photo from '../components/Photo.jsx'
 import RequestForm from '../components/RequestForm.jsx'
 import { useRequestModal } from '../components/RequestModal.jsx'
@@ -903,55 +907,83 @@ export function Investment() {
   )
 }
 
+/**
+ * The address as Google Maps should read it. Kept as one query string so the
+ * embed and the outbound link can never point at two different places.
+ */
+const MAP_QUERY = 'Strada Iuliu Maniu 65, Oradea, Bihor, Romania'
+const MAP_EMBED = `https://www.google.com/maps?q=${encodeURIComponent(MAP_QUERY)}&output=embed`
+const MAP_LINK = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(MAP_QUERY)}`
+
+/** One line of the contact card: accent icon, label, value. */
+function ContactRow({ icon: Icon, label, value, href }) {
+  return (
+    <div className="flex items-start gap-4">
+      <span className="mt-0.5 flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-forest-50 text-forest-700">
+        <Icon size={19} weight="light" />
+      </span>
+      <div className="min-w-0">
+        <dt className="text-[11px] font-medium tracking-[0.2em] uppercase text-ink/40">{label}</dt>
+        <dd className="mt-1.5 text-[16px] leading-relaxed text-ink/85">
+          {href ? (
+            <a href={href} className="transition-colors duration-200 hover:text-forest-700">
+              {value}
+            </a>
+          ) : (
+            value
+          )}
+        </dd>
+      </div>
+    </div>
+  )
+}
+
 export function Contact({ withHeading = true }) {
   const { t } = useLanguage()
   const { openRequest } = useRequestModal()
 
   return (
     <Section id="contact" tone="warm">
-      <div className={`grid gap-14 lg:gap-20 ${withHeading ? 'lg:grid-cols-12' : ''}`}>
-        {withHeading && (
-          <div className="lg:col-span-7">
-            <SectionHeading
-              eyebrow={t.contact.eyebrow}
-              title={t.contact.title}
-              body={t.contact.body}
-            />
-          </div>
-        )}
+      {withHeading && (
+        <div className="mb-14 max-w-2xl">
+          <SectionHeading
+            eyebrow={t.contact.eyebrow}
+            title={t.contact.pageTitle}
+            body={t.contact.pageLead}
+          />
+        </div>
+      )}
 
-        <Reveal delay={140} className={withHeading ? 'lg:col-span-5' : 'w-full max-w-xl'}>
-          <div className="rounded-[2rem] bg-white p-9 sm:p-11">
-            <dl className="flex flex-col gap-8">
-              {[
-                { label: t.contact.addressLabel, value: t.contact.address },
-                { label: t.contact.phoneLabel, value: t.contact.phone, tel: true },
-                { label: t.contact.emailLabel, value: t.contact.placeholder },
-              ].map((row) => (
-                <div key={row.label}>
-                  <dt className="text-[11px] font-medium tracking-[0.2em] uppercase text-ink/40">
-                    {row.label}
-                  </dt>
-                  <dd className="mt-2 text-[17px] leading-relaxed text-ink/85">
-                    {row.tel ? (
-                      <a
-                        href={`tel:${row.value.replace(/\s/g, '')}`}
-                        className="transition-colors duration-200 hover:text-forest-700"
-                      >
-                        {row.value}
-                      </a>
-                    ) : (
-                      row.value
-                    )}
-                  </dd>
-                </div>
-              ))}
+      <div className="grid items-start gap-6 lg:grid-cols-12 lg:gap-8">
+        <Reveal className="lg:col-span-5">
+          <div className="rounded-[2rem] bg-white p-8 sm:p-10">
+            <h3 className="font-display text-2xl">{t.contact.detailsTitle}</h3>
+
+            <dl className="mt-8 flex flex-col gap-7">
+              <ContactRow
+                icon={Phone}
+                label={t.contact.phoneLabel}
+                value={t.contact.phone}
+                href={`tel:${t.contact.phone.replace(/\s/g, '')}`}
+              />
+              <ContactRow
+                icon={EnvelopeSimple}
+                label={t.contact.emailLabel}
+                // TODO: replace with the real address, then pass href={`mailto:${...}`}
+                value={t.contact.placeholder}
+              />
+              <ContactRow
+                icon={MapPin}
+                label={t.contact.addressLabel}
+                value={t.contact.address}
+                href={MAP_LINK}
+              />
             </dl>
 
             <button
               type="button"
               onClick={openRequest}
-              className="group mt-11 flex w-full items-center justify-center gap-3 rounded-full bg-forest-700 px-7 py-4 text-sm font-medium text-white transition-colors duration-300 hover:bg-forest-800"
+              className="group mt-10 flex w-full items-center justify-center gap-3 rounded-full bg-forest-700 px-7 py-4 text-sm font-medium text-white transition-colors duration-300 hover:bg-forest-800"
             >
               {t.contact.cta}
               <ArrowRight
@@ -962,7 +994,38 @@ export function Contact({ withHeading = true }) {
             </button>
           </div>
         </Reveal>
+
+        <Reveal delay={140} className="lg:col-span-7">
+          <div className="rounded-[2rem] bg-white p-8 sm:p-10">
+            <h3 className="font-display text-2xl">{t.contact.formTitle}</h3>
+            <div className="mt-8">
+              <ContactForm />
+            </div>
+          </div>
+        </Reveal>
       </div>
+
+      <Reveal delay={80} className="mt-6">
+        <div className="overflow-hidden rounded-[2rem] bg-white">
+          <iframe
+            src={MAP_EMBED}
+            title={t.contact.mapTitle}
+            loading="lazy"
+            allowFullScreen
+            referrerPolicy="no-referrer-when-downgrade"
+            className="block h-[320px] w-full sm:h-[420px]"
+          />
+        </div>
+        <a
+          href={MAP_LINK}
+          target="_blank"
+          rel="noreferrer"
+          className="mt-4 inline-flex items-center gap-2 text-[13px] font-medium text-forest-700 transition-colors duration-200 hover:text-forest-800"
+        >
+          {t.contact.openInMaps}
+          <ArrowSquareOut size={14} weight="light" />
+        </a>
+      </Reveal>
     </Section>
   )
 }

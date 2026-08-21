@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { CheckCircle, LockSimple } from '@phosphor-icons/react'
 import { useLanguage } from '../i18n/LanguageContext.jsx'
+import { REQUEST_FORM_ENDPOINT, submitForm } from '../formEndpoints.js'
 
 const EMPTY = { acquisition: '', agency: '', buyerType: '', budget: '' }
 
@@ -80,15 +81,15 @@ export default function RequestForm({ onDone, compact = false }) {
   }
   const hasMissing = Object.values(missing).some(Boolean)
 
-  const onSubmit = (event) => {
+  const onSubmit = async (event) => {
     event.preventDefault()
     if (hasMissing) {
       setShowErrors(true)
       return
     }
-    // No backend yet. Logged so nothing is silently lost while delivery is
-    // wired up separately.
-    console.info('[acquisition request]', values)
+    // Falls back to logging while REQUEST_FORM_ENDPOINT is empty, so answers
+    // are never silently lost before delivery is wired up.
+    await submitForm(REQUEST_FORM_ENDPOINT, { form: 'acquisition', ...values })
     setSent(true)
   }
 
