@@ -1,13 +1,19 @@
 /**
  * Form delivery, through Web3Forms.
  *
- * The access key is a public, client-side key by design. It names the inbox
- * that submissions land in, it does not authorise anything on this end, and
- * Web3Forms expects it to ship in the page. So it lives here in the source
- * rather than in an env var, where hiding it would only be theatre.
+ * The access key is a public, client-side key by design. It does not authorise
+ * anything on this end and Web3Forms expects it to ship in the page, so it
+ * lives here in the source rather than in an env var, where hiding it would
+ * only be theatre.
  *
- * One key means one inbox, so both forms arrive at the same address. They set
- * different subjects, which is what makes them filterable apart.
+ * WHERE SUBMISSIONS ARRIVE. There is no recipient field here, and adding one
+ * would do nothing: Web3Forms treats the access key as an alias for a single
+ * inbox, fixed when the key was created at web3forms.com. So the destination
+ * is a property of the key below, not of this code.
+ *
+ * That inbox is meant to be maniucentralproperty@gmail.com. To point the forms
+ * somewhere else, create a key for that address at web3forms.com and replace
+ * the one below; editing anything here cannot redirect the existing key.
  */
 const ENDPOINT = 'https://api.web3forms.com/submit'
 const ACCESS_KEY = '8757610b-4b00-476f-93d4-dff8e9573bf4'
