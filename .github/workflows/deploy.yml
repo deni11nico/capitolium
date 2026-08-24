@@ -34,10 +34,10 @@ jobs:
         run: npm ci
 
       - name: Build
-        # The repo is a project site, so it is served from /capitolium/ rather
-        # than the domain root. vite.config.js reads this.
-        env:
-          VITE_BASE_PATH: /capitolium/
+        # Served from the root of maniu65centralproperty.ro, so no base path.
+        # It was /capitolium/ while this was a project site; leaving that in
+        # would send every asset to /capitolium/... on the custom domain and
+        # the page would come up blank.
         run: npm run build
 
       - name: Add SPA fallback
