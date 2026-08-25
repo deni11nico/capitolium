@@ -16,7 +16,7 @@ export default function Footer() {
     <footer className="bg-ink text-white">
       <div className="mx-auto max-w-[1400px] px-5 py-20 sm:px-8 sm:py-24">
         <div className="grid gap-12 lg:grid-cols-12">
-          <div className="lg:col-span-5">
+          <div className="lg:col-span-4">
             <Link
               to="/"
               className="flex w-fit flex-col leading-none transition-opacity hover:opacity-70"
@@ -55,7 +55,7 @@ export default function Footer() {
             </ul>
           </div>
 
-          <div className="lg:col-span-3">
+          <div className="lg:col-span-4">
             <p className="text-[11px] font-medium tracking-[0.2em] uppercase text-white/35">
               {t.contact.reach}
             </p>
@@ -64,7 +64,7 @@ export default function Footer() {
             {email.href ? (
               <a
                 href={email.href}
-                className="mt-6 flex w-fit items-start gap-2.5 text-[17px] leading-snug break-all text-white/80 transition-colors duration-200 hover:text-brass-300"
+                className="mt-6 flex w-fit items-start gap-2.5 text-[17px] leading-snug break-words text-white/80 transition-colors duration-200 hover:text-brass-300"
               >
                 <EnvelopeSimple size={17} weight="light" className="mt-1 shrink-0" />
                 {email.value}
