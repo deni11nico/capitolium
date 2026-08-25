@@ -1,4 +1,4 @@
-import { EnvelopeSimple, MapPin, Phone } from '@phosphor-icons/react'
+import { EnvelopeSimple, MapPin } from '@phosphor-icons/react'
 
 /**
  * The address as Google Maps should read it. Kept as one query string so the
@@ -9,8 +9,8 @@ export const MAP_EMBED = `https://www.google.com/maps?q=${encodeURIComponent(MAP
 export const MAP_LINK = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(MAP_QUERY)}`
 
 /**
- * The three ways to reach us, derived once so the contact page's card, the
- * strip above the footer and the footer itself cannot drift apart.
+ * The ways to reach us, derived once so the contact page's card, the strip
+ * above the footer and the footer itself cannot drift apart.
  *
  * `href` is null when there is nothing to link to, which today means the email
  * while `contact.email` is still empty. Callers render those as plain text
@@ -20,13 +20,6 @@ export function contactChannels(t) {
   const email = t.contact.email.trim()
 
   return [
-    {
-      key: 'phone',
-      icon: Phone,
-      label: t.contact.phoneLabel,
-      value: t.contact.phone,
-      href: `tel:${t.contact.phone.replace(/\s/g, '')}`,
-    },
     {
       key: 'email',
       icon: EnvelopeSimple,

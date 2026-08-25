@@ -34,18 +34,20 @@ export default function ContactStrip() {
           {/* A tinted card, so the block reads as its own thing whatever the
               page above it happens to end on. */}
           <div className="rounded-[2rem] bg-stone-warm px-7 py-10 sm:px-12 sm:py-12">
-            <div className="max-w-2xl">
-              <h2 className="font-display text-[2rem] leading-tight sm:text-[2.5rem]">
-                {t.contact.reach}
-              </h2>
-              <p className="mt-4 text-[15px] leading-relaxed text-ink/60 sm:text-base">
-                {t.contact.pageLead}
-              </p>
-            </div>
+            {/* Only the email is left here, and stacked under the heading it
+                sat alone against most of the card's width. Set beside the
+                heading instead, the two balance each other. */}
+            <div className="flex flex-col gap-9 lg:flex-row lg:items-center lg:justify-between lg:gap-16">
+              <div className="max-w-xl">
+                <h2 className="font-display text-[2rem] leading-tight sm:text-[2.5rem]">
+                  {t.contact.reach}
+                </h2>
+                <p className="mt-4 text-[15px] leading-relaxed text-ink/60 sm:text-base">
+                  {t.contact.pageLead}
+                </p>
+              </div>
 
-            {/* Two items now, so they sit side by side at their natural width
-                rather than being stretched across the full card. */}
-            <dl className="mt-10 flex flex-col gap-8 sm:flex-row sm:gap-16">
+              <dl className="flex flex-col gap-8 sm:flex-row sm:gap-16 lg:shrink-0">
               {channels.map(({ key, icon: Icon, label, value, href, external }) => (
                 <div key={key} className="flex items-start gap-4">
                   <span className="mt-0.5 flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-white text-forest-700">
@@ -70,8 +72,9 @@ export default function ContactStrip() {
                     </dd>
                   </div>
                 </div>
-              ))}
-            </dl>
+                ))}
+              </dl>
+            </div>
           </div>
         </Reveal>
       </div>

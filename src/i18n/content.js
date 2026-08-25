@@ -131,7 +131,8 @@ export const content = {
       invalidPhone: 'Introduceți un număr de telefon valid.',
       requiredMark: '(obligatoriu)',
       sending: 'Se trimite...',
-      sendFailed: 'Solicitarea nu a putut fi trimisă. Vă rugăm să ne sunați la +40 771 517 242.',
+      sendFailed:
+        'Solicitarea nu a putut fi trimisă. Vă rugăm să ne scrieți la maniucentralproperty@gmail.com.',
       successTitle: 'Solicitare trimisă',
       successBody:
         'Vă mulțumim. Vă vom contacta în cel mai scurt timp în legătură cu această oportunitate.',
@@ -347,8 +348,6 @@ export const content = {
       // Confirmed against the cadastral surveys, which all read
       // "Oradea, str. Iuliu Maniu, nr. 65, jud. Bihor".
       address: 'Str. Iuliu Maniu nr. 65, Oradea, județul Bihor, România',
-      phoneLabel: 'Telefon',
-      phone: '+40 771 517 242',
       emailLabel: 'Email',
       email: 'maniucentralproperty@gmail.com',
       placeholder: 'urmează',
@@ -501,7 +500,8 @@ export const content = {
       invalidPhone: 'Please enter a valid phone number.',
       requiredMark: '(required)',
       sending: 'Sending...',
-      sendFailed: 'The request could not be sent. Please call us on +40 771 517 242.',
+      sendFailed:
+        'The request could not be sent. Please email us at maniucentralproperty@gmail.com.',
       successTitle: 'Request sent',
       successBody:
         'Thank you. We will be in touch shortly regarding this opportunity.',
@@ -715,8 +715,6 @@ export const content = {
       cta: 'Request details',
       addressLabel: 'Address',
       address: '65 Iuliu Maniu Street, Oradea, Bihor County, Romania',
-      phoneLabel: 'Phone',
-      phone: '+40 771 517 242',
       emailLabel: 'Email',
       email: 'maniucentralproperty@gmail.com',
       placeholder: 'to follow',

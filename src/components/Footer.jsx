@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import { MapPin, Phone } from '@phosphor-icons/react'
+import { EnvelopeSimple, MapPin } from '@phosphor-icons/react'
 import { useLanguage } from '../i18n/LanguageContext.jsx'
 import { BRAND_DESCRIPTOR, BRAND_FULL, BRAND_NAME } from '../brand.js'
 import { units } from '../data/units.js'
@@ -59,28 +59,22 @@ export default function Footer() {
             <p className="text-[11px] font-medium tracking-[0.2em] uppercase text-white/35">
               {t.contact.reach}
             </p>
-            {/* Secondary on purpose: the hero drives enquiries through the
-                qualifying form, this is here for anyone who prefers to call. */}
-            <a
-              href={`tel:${t.contact.phone.replace(/\s/g, '')}`}
-              className="mt-6 flex w-fit items-center gap-2.5 text-[17px] text-white/80 transition-colors duration-200 hover:text-brass-300"
-            >
-              <Phone size={17} weight="light" />
-              {t.contact.phone}
-            </a>
-            <p className="mt-3 text-[15px] leading-relaxed text-white/60">
-              {t.contact.emailLabel}:{' '}
-              {email.href ? (
-                <a
-                  href={email.href}
-                  className="transition-colors duration-200 hover:text-brass-300"
-                >
-                  {email.value}
-                </a>
-              ) : (
-                email.value
-              )}
-            </p>
+            {/* The email takes the slot the phone number used to hold, rather
+                than staying the small line beneath it and leaving a gap. */}
+            {email.href ? (
+              <a
+                href={email.href}
+                className="mt-6 flex w-fit items-start gap-2.5 text-[17px] leading-snug break-all text-white/80 transition-colors duration-200 hover:text-brass-300"
+              >
+                <EnvelopeSimple size={17} weight="light" className="mt-1 shrink-0" />
+                {email.value}
+              </a>
+            ) : (
+              <p className="mt-6 flex items-start gap-2.5 text-[17px] leading-snug text-white/80">
+                <EnvelopeSimple size={17} weight="light" className="mt-1 shrink-0" />
+                {email.value}
+              </p>
+            )}
           </div>
         </div>
 
