@@ -35,7 +35,7 @@ const INTERNATIONAL = /^\+\d{8,15}$/
  * is still accepted: a buyer calling from abroad should not be turned away by
  * a regex, and the number only has to be good enough to ring.
  *
- * Separators are stripped first, so "0765 776 955" and "(0765) 776-955" both
+ * Separators are stripped first, so "0771 517 242" and "(0771) 517-242" both
  * pass, as does the en dash a phone keyboard sometimes inserts.
  */
 export function isValidPhone(value) {
