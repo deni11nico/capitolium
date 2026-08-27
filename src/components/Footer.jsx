@@ -82,6 +82,12 @@ export default function Footer() {
           <p>
             &copy; {year} {BRAND_FULL}. {t.footer.rights}
           </p>
+          <Link
+            to="/politica-confidentialitate"
+            className="transition-colors duration-200 hover:text-brass-300"
+          >
+            {t.footer.privacy}
+          </Link>
           <p className="max-w-md sm:text-right">{t.footer.disclaimer}</p>
         </div>
       </div>

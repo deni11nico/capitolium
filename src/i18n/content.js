@@ -362,9 +362,86 @@ export const content = {
       openInMaps: 'Deschide în Google Maps',
     },
 
+    privacy: {
+      eyebrow: 'Legal',
+      title: 'Politica de confidențialitate',
+      updated: 'Ultima actualizare: 27 august 2026',
+      sections: [
+        {
+          title: 'Operatorul de date',
+          intro: 'Operator de date cu caracter personal:',
+          lines: [
+            'Gere Ferencz-Tivadar, prin CAPITOLIUM TOURS SRL',
+            'Sediu social: Str. Avram Iancu, Nr. 8, Municipiul Oradea, Județul Bihor, România',
+            'Cod Unic de Înregistrare: 6576836',
+          ],
+          email: 'gereferencz@yahoo.com',
+          emailLabel: 'Email:',
+        },
+        {
+          title: 'Ce date colectăm',
+          intro:
+            'Prin intermediul formularului de contact de pe acest site, colectăm:',
+          list: [
+            'Numele dumneavoastră',
+            'Adresa de email',
+            'Numărul de telefon',
+            'Subiectul (opțional) și mesajul transmis',
+            'Răspunsurile la întrebările de calificare (interes de achiziție, tip cumpărător, interval de buget estimat)',
+          ],
+          outro:
+            'De asemenea, prin utilizarea site-ului, colectăm automat date tehnice de navigare (ex. pagini vizitate, durata vizitei) prin Google Tag Manager și Google Analytics, cu acordul dumneavoastră exprimat prin bannerul de cookies.',
+        },
+        {
+          title: 'Scopul prelucrării',
+          intro: 'Datele colectate sunt folosite exclusiv pentru:',
+          list: [
+            'A răspunde solicitărilor dumneavoastră legate de proprietatea prezentată pe site',
+            'A vă contacta în legătură cu oportunitatea de investiție solicitată',
+            'Analiza traficului site-ului, pentru îmbunătățirea experienței utilizatorilor (doar cu acordul dumneavoastră pentru cookies)',
+          ],
+        },
+        {
+          title: 'Temeiul legal',
+          intro:
+            'Prelucrarea se bazează pe consimțământul dumneavoastră, exprimat prin completarea voluntară a formularului de contact și/sau prin acceptarea cookie-urilor.',
+        },
+        {
+          title: 'Destinatarii datelor',
+          intro:
+            'Datele transmise prin formular sunt procesate prin serviciul terț Web3Forms, exclusiv în scopul transmiterii mesajului către operator. Datele de navigare sunt procesate prin Google (Tag Manager, Analytics), conform politicilor de confidențialitate ale acestor servicii.',
+        },
+        {
+          title: 'Perioada de stocare',
+          intro:
+            'Datele transmise prin formular sunt păstrate atât timp cât este necesar pentru gestionarea solicitării dumneavoastră, dar nu mai mult de 2 ani de la ultima interacțiune, cu excepția cazului în care legea impune o perioadă diferită.',
+        },
+        {
+          title: 'Drepturile dumneavoastră',
+          intro:
+            'Conform Regulamentului (UE) 2016/679 (GDPR), aveți dreptul de a:',
+          list: [
+            'Solicita accesul la datele dumneavoastră personale',
+            'Solicita rectificarea sau ștergerea datelor',
+            'Vă retrage consimțământul în orice moment',
+            'Vă opune prelucrării datelor',
+            'Depune o plângere la Autoritatea Națională de Supraveghere a Prelucrării Datelor cu Caracter Personal (ANSPDCP)',
+          ],
+          outro: 'Pentru exercitarea acestor drepturi, ne puteți contacta la:',
+          email: 'gereferencz@yahoo.com',
+        },
+        {
+          title: 'Cookie-uri',
+          intro:
+            'Acest site folosește cookie-uri pentru analiza traficului. Puteți gestiona preferințele de cookie-uri prin bannerul afișat la prima vizită sau prin setările browserului dumneavoastră.',
+        },
+      ],
+    },
+
     footer: {
       tagline: 'Proprietate exclusivistă în ultracentrul Oradiei.',
       rights: 'Toate drepturile rezervate.',
+      privacy: 'Politica de confidențialitate',
       disclaimer:
         'Fotografiile și informațiile au caracter de prezentare și nu constituie ofertă contractuală.',
     },
@@ -729,9 +806,68 @@ export const content = {
       openInMaps: 'Open in Google Maps',
     },
 
+    privacy: {
+      eyebrow: 'Legal',
+      title: 'Privacy Policy',
+      updated: 'Last updated: 27 August 2026',
+      sections: [
+        {
+          title: 'Data controller',
+          intro: 'Data controller:',
+          lines: [
+            'Gere Ferencz-Tivadar, through CAPITOLIUM TOURS SRL',
+            'Registered office: Str. Avram Iancu, Nr. 8, Oradea, Bihor County, Romania',
+            'Registration Number: 6576836',
+          ],
+          email: 'gereferencz@yahoo.com',
+          emailLabel: 'Email:',
+        },
+        {
+          title: 'What data we collect',
+          intro:
+            'Through the contact form on this site, we collect: your name, email address, phone number, subject (optional) and message, and your answers to the qualifying questions (purchase interest, buyer type, estimated budget range).',
+          outro:
+            'We also automatically collect technical browsing data (e.g. pages visited, visit duration) via Google Tag Manager and Google Analytics, with your consent given through the cookie banner.',
+        },
+        {
+          title: 'Purpose of processing',
+          intro:
+            'Data collected is used exclusively to respond to your inquiries about the property presented on this site, contact you regarding the investment opportunity requested, and analyze site traffic to improve user experience (only with your cookie consent).',
+        },
+        {
+          title: 'Legal basis',
+          intro:
+            'Processing is based on your consent, given by voluntarily completing the contact form and/or accepting cookies.',
+        },
+        {
+          title: 'Data recipients',
+          intro:
+            'Form submissions are processed through the third-party service Web3Forms, solely for message delivery to the controller. Browsing data is processed through Google (Tag Manager, Analytics), per their respective privacy policies.',
+        },
+        {
+          title: 'Retention period',
+          intro:
+            'Data submitted through the form is kept as long as necessary to handle your request, but no longer than 2 years from the last interaction, unless otherwise required by law.',
+        },
+        {
+          title: 'Your rights',
+          intro:
+            'Under GDPR (Regulation (EU) 2016/679), you have the right to: access your personal data, request rectification or deletion, withdraw consent at any time, object to processing, and file a complaint with the Romanian Data Protection Authority (ANSPDCP).',
+          outro: 'To exercise these rights, contact us at:',
+          email: 'gereferencz@yahoo.com',
+        },
+        {
+          title: 'Cookies',
+          intro:
+            'This site uses cookies for traffic analysis. You can manage cookie preferences via the banner shown on first visit or through your browser settings.',
+        },
+      ],
+    },
+
     footer: {
       tagline: 'An exclusive property in the heart of Oradea.',
       rights: 'All rights reserved.',
+      privacy: 'Privacy Policy',
       disclaimer:
         'Photographs and information are presentational and do not constitute a contractual offer.',
     },

@@ -9,6 +9,7 @@ import ExteriorPage from './pages/ExteriorPage.jsx'
 import Apartments from './pages/Apartments.jsx'
 import InvestmentPage from './pages/InvestmentPage.jsx'
 import ContactPage from './pages/ContactPage.jsx'
+import PrivacyPage from './pages/PrivacyPage.jsx'
 import UnitPage from './pages/UnitPage.jsx'
 
 export default function App() {
@@ -25,6 +26,7 @@ export default function App() {
             <Route path="/apartamente" element={<Apartments />} />
             <Route path="/investitie" element={<InvestmentPage />} />
             <Route path="/contact" element={<ContactPage />} />
+            <Route path="/politica-confidentialitate" element={<PrivacyPage />} />
             {/* Static paths above win over this by React Router's ranking, so
                 the unit pages keep their short /ap-1 style URLs. */}
             <Route path="/:slug" element={<UnitPage />} />

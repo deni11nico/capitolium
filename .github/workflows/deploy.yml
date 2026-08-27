@@ -45,6 +45,14 @@ jobs:
         # 404. Serving the same shell as 404.html lets the router take over.
         run: cp dist/index.html dist/404.html
 
+      - name: Serve the privacy policy at its own path
+        # The fallback above renders the right page but answers 404, which is
+        # the wrong status for a URL the cookie banner links to and crawlers
+        # are meant to index. A real file at the path answers 200 instead.
+        run: |
+          mkdir -p dist/politica-confidentialitate
+          cp dist/index.html dist/politica-confidentialitate/index.html
+
       - name: Configure Pages
         uses: actions/configure-pages@v5
 
