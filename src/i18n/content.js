@@ -11,7 +11,7 @@ export const content = {
     meta: {
       title: 'Maniu 65 Central | Proprietate de investiție în centrul Oradiei',
       description:
-        'Maniu 65 Central, str. Iuliu Maniu, Oradea. Imobil ultracentral complet modernizat, 6 unități independente, vândut integral, într-o singură tranzacție.',
+        'Oportunitate unică de investiție: imobil complet modernizat, 6 unități independente, vândut integral, într-o singură tranzacție. Ideal pentru investiție, oportunitate de business.',
     },
 
     nav: {
