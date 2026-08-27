@@ -22,7 +22,15 @@ import { fileURLToPath } from 'node:url'
 import { content } from '../src/i18n/content.js'
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..')
-const OUT_DIR = path.join(ROOT, 'public', 'og')
+const OUT_DIR = process.env.OG_OUT ?? path.join(ROOT, 'public', 'og')
+
+/*
+ * How far down the scaled photo the 630px window starts. sharp's named crop
+ * positions are too coarse here: 'north' pins it to the very top and leaves the
+ * card mostly sky, 'centre' drops the roofline. The photo scales to 1200x799,
+ * so this can run 0 (north) to 169 (south).
+ */
+const CROP_OFFSET = Number(process.env.OG_OFFSET ?? 55)
 
 /** The size every platform crops from cleanly, and the one Facebook asks for. */
 const WIDTH = 1200
@@ -163,8 +171,14 @@ for (const card of CARDS) {
   const source = path.join(ROOT, 'public', card.source)
   const output = path.join(OUT_DIR, `${card.slug}.jpg`)
 
-  await sharp(source)
-    .resize(WIDTH, HEIGHT, { fit: 'cover', position: card.crop })
+  // Resize to width, then take the window explicitly: 'cover' would decide
+  // the vertical placement itself and only offers the named positions.
+  const scaled = await sharp(source).resize({ width: WIDTH }).toBuffer()
+  const { height: scaledHeight } = await sharp(scaled).metadata()
+  const top = Math.max(0, Math.min(CROP_OFFSET, scaledHeight - HEIGHT))
+
+  await sharp(scaled)
+    .extract({ left: 0, top, width: WIDTH, height: HEIGHT })
     .composite([{ input: overlay(card), top: 0, left: 0 }])
     .jpeg({ quality: 82, progressive: true, mozjpeg: true })
     .toFile(output)
