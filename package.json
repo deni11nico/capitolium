@@ -8,7 +8,8 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "og": "node scripts/make-og-image.mjs"
+    "og": "node scripts/make-og-images.mjs",
+    "prerender": "node scripts/prerender.mjs"
   },
   "dependencies": {
     "@phosphor-icons/react": "^2.1.7",

@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <!--
+    The wordmark reduced to the number, which is the part that survives at
+    16px. Set in a serif to match the display face the site is set in.
+  -->
+  <rect width="64" height="64" rx="14" fill="#1c2619"/>
+  <text
+    x="32"
+    y="45"
+    text-anchor="middle"
+    font-family="Palatino Linotype, Book Antiqua, Georgia, serif"
+    font-size="36"
+    letter-spacing="1"
+    fill="#c4a962"
+  >65</text>
+</svg>
