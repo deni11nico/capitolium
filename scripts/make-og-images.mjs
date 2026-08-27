@@ -37,6 +37,16 @@ const HEIGHT = 630
 const DISPLAY = 'Palatino Linotype, Book Antiqua, Georgia, serif'
 const SANS = 'Segoe UI, Tahoma, Arial, sans-serif'
 
+/*
+ * One background across every card: poze3's facade shot, the same frame the
+ * hero uses. The cards stay distinct through their eyebrow and title.
+ *
+ * The rest of poze3 (imag1..imag4) is deliberately not used here. Those are
+ * the AI-generated interiors the site labels as such, and a sharing card
+ * stands in for the property itself, where a render would misrepresent it.
+ */
+const BACKGROUND = 'media/uz/fatada-146e0a-f.webp'
+
 const t = content.ro
 
 /**
@@ -46,42 +56,42 @@ const t = content.ro
 const CARDS = [
   {
     slug: 'home',
-    source: 'media/uz/fatada-146e0a-f.webp',
+    source: BACKGROUND,
     crop: 'north',
     eyebrow: t.hero.eyebrow,
     title: 'Proprietate exclusivistă în inima Oradiei',
   },
   {
     slug: 'proprietate',
-    source: 'media/curte/las-7417-8e26ab-f.webp',
-    crop: 'centre',
+    source: BACKGROUND,
+    crop: 'north',
     eyebrow: t.pages.property.eyebrow,
     title: t.pages.property.title,
   },
   {
     slug: 'exterior',
-    source: 'media/curte/las-7389-faf1dc-f.webp',
-    crop: 'centre',
+    source: BACKGROUND,
+    crop: 'north',
     eyebrow: t.pages.exterior.eyebrow,
     title: t.pages.exterior.title,
   },
   {
     slug: 'apartamente',
-    source: 'media/ap-1/las-7425-535f5b-f.webp',
-    crop: 'centre',
+    source: BACKGROUND,
+    crop: 'north',
     eyebrow: t.units.eyebrow,
     title: t.units.title,
   },
   {
     slug: 'investitie',
-    source: 'media/fatada/las-7843-b9a09d-f.webp',
+    source: BACKGROUND,
     crop: 'north',
     eyebrow: t.investment.eyebrow,
     title: t.investment.title,
   },
   {
     slug: 'contact',
-    source: 'media/fatada/las-7857-d449fd-f.webp',
+    source: BACKGROUND,
     crop: 'north',
     eyebrow: t.contact.eyebrow,
     title: t.contact.pageTitle,
